@@ -859,3 +859,33 @@ input,select,textarea,button { font-family: var(--font-main); }
     .section-title { font-size: 1.5rem; }
     .stats-grid { grid-template-columns: 1fr; }
 }
+
+/* Hide Netlify injected badges, drawer toolbar, and feedback widgets */
+#netlify-modal-root,
+.netlify-feedback-widget,
+[data-netlify-badge],
+iframe[src*="netlify"],
+div[class*="netlify"],
+div[id*="netlify"],
+#netlify-drawer-root,
+[class*="netlify-drawer"],
+[class*="netlify-feedback"],
+[class*="netlify-badge"],
+[id*="netlify-drawer"],
+a[href*="netlify.com"],
+button[aria-label*="Netlify"],
+div[style*="z-index"][style*="bottom"] > a[href*="netlify"],
+div[style*="z-index"][style*="fixed"] > button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    max-width: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transform: scale(0) !important;
+    clip-path: inset(100%) !important;
+}
+

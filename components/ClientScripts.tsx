@@ -253,6 +253,32 @@ export default function ClientScripts() {
       cleanupFns.push(() => form.removeEventListener("submit", submitHandler));
     }
 
+    // 11. Remove Netlify Badge & Drawer script/elements dynamically
+    const removeNetlifyElements = () => {
+      const selectors = [
+        '[id*="netlify"]',
+        '[class*="netlify"]',
+        '[data-netlify-badge]',
+        'iframe[src*="netlify"]',
+        'a[href*="netlify.com"]',
+        'button[aria-label*="Netlify"]',
+      ];
+      selectors.forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => {
+          if (
+            el.id !== "react-loader-root" &&
+            el.id !== "react-carousel-root"
+          ) {
+            el.remove();
+          }
+        });
+      });
+    };
+
+    removeNetlifyElements();
+    const netlifyInterval = setInterval(removeNetlifyElements, 500);
+    cleanupFns.push(() => clearInterval(netlifyInterval));
+
     return () => {
       window.removeEventListener("resize", setHeaderOffset);
       window.removeEventListener("scroll", onScroll);
