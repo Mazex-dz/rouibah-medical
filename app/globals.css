@@ -199,7 +199,7 @@ input,select,textarea,button { font-family: var(--font-main); }
 .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION (BRIGHT THEME)
    ========================================================================== */
 .hero {
     position: relative; min-height: 100vh; display: flex; align-items: center;
@@ -207,50 +207,54 @@ input,select,textarea,button { font-family: var(--font-main); }
     overflow: hidden; background: var(--bg-soft);
 }
 .hero-bg { position: absolute; inset: 0; z-index: 1; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.85); }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1); }
 .hero-gradient {
     position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(11,37,69,.92) 0%, rgba(15,76,129,.78) 60%, rgba(20,184,166,.45) 100%);
+    background: linear-gradient(
+        105deg,
+        rgba(255,255,255,.97) 0%,
+        rgba(240,247,255,.92) 45%,
+        rgba(11,37,69,.40) 100%
+    );
 }
 .hero-particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.hero-content { position: relative; z-index: 3; color: #fff; max-width: 850px; text-align: center; margin: 0 auto; }
+.hero-content { position: relative; z-index: 3; color: var(--text-dark); max-width: 850px; text-align: right; margin: 0; }
 
 .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
-    padding: 8px 20px; border-radius: var(--radius-full);
-    border: 1px solid rgba(255,255,255,.25); font-size: .9rem; font-weight: 600;
-    margin-bottom: 24px; color: #fff;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(20,184,166,.12); border: 1px solid rgba(20,184,166,.3);
+    color: var(--teal-500); padding: 8px 20px; border-radius: var(--radius-full);
+    font-size: .9rem; font-weight: 700; margin-bottom: 28px;
 }
-.hero-badge i { color: var(--teal-300); }
+.hero-badge i { color: var(--teal-500); }
 
 .hero-title {
-    font-size: 3.4rem; font-weight: 900; line-height: 1.2;
-    color: #fff; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,.2);
+    font-size: 3.4rem; font-weight: 900; line-height: 1.25;
+    color: var(--text-dark); margin-bottom: 20px; text-shadow: none;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem; color: rgba(255,255,255,.9);
-    max-width: 680px; margin: 0 auto 36px; line-height: 1.7;
+    font-size: 1.2rem; color: var(--text-muted);
+    max-width: 680px; margin: 0 0 36px; line-height: 1.7;
 }
 
-.hero-buttons { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 50px; }
+.hero-buttons { display: flex; align-items: center; justify-content: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 50px; }
 
 .hero-stats {
     display: inline-flex; align-items: center; justify-content: center; gap: 30px;
-    background: rgba(255,255,255,.12); backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-lg);
-    padding: 20px 40px; box-shadow: var(--shadow-lg); flex-wrap: wrap;
+    background: rgba(255,255,255,.88); backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.8); border-radius: var(--radius-lg);
+    padding: 20px 40px; box-shadow: var(--shadow-md); flex-wrap: wrap;
 }
 .hero-stat { text-align: center; }
-.hero-stat .stat-number { font-size: 2rem; font-weight: 800; color: #fff; line-height: 1; }
-.hero-stat .stat-label { font-size: .85rem; color: rgba(255,255,255,.8); margin-top: 4px; }
-.stat-divider { width: 1px; height: 36px; background: rgba(255,255,255,.2); }
+.hero-stat .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--blue-800); line-height: 1; }
+.hero-stat .stat-label { font-size: .85rem; color: var(--text-muted); margin-top: 4px; }
+.stat-divider { width: 1px; height: 36px; background: var(--border); }
 
 .hero-scroll-indicator {
     position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
     z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 6px;
-    color: rgba(255,255,255,.7); font-size: .8rem; cursor: pointer;
+    color: var(--text-muted); font-size: .8rem; cursor: pointer;
     animation: bounce 2s infinite;
 }
 @keyframes bounce {
