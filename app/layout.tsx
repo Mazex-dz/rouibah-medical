@@ -1,17 +1,18 @@
 import "./globals.css";
+import Script from "next/script";
 import ClientScripts from "@/components/ClientScripts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rouibah Medical | عيادة الرويبح — برج منايل",
+  title: "Rouibah Medical | Groupe Médical Rouibah — Bordj Menaïel",
   description:
-    "عيادة الرويبح - Rouibah Medical Group. مركز طبي متكامل في برج منايل، ولاية بومرداس، الجزائر. طوارئ 24/7، أطباء متخصصون، أجهزة طبية حديثة.",
+    "Groupe Médical Rouibah — Centre médical privé à Bordj Menaïel, Wilaya de Boumerdès, Algérie. Urgences 24/7, médecins spécialisés, laboratoire, radiologie.",
   keywords:
-    "عيادة الرويبح, Rouibah Medical, برج منايل, Bordj Menaiel, عيادة خاصة, طوارئ, مختبر, بومرداس",
+    "Rouibah Medical, عيادة الرويبح, Bordj Menaïel, برج منايل, clinique privée, urgences, laboratoire, Boumerdès",
   openGraph: {
-    title: "Rouibah Medical | عيادة الرويبح",
+    title: "Rouibah Medical | Groupe Médical Rouibah",
     description:
-      "رعاية صحية متكاملة في برج منايل. طوارئ 24/7، أطباء متخصصون، تحاليل، أشعة.",
+      "Soins de santé complets à Bordj Menaïel. Urgences 24/7, médecins spécialisés, analyses, radiologie.",
     type: "website",
   },
 };
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="fr" dir="ltr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -38,6 +39,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
+        <Script src="/lang-switcher.js" strategy="afterInteractive" />
       </head>
       <body>
         <div id="react-loader-root"></div>

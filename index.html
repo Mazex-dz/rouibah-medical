@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -31,8 +31,8 @@
     <div class="topbar">
         <div class="container topbar-inner">
             <div class="topbar-left">
-                <span><i class="fa-solid fa-location-dot"></i> برج منايل، ولاية بومرداس، الجزائر</span>
-                <span><i class="fa-solid fa-clock"></i> مفتوح 24 ساعة / 7 أيام</span>
+                <span data-i18n="topbar-address"><i class="fa-solid fa-location-dot"></i> Bordj Menaïel, Wilaya de Boumerdès, Algérie</span>
+                <span data-i18n="topbar-hours"><i class="fa-solid fa-clock"></i> Ouvert 24h/24, 7j/7</span>
             </div>
             <div class="topbar-right">
                 <a href="https://www.facebook.com/p/Rouibah-Medical-Group-61559585559411/" target="_blank"><i
@@ -60,21 +60,25 @@
 
             <nav class="navbar" id="navbar">
                 <ul class="nav-links">
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">من نحن</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#doctors">فريقنا</a></li>
-                    <li><a href="#gallery">معرض الصور</a></li>
-                    <li><a href="#testimonials">آراء المرضى</a></li>
-                    <li><a href="#contact">تواصل معنا</a></li>
+                    <li><a href="#home" data-i18n="nav-home">Accueil</a></li>
+                    <li><a href="#about" data-i18n="nav-about">À propos</a></li>
+                    <li><a href="#services" data-i18n="nav-services">Nos Services</a></li>
+                    <li><a href="#doctors" data-i18n="nav-doctors">Notre Équipe</a></li>
+                    <li><a href="#gallery" data-i18n="nav-gallery">Galerie</a></li>
+                    <li><a href="#testimonials" data-i18n="nav-testimonials">Avis Patients</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-cta">
-                <a href="#appointment" class="btn btn-primary">
+                <a href="#appointment" class="btn btn-primary" data-i18n="btn-book">
                     <i class="fa-solid fa-calendar-plus"></i>
-                    احجز موعداً
+                    Prendre Rendez-vous
                 </a>
+                <div class="lang-switcher lang-switcher-mobile">
+                    <button class="lang-btn active" data-lang="fr" aria-label="Passer au Français">FR</button>
+                    <button class="lang-btn" data-lang="ar" aria-label="التحويل إلى العربية">العربية</button>
+                </div>
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
                     <span></span><span></span><span></span>
                 </button>
@@ -93,10 +97,7 @@
         </div>
         <div class="hero-particles" id="hero-particles"></div>
         <div class="container hero-content">
-            <div class="hero-badge fade-in" data-delay="100">
-                <i class="fa-solid fa-shield-heart"></i>
-                <span>مركز طبي معتمد — برج منايل، الجزائر</span>
-            </div>
+            <div class="hero-badge fade-in" data-delay="100" data-i18n="hero-badge"><i class="fa-solid fa-shield-heart"></i> Centre Médical Agréé — Bordj Menaïel, Algérie</div>
             <h1 class="hero-title fade-in" data-delay="200">
                 صحتك أمانة في أيدٍ<br>
                 <span class="gradient-text">متخصصة وموثوقة</span>
@@ -106,35 +107,29 @@
                 به في كل الأوقات.
             </p>
             <div class="hero-buttons fade-in" data-delay="400">
-                <a href="#appointment" class="btn btn-hero-primary">
-                    احجز موعداً الآن
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>
-                <a href="#about" class="btn btn-hero-ghost">
-                    <i class="fa-solid fa-play-circle"></i>
-                    تعرف علينا
-                </a>
+                <a href="#appointment" class="btn btn-hero-primary" data-i18n="hero-btn-book">Réserver un rendez-vous <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#about" class="btn btn-hero-ghost" data-i18n="hero-btn-about"><i class="fa-solid fa-play-circle"></i> Découvrez-nous</a>
             </div>
 
             <div class="hero-stats fade-in" data-delay="500">
                 <div class="hero-stat">
                     <div class="stat-number" data-target="31">0</div>
-                    <div class="stat-label">تقييم على Google</div>
+                    <div class="stat-label" data-i18n="stat-google-label">Avis sur Google</div>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="hero-stat">
                     <div class="stat-number" data-target="6">0</div>
-                    <div class="stat-label">تخصصات طبية</div>
+                    <div class="stat-label" data-i18n="stat-spec-label">Spécialités médicales</div>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="hero-stat">
                     <div class="stat-number" data-suffix="ساعة">24</div>
-                    <div class="stat-label">استعجالات على مدار الساعة</div>
+                    <div class="stat-label" data-i18n="stat-emerg-label">Urgences 24/7</div>
                 </div>
             </div>
         </div>
         <div class="hero-scroll-indicator">
-            <span>اكتشف المزيد</span>
+            <span data-i18n="hero-scroll">Découvrir plus</span>
             <i class="fa-solid fa-chevron-down"></i>
         </div>
     </section>
@@ -148,13 +143,10 @@
                 <i class="fa-solid fa-truck-medical"></i>
             </div>
             <div class="emergency-text">
-                <strong>قسم الطوارئ مفتوح 24/7</strong>
-                <span>نستقبل حالات الطوارئ الطبية على مدار الساعة — لا تتردد في التواصل</span>
+                <strong data-i18n="emerg-title">Service des Urgences Ouvert 24/7</strong>
+                <span data-i18n="emerg-desc">Nous accueillons les urgences médicales 24h/24 — N'hésitez pas à nous contacter</span>
             </div>
-            <a href="tel:0559505001" class="btn btn-emergency">
-                <i class="fa-solid fa-phone-volume"></i>
-                اتصل الآن
-            </a>
+            <a href="tel:0559505001" class="btn btn-emergency" data-i18n="emerg-btn"><i class="fa-solid fa-phone-volume"></i> Appeler Maintenant</a>
         </div>
     </section>
 
@@ -176,8 +168,8 @@
                     <div class="about-badge-float">
                         <i class="fa-solid fa-award"></i>
                         <div>
-                            <strong>مركز طبي متكامل</strong>
-                            <span>برج منايل</span>
+                            <strong data-i18n="about-badge-title">Centre Médical Intégré</strong>
+                            <span data-i18n="about-badge-sub">Bordj Menaïel</span>
                         </div>
                     </div>
                     <div class="about-rating-float">
@@ -188,13 +180,13 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <span>تقييم Google</span>
+                        <span data-i18n="about-rating-text">Avis Google</span>
                         <strong>3.7 / 5</strong>
                     </div>
                 </div>
 
                 <div class="about-content animate" data-animation="slide-left">
-                    <span class="label-tag"><i class="fa-solid fa-circle-dot"></i> من نحن</span>
+                    <span class="label-tag" data-i18n="about-tag"><i class="fa-solid fa-circle-dot"></i> À propos de nous</span>
                     <h2 class="section-title">
                         رسالتنا: رعاية<br>
                         طبية تستحقها
@@ -212,29 +204,29 @@
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-bullseye"></i></div>
                             <div class="value-text">
-                                <h4>الدقة والكفاءة</h4>
-                                <p>تشخيص صحيح وعلاج فعّال من أول زيارة</p>
+                                <h4 data-i18n="val1-title">Précision & Efficacité</h4>
+                                <p data-i18n="val1-desc">Diagnostic exact et traitement efficace dès la première visite</p>
                             </div>
                         </div>
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
                             <div class="value-text">
-                                <h4>الرعاية الإنسانية</h4>
-                                <p>نعامل كل مريض بالاحترام والتعاطف</p>
+                                <h4 data-i18n="val2-title">Soins Humains</h4>
+                                <p data-i18n="val2-desc">Nous traitons chaque patient avec respect et compassion</p>
                             </div>
                         </div>
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-flask"></i></div>
                             <div class="value-text">
-                                <h4>تقنيات متطورة</h4>
-                                <p>أحدث الأجهزة التشخيصية والعلاجية</p>
+                                <h4 data-i18n="val3-title">Technologies Avancées</h4>
+                                <p data-i18n="val3-desc">Équipements de diagnostic et de traitement de pointe</p>
                             </div>
                         </div>
                         <div class="value-item">
                             <div class="value-icon"><i class="fa-solid fa-rotate"></i></div>
                             <div class="value-text">
-                                <h4>تطوير مستمر</h4>
-                                <p>نستثمر دائماً في التحسين والنمو</p>
+                                <h4 data-i18n="val4-title">Développement Continu</h4>
+                                <p data-i18n="val4-desc">Nous investissons constamment dans l'amélioration de nos services</p>
                             </div>
                         </div>
                     </div>
@@ -256,25 +248,25 @@
                 <div class="stat-icon"><i class="fa-solid fa-user-group"></i></div>
                 <div class="stat-counter" data-target="500">0</div>
                 <div class="stat-suffix">+</div>
-                <p>مريض خُدم</p>
+                <p data-i18n="stat-counter1-label">Patients accompagnés</p>
             </div>
             <div class="stat-box animate" data-animation="fade-up" data-delay="100">
                 <div class="stat-icon"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="stat-counter" data-target="12">0</div>
                 <div class="stat-suffix">+</div>
-                <p>طبيب متخصص</p>
+                <p data-i18n="stat-counter2-label">Médecins spécialistes</p>
             </div>
             <div class="stat-box animate" data-animation="fade-up" data-delay="200">
                 <div class="stat-icon"><i class="fa-solid fa-microscope"></i></div>
                 <div class="stat-counter" data-target="6">0</div>
                 <div class="stat-suffix"></div>
-                <p>تخصصات طبية</p>
+                <p data-i18n="stat-counter3-label">Spécialités médicales</p>
             </div>
             <div class="stat-box animate" data-animation="fade-up" data-delay="300">
                 <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
                 <div class="stat-counter" data-target="3" data-decimal=".7">0</div>
                 <div class="stat-suffix">/5</div>
-                <p>تقييم Google Maps</p>
+                <p data-i18n="stat-counter4-label">Avis Google Maps</p>
             </div>
         </div>
     </section>
@@ -285,8 +277,8 @@
     <section class="services section bg-wave" id="services">
         <div class="container">
             <div class="section-header text-center animate" data-animation="fade-up">
-                <span class="label-tag"><i class="fa-solid fa-circle-dot"></i> خدماتنا الطبية</span>
-                <h2 class="section-title">تخصصات شاملة <span class="text-teal">لرعايتك الكاملة</span></h2>
+                <span class="label-tag" data-i18n="services-tag"><i class="fa-solid fa-circle-dot"></i> Nos Services Médicaux</span>
+                <h2 class="section-title" data-i18n="services-title">Spécialités complètes <span class="text-teal">pour vos soins</span></h2>
                 <p class="section-lead">نوفر مجموعة متكاملة من الخدمات الطبية في مكان واحد، لأن صحتك لا تستحق أقل من
                     ذلك.</p>
             </div>
@@ -296,7 +288,7 @@
                     <div class="service-card-inner">
                         <div class="service-number">01</div>
                         <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
-                        <h3>الطب العام والطوارئ</h3>
+                        <h3 data-i18n="s1-title">Médecine Générale & Urgences</h3>
                         <p>قسم طوارئ مجهز بالكامل يعمل 24 ساعة في اليوم 7 أيام في الأسبوع لاستقبال جميع الحالات
                             المستعجلة.</p>
                         <ul class="service-features">
@@ -311,7 +303,7 @@
                     <div class="service-card-inner">
                         <div class="service-number">02</div>
                         <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
-                        <h3>طب وجراحة الأسنان</h3>
+                        <h3 data-i18n="s2-title">Médecine Dentaire & Chirurgie</h3>
                         <p>خدمات تقويم وعلاج وتجميل الأسنان بأحدث التقنيات، من يد أطباء متخصصين ذوي خبرة.</p>
                         <ul class="service-features">
                             <li><i class="fa-solid fa-check"></i> علاج وحشوات بدون ألم</li>
@@ -325,7 +317,7 @@
                     <div class="service-card-inner">
                         <div class="service-number">03</div>
                         <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
-                        <h3>النساء والتوليد</h3>
+                        <h3 data-i18n="s3-title">Gynécologie & Obstétrique</h3>
                         <p>متابعة شاملة للحمل، ولادة آمنة، ورعاية ما بعد الولادة في بيئة مريحة وآمنة.</p>
                         <ul class="service-features">
                             <li><i class="fa-solid fa-check"></i> متابعة دورية للحامل</li>
@@ -339,7 +331,7 @@
                     <div class="service-card-inner">
                         <div class="service-number">04</div>
                         <div class="service-icon"><i class="fa-solid fa-child-reaching"></i></div>
-                        <h3>طب الأطفال</h3>
+                        <h3 data-i18n="s4-title">Pédiatrie</h3>
                         <p>رعاية متكاملة وشاملة لصحة أطفالك، من الولادة إلى المراهقة، بأيدي أطباء متفانين.</p>
                         <ul class="service-features">
                             <li><i class="fa-solid fa-check"></i> متابعة النمو والتطور</li>
@@ -353,7 +345,7 @@
                     <div class="service-card-inner">
                         <div class="service-number">05</div>
                         <div class="service-icon"><i class="fa-solid fa-flask-vial"></i></div>
-                        <h3>المخبر والتحاليل الطبية</h3>
+                        <h3 data-i18n="s5-title">Laboratoire d'Analyses Médicales</h3>
                         <p>مخبر حديث ومجهز بأحدث الأجهزة، يوفر نتائج دقيقة وسريعة لجميع أنواع التحاليل.</p>
                         <ul class="service-features">
                             <li><i class="fa-solid fa-check"></i> تحاليل دم وبول شاملة</li>
@@ -367,7 +359,7 @@
                     <div class="service-card-inner">
                         <div class="service-number">06</div>
                         <div class="service-icon"><i class="fa-solid fa-x-ray"></i></div>
-                        <h3>الأشعة والتصوير الطبي</h3>
+                        <h3 data-i18n="s6-title">Imagerie Médicale & Radiologie</h3>
                         <p>قسم أشعة مجهز بالكامل يوفر جميع أنواع التصوير الطبي اللازمة للتشخيص الدقيق.</p>
                         <ul class="service-features">
                             <li><i class="fa-solid fa-check"></i> أشعة سينية (Radio)</li>
@@ -386,8 +378,8 @@
     <section class="whyus section" id="whyus">
         <div class="container whyus-grid">
             <div class="whyus-content animate" data-animation="slide-right">
-                <span class="label-tag"><i class="fa-solid fa-circle-dot"></i> لماذا تختارنا؟</span>
-                <h2 class="section-title">ما يجعلنا الخيار<br><span class="text-teal">الأول في برج منايل</span></h2>
+                <span class="label-tag" data-i18n="why-tag"><i class="fa-solid fa-circle-dot"></i> Pourquoi nous choisir ?</span>
+                <h2 class="section-title" data-i18n="why-title">Ce qui fait de nous le premier choix <br><span class="text-teal">à Bordj Menaïel</span></h2>
                 <p class="whyus-desc">
                     نحن لا نقدم مجرد خدمة طبية — نحن نبني معك علاقة ثقة وشراكة في الصحة. ما يميزنا هو التزامنا الثابت
                     بالجودة والتطوير المستمر، حتى في مواجهة التحديات.
@@ -397,7 +389,7 @@
                     <div class="feature-item animate" data-animation="slide-right" data-delay="0">
                         <div class="feature-icon teal"><i class="fa-solid fa-clock-rotate-left"></i></div>
                         <div class="feature-body">
-                            <h4>استعجالات 24/7 بلا انقطاع</h4>
+                            <h4 data-i18n="w1-title">Urgences 24/7 sans interruption</h4>
                             <p>طاقم طبي متواجد على مدار الساعة للتعامل مع أي حالة طارئة باحترافية تامة.</p>
                         </div>
                     </div>
@@ -447,8 +439,8 @@
     <section class="doctors section bg-soft" id="doctors">
         <div class="container">
             <div class="section-header text-center animate" data-animation="fade-up">
-                <span class="label-tag"><i class="fa-solid fa-circle-dot"></i> فريقنا الطبي</span>
-                <h2 class="section-title">أطباء متخصصون <span class="text-teal">في خدمتك</span></h2>
+                <span class="label-tag" data-i18n="doctors-tag"><i class="fa-solid fa-circle-dot"></i> Équipe Médicale</span>
+                <h2 class="section-title" data-i18n="doctors-title">Des médecins spécialisés <span class="text-teal">à votre service</span></h2>
                 <p class="section-lead">يضم فريق الرويبح الطبي نخبة من الأطباء المتخصصين ذوي الخبرة والكفاءة العالية.
                 </p>
             </div>
@@ -463,8 +455,8 @@
                         </div>
                     </div>
                     <div class="doctor-info">
-                        <h4>د. مختص في الطب الداخلي</h4>
-                        <p>طب داخلي — تجربة 10+ سنوات</p>
+                        <h4 data-i18n="d1-name">Dr. Rouibah</h4>
+                        <p data-i18n="d1-role">Médecin Directeur & Généraliste</p>
                         <div class="doctor-socials">
                             <span><i class="fa-solid fa-stethoscope"></i></span>
                         </div>
@@ -480,8 +472,8 @@
                         </div>
                     </div>
                     <div class="doctor-info">
-                        <h4>د. أخصائية في النساء والتوليد</h4>
-                        <p>نساء وتوليد — خبرة ومتابعة متميزة</p>
+                        <h4 data-i18n="d3-name">Dr. Gynécologue Spécialiste</h4>
+                        <p data-i18n="d3-role">Spécialiste en Gynécologie-Obstétrique</p>
                         <div class="doctor-socials">
                             <span><i class="fa-solid fa-heart-pulse"></i></span>
                         </div>
@@ -497,8 +489,8 @@
                         </div>
                     </div>
                     <div class="doctor-info">
-                        <h4>د. أخصائي في طب الأطفال</h4>
-                        <p>طب الأطفال — رعاية ودافئة</p>
+                        <h4 data-i18n="d2-name">Dr. Pédiatre Spécialiste</h4>
+                        <p data-i18n="d2-role">Spécialiste en Pédiatrie</p>
                         <div class="doctor-socials">
                             <span><i class="fa-solid fa-child"></i></span>
                         </div>
@@ -514,8 +506,8 @@
                         </div>
                     </div>
                     <div class="doctor-info">
-                        <h4>د. جراح أسنان متخصص</h4>
-                        <p>جراحة وتجميل الأسنان</p>
+                        <h4 data-i18n="d4-name">Équipe d'Urgences</h4>
+                        <p data-i18n="d4-role">Médecins Urgentistes & Infirmiers</p>
                         <div class="doctor-socials">
                             <span><i class="fa-solid fa-tooth"></i></span>
                         </div>
@@ -531,7 +523,7 @@
     <section class="gallery section" id="gallery">
         <div class="container">
             <div class="section-header text-center animate" data-animation="fade-up">
-                <span class="label-tag"><i class="fa-solid fa-circle-dot"></i> معرض الصور</span>
+                <span class="label-tag" data-i18n="gallery-tag"><i class="fa-solid fa-circle-dot"></i> Galerie de la Clinique</span>
                 <h2 class="section-title">داخل <span class="text-teal">عيادة الرويبح</span></h2>
                 <p class="section-lead">نوفر بيئة طبية حديثة ومريحة تليق بكل مريض.</p>
             </div>
@@ -835,7 +827,7 @@
     <section class="contact section bg-soft" id="contact">
         <div class="container">
             <div class="section-header text-center animate" data-animation="fade-up">
-                <span class="label-tag"><i class="fa-solid fa-circle-dot"></i> تواصل معنا</span>
+                <span class="label-tag" data-i18n="contact-tag"><i class="fa-solid fa-circle-dot"></i> Contactez-nous</span>
                 <h2 class="section-title">نحن في <span class="text-teal">برج منايل</span> — تعال إلينا</h2>
             </div>
 
@@ -1023,7 +1015,7 @@
                 </div>
 
                 <div class="footer-links-col">
-                    <h4>روابط سريعة</h4>
+                    <h4 data-i18n="footer-quick">Liens Rapides</h4>
                     <ul>
                         <li><a href="#home"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
                         <li><a href="#about"><i class="fa-solid fa-chevron-left"></i> من نحن</a></li>
@@ -1080,8 +1072,8 @@
 
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <p>&copy; <span id="current-year"></span> Rouibah Medical Group. جميع الحقوق محفوظة.</p>
-                <p>تصميم موقع احترافي لـ عيادة الرويبح، برج منايل، الجزائر.</p>
+                <p data-i18n="footer-rights">Tous droits réservés © Groupe Médical Rouibah.</p>
+                <p data-i18n="footer-rights">Tous droits réservés © Groupe Médical Rouibah.</p>
             </div>
         </div>
     </footer>

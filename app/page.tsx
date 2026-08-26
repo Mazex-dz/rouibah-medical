@@ -7,13 +7,8 @@ export default function HomePage() {
       <div className="topbar">
         <div className="container topbar-inner">
           <div className="topbar-left">
-            <span>
-              <i className="fa-solid fa-location-dot"></i> برج منايل، ولاية
-              بومرداس، الجزائر
-            </span>
-            <span>
-              <i className="fa-solid fa-clock"></i> مفتوح 24 ساعة / 7 أيام
-            </span>
+            <span data-i18n="topbar-address"><i className="fa-solid fa-location-dot"></i> Bordj Menaïel, Wilaya de Boumerdès, Algérie</span>
+            <span data-i18n="topbar-hours"><i className="fa-solid fa-clock"></i> Ouvert 24h/24, 7j/7</span>
           </div>
           <div className="topbar-right">
             <a
@@ -26,9 +21,13 @@ export default function HomePage() {
             <a href="#">
               <i className="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="tel:0559505001">
-              <i className="fa-solid fa-phone"></i> اتصل بنا
+            <a href="tel:0559505001" data-i18n="topbar-contact">
+              <i className="fa-solid fa-phone"></i> Contactez-nous
             </a>
+            <div className="lang-switcher">
+              <button className="lang-btn active" data-lang="fr" aria-label="Passer au Français">FR</button>
+              <button className="lang-btn" data-lang="ar" aria-label="التحويل إلى العربية">العربية</button>
+            </div>
           </div>
         </div>
       </div>
@@ -50,35 +49,29 @@ export default function HomePage() {
 
           <nav className="navbar" id="navbar">
             <ul className="nav-links">
-              <li>
-                <a href="#home">الرئيسية</a>
-              </li>
-              <li>
-                <a href="#about">من نحن</a>
-              </li>
-              <li>
-                <a href="#services">خدماتنا</a>
-              </li>
-              <li>
-                <a href="#doctors">فريقنا</a>
-              </li>
-              <li>
-                <a href="#gallery">معرض الصور</a>
-              </li>
-              <li>
-                <a href="#testimonials">آراء المرضى</a>
-              </li>
-              <li>
-                <a href="#contact">تواصل معنا</a>
-              </li>
+              <li><a href="#home" data-i18n="nav-home">Accueil</a></li>
+              <li><a href="#about" data-i18n="nav-about">À propos</a></li>
+              <li><a href="#services" data-i18n="nav-services">Nos Services</a></li>
+              <li><a href="#doctors" data-i18n="nav-doctors">Notre Équipe</a></li>
+              <li><a href="#gallery" data-i18n="nav-gallery">Galerie</a></li>
+              <li><a href="#testimonials" data-i18n="nav-testimonials">Avis Patients</a></li>
+              <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
+            <div className="lang-switcher-mobile">
+              <button className="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+              <button className="lang-btn" data-lang="ar" aria-label="Arabic">العربية</button>
+            </div>
           </nav>
 
           <div className="header-cta">
-            <a href="#appointment" className="btn btn-primary">
+            <a href="#appointment" className="btn btn-primary" data-i18n="btn-book">
               <i className="fa-solid fa-calendar-plus"></i>
-              احجز موعداً
+              Prendre Rendez-vous
             </a>
+            <div className="lang-switcher lang-switcher-mobile">
+              <button className="lang-btn active" data-lang="fr" aria-label="Passer au Français">FR</button>
+              <button className="lang-btn" data-lang="ar" aria-label="التحويل إلى العربية">العربية</button>
+            </div>
             <button
               className="menu-toggle"
               id="menu-toggle"
@@ -106,28 +99,12 @@ export default function HomePage() {
         </div>
         <div className="hero-particles" id="hero-particles"></div>
         <div className="container hero-content">
-          <div className="hero-badge fade-in" data-delay="100">
-            <i className="fa-solid fa-shield-heart"></i>
-            <span>مركز طبي معتمد — برج منايل، الجزائر</span>
-          </div>
-          <h1 className="hero-title fade-in" data-delay="200">
-            صحتك أمانة في أيدٍ
-            <br />
-            <span className="gradient-text">متخصصة وموثوقة</span>
-          </h1>
-          <p className="hero-subtitle fade-in" data-delay="300">
-            في عيادة الرويبح نجمع بين الكفاءة الطبية العالية والرعاية الإنسانية
-            الحقيقية، لنكون شريكك الصحي الذي تثق به في كل الأوقات.
-          </p>
+          <div className="hero-badge fade-in" data-delay="100" data-i18n="hero-badge"><i className="fa-solid fa-shield-heart"></i> Centre Médical Agréé — Bordj Menaïel, Algérie</div>
+          <h1 className="hero-title fade-in" data-delay="200" data-i18n="hero-title">Votre santé est une priorité entre des mains<br /><span className="gradient-text">spécialisées et de confiance</span></h1>
+          <p className="hero-subtitle fade-in" data-delay="300" data-i18n="hero-subtitle">Au Groupe Médical Rouibah, nous allions une haute compétence médicale à une vraie prise en charge humaine pour être votre partenaire santé de confiance à tout moment.</p>
           <div className="hero-buttons fade-in" data-delay="400">
-            <a href="#appointment" className="btn btn-hero-primary">
-              احجز موعداً الآن
-              <i className="fa-solid fa-arrow-left"></i>
-            </a>
-            <a href="#about" className="btn btn-hero-ghost">
-              <i className="fa-solid fa-play-circle"></i>
-              تعرف علينا
-            </a>
+            <a href="#appointment" className="btn btn-hero-primary" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
+            <a href="#about" className="btn btn-hero-ghost" data-i18n="hero-btn-about"><i className="fa-solid fa-play-circle"></i> Découvrez-nous</a>
           </div>
 
           <div className="hero-stats fade-in" data-delay="500">
@@ -135,26 +112,26 @@ export default function HomePage() {
               <div className="stat-number" data-target="31">
                 0
               </div>
-              <div className="stat-label">تقييم على Google</div>
+              <div className="stat-label" data-i18n="stat-google-label">Avis sur Google</div>
             </div>
             <div className="stat-divider"></div>
             <div className="hero-stat">
               <div className="stat-number" data-target="6">
                 0
               </div>
-              <div className="stat-label">تخصصات طبية</div>
+              <div className="stat-label" data-i18n="stat-spec-label">Spécialités médicales</div>
             </div>
             <div className="stat-divider"></div>
             <div className="hero-stat">
               <div className="stat-number" data-suffix="ساعة">
                 24
               </div>
-              <div className="stat-label">استعجالات على مدار الساعة</div>
+              <div className="stat-label" data-i18n="stat-emerg-label">Urgences 24/7</div>
             </div>
           </div>
         </div>
         <div className="hero-scroll-indicator">
-          <span>اكتشف المزيد</span>
+          <span data-i18n="hero-scroll">Découvrir plus</span>
           <i className="fa-solid fa-chevron-down"></i>
         </div>
       </section>
@@ -168,15 +145,10 @@ export default function HomePage() {
             <i className="fa-solid fa-truck-medical"></i>
           </div>
           <div className="emergency-text">
-            <strong>قسم الطوارئ مفتوح 24/7</strong>
-            <span>
-              نستقبل حالات الطوارئ الطبية على مدار الساعة — لا تتردد في التواصل
-            </span>
+            <strong data-i18n="emerg-title">Service des Urgences Ouvert 24/7</strong>
+            <span data-i18n="emerg-desc">Nous accueillons les urgences médicales 24h/24 — N'hésitez pas à nous contacter</span>
           </div>
-          <a href="tel:0559505001" className="btn btn-emergency">
-            <i className="fa-solid fa-phone-volume"></i>
-            اتصل الآن
-          </a>
+          <a href="tel:0559505001" className="btn btn-emergency" data-i18n="emerg-btn"><i className="fa-solid fa-phone-volume"></i> Appeler Maintenant</a>
         </div>
       </section>
 
@@ -202,8 +174,8 @@ export default function HomePage() {
               <div className="about-badge-float">
                 <i className="fa-solid fa-award"></i>
                 <div>
-                  <strong>مركز طبي متكامل</strong>
-                  <span>برج منايل</span>
+                  <strong data-i18n="about-badge-title">Centre Médical Intégré</strong>
+                  <span data-i18n="about-badge-sub">Bordj Menaïel</span>
                 </div>
               </div>
               <div className="about-rating-float">
@@ -214,30 +186,16 @@ export default function HomePage() {
                   <i className="fa-solid fa-star"></i>
                   <i className="fa-regular fa-star"></i>
                 </div>
-                <span>تقييم Google</span>
+                <span data-i18n="about-rating-text">Avis Google</span>
                 <strong>3.7 / 5</strong>
               </div>
             </div>
 
             <div className="about-content animate" data-animation="slide-left">
-              <span className="label-tag">
-                <i className="fa-solid fa-circle-dot"></i> من نحن
-              </span>
-              <h2 className="section-title">
-                رسالتنا: رعاية
-                <br />
-                طبية تستحقها
-              </h2>
-              <p className="about-lead">
-                عيادة الرويبح (Rouibah Medical Group) هي صرح طبي خاص تأسس لخدمة
-                أهالي برج منايل ومناطقها المجاورة، بهدف توفير رعاية صحية
-                متكاملة تجمع بين الكفاءة المهنية والإنسانية الراقية.
-              </p>
-              <p className="about-desc">
-                نؤمن أن كل مريض يستحق اهتماماً حقيقياً وتشخيصاً دقيقاً، لذلك نوظف
-                أحدث التقنيات الطبية ونختار بعناية فريقاً طبياً مؤهلاً في مختلف
-                التخصصات.
-              </p>
+              <span className="label-tag" data-i18n="about-tag"><i className="fa-solid fa-circle-dot"></i> À propos de nous</span>
+              <h2 className="section-title" data-i18n="about-title">Notre mission : des soins<br />médicaux d'excellence</h2>
+              <p className="about-lead" data-i18n="about-lead">Le Groupe Médical Rouibah (Rouibah Medical Group) est un établissement médical privé créé pour servir les habitants de Bordj Menaïel et ses environs, offrant des soins de santé complets qui allient compétence professionnelle et humanité.</p>
+              <p className="about-desc" data-i18n="about-desc">Nous croyons que chaque patient mérite une attention sincère et un diagnostic précis. C'est pourquoi nous utilisons les technologies médicales les plus récentes et sélectionnons rigoureusement notre équipe qualifiée.</p>
 
               <div className="about-values">
                 <div className="value-item">
@@ -245,8 +203,8 @@ export default function HomePage() {
                     <i className="fa-solid fa-bullseye"></i>
                   </div>
                   <div className="value-text">
-                    <h4>الدقة والكفاءة</h4>
-                    <p>تشخيص صحيح وعلاج فعّال من أول زيارة</p>
+                    <h4 data-i18n="val1-title">Précision & Efficacité</h4>
+                    <p data-i18n="val1-desc">Diagnostic exact et traitement efficace dès la première visite</p>
                   </div>
                 </div>
                 <div className="value-item">
@@ -254,8 +212,8 @@ export default function HomePage() {
                     <i className="fa-solid fa-heart"></i>
                   </div>
                   <div className="value-text">
-                    <h4>الرعاية الإنسانية</h4>
-                    <p>نعامل كل مريض بالاحترام والتعاطف</p>
+                    <h4 data-i18n="val2-title">Soins Humains</h4>
+                    <p data-i18n="val2-desc">Nous traitons chaque patient avec respect et compassion</p>
                   </div>
                 </div>
                 <div className="value-item">
@@ -263,8 +221,8 @@ export default function HomePage() {
                     <i className="fa-solid fa-flask"></i>
                   </div>
                   <div className="value-text">
-                    <h4>تقنيات متطورة</h4>
-                    <p>أحدث الأجهزة التشخيصية والعلاجية</p>
+                    <h4 data-i18n="val3-title">Technologies Avancées</h4>
+                    <p data-i18n="val3-desc">Équipements de diagnostic et de traitement de pointe</p>
                   </div>
                 </div>
                 <div className="value-item">
@@ -272,15 +230,12 @@ export default function HomePage() {
                     <i className="fa-solid fa-rotate"></i>
                   </div>
                   <div className="value-text">
-                    <h4>تطوير مستمر</h4>
-                    <p>نستثمر دائماً في التحسين والنمو</p>
+                    <h4 data-i18n="val4-title">Développement Continu</h4>
+                    <p data-i18n="val4-desc">Nous investissons constamment dans l'amélioration de nos services</p>
                   </div>
                 </div>
               </div>
-              <a href="#services" className="btn btn-primary mt-30">
-                اكتشف خدماتنا
-                <i className="fa-solid fa-arrow-left"></i>
-              </a>
+              <a href="#services" className="btn btn-primary mt-30" data-i18n="about-btn">Découvrez nos services <i className="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -303,7 +258,7 @@ export default function HomePage() {
               0
             </div>
             <div className="stat-suffix">+</div>
-            <p>مريض خُدم</p>
+            <p data-i18n="stat-counter1-label">Patients accompagnés</p>
           </div>
           <div
             className="stat-box animate"
@@ -317,7 +272,7 @@ export default function HomePage() {
               0
             </div>
             <div className="stat-suffix">+</div>
-            <p>طبيب متخصص</p>
+            <p data-i18n="stat-counter2-label">Médecins spécialistes</p>
           </div>
           <div
             className="stat-box animate"
@@ -331,7 +286,7 @@ export default function HomePage() {
               0
             </div>
             <div className="stat-suffix"></div>
-            <p>تخصصات طبية</p>
+            <p data-i18n="stat-counter3-label">Spécialités médicales</p>
           </div>
           <div
             className="stat-box animate"
@@ -345,7 +300,7 @@ export default function HomePage() {
               0
             </div>
             <div className="stat-suffix">/5</div>
-            <p>تقييم Google Maps</p>
+            <p data-i18n="stat-counter4-label">Avis Google Maps</p>
           </div>
         </div>
       </section>
@@ -359,16 +314,9 @@ export default function HomePage() {
             className="section-header text-center animate"
             data-animation="fade-up"
           >
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> خدماتنا الطبية
-            </span>
-            <h2 className="section-title">
-              تخصصات شاملة <span className="text-teal">لرعايتك الكاملة</span>
-            </h2>
-            <p className="section-lead">
-              نوفر مجموعة متكاملة من الخدمات الطبية في مكان واحد، لأن صحتك لا
-              تستحق أقل من ذلك.
-            </p>
+            <span className="label-tag" data-i18n="services-tag"><i className="fa-solid fa-circle-dot"></i> Nos Services Médicaux</span>
+            <h2 className="section-title" data-i18n="services-title">Spécialités complètes <span className="text-teal">pour vos soins</span></h2>
+            <p className="section-lead" data-i18n="services-lead">Nous offrons une gamme complète de services médicaux et diagnostiques au même endroit, car votre santé mérite le meilleur.</p>
           </div>
 
           <div className="services-grid">
@@ -382,22 +330,12 @@ export default function HomePage() {
                 <div className="service-icon">
                   <i className="fa-solid fa-truck-medical"></i>
                 </div>
-                <h3>الطب العام والطوارئ</h3>
-                <p>
-                  قسم طوارئ مجهز بالكامل يعمل 24 ساعة في اليوم 7 أيام في الأسبوع
-                  لاستقبال جميع الحالات المستعجلة.
-                </p>
+                <h3 data-i18n="s1-title">Médecine Générale & Urgences</h3>
+                <p data-i18n="s1-desc">Un service d'urgence entièrement équipé, ouvert 24h/24 et 7j/7 pour accueillir tous les cas urgents.</p>
                 <ul className="service-features">
-                  <li>
-                    <i className="fa-solid fa-check"></i> استقبال فوري للحالات
-                    الطارئة
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> تشخيص وعلاج سريع
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> إشراف طبي مستمر
-                  </li>
+                  <li data-i18n="s1-f1"><i className="fa-solid fa-check"></i> Prise en charge immédiate des urgences</li>
+                  <li data-i18n="s1-f2"><i className="fa-solid fa-check"></i> Diagnostic et traitement rapides</li>
+                  <li data-i18n="s1-f3"><i className="fa-solid fa-check"></i> Surveillance médicale continue</li>
                 </ul>
               </div>
             </div>
@@ -412,22 +350,12 @@ export default function HomePage() {
                 <div className="service-icon">
                   <i className="fa-solid fa-tooth"></i>
                 </div>
-                <h3>طب وجراحة الأسنان</h3>
-                <p>
-                  خدمات تقويم وعلاج وتجميل الأسنان بأحدث التقنيات، من يد أطباء
-                  متخصصين ذوي خبرة.
-                </p>
+                <h3 data-i18n="s2-title">Médecine Dentaire & Chirurgie</h3>
+                <p data-i18n="s2-desc">Services d'orthodontie, de soin et d'esthétique dentaire avec des technologies récentes et des spécialistes expérimentés.</p>
                 <ul className="service-features">
-                  <li>
-                    <i className="fa-solid fa-check"></i> علاج وحشوات بدون ألم
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> تجميل الأسنان
-                    والابتسامة
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> زراعة الأسنان الفورية
-                  </li>
+                  <li data-i18n="s2-f1"><i className="fa-solid fa-check"></i> Soins et obturations sans douleur</li>
+                  <li data-i18n="s2-f2"><i className="fa-solid fa-check"></i> Esthétique dentaire et du sourire</li>
+                  <li data-i18n="s2-f3"><i className="fa-solid fa-check"></i> Implantologie dentaire</li>
                 </ul>
               </div>
             </div>
@@ -442,21 +370,12 @@ export default function HomePage() {
                 <div className="service-icon">
                   <i className="fa-solid fa-baby"></i>
                 </div>
-                <h3>النساء والتوليد</h3>
-                <p>
-                  متابعة شاملة للحمل، ولادة آمنة، ورعاية ما بعد الولادة في بيئة
-                  مريحة وآمنة.
-                </p>
+                <h3 data-i18n="s3-title">Gynécologie & Obstétrique</h3>
+                <p data-i18n="s3-desc">Suivi complet de la grossesse, accouchement sécurisé et soins post-partum dans un environnement confortable.</p>
                 <ul className="service-features">
-                  <li>
-                    <i className="fa-solid fa-check"></i> متابعة دورية للحامل
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> ولادة طبيعية وقيصرية
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> رعاية ما بعد الوضع
-                  </li>
+                  <li data-i18n="s3-f1"><i className="fa-solid fa-check"></i> Suivi prénatal régulier</li>
+                  <li data-i18n="s3-f2"><i className="fa-solid fa-check"></i> Accouchement naturel et césarienne</li>
+                  <li data-i18n="s3-f3"><i className="fa-solid fa-check"></i> Soins gynécologiques post-partum</li>
                 </ul>
               </div>
             </div>
@@ -471,21 +390,12 @@ export default function HomePage() {
                 <div className="service-icon">
                   <i className="fa-solid fa-child-reaching"></i>
                 </div>
-                <h3>طب الأطفال</h3>
-                <p>
-                  رعاية متكاملة وشاملة لصحة أطفالك، من الولادة إلى المراهقة،
-                  بأيدي أطباء متفانين.
-                </p>
+                <h3 data-i18n="s4-title">Pédiatrie</h3>
+                <p data-i18n="s4-desc">Soins complets pour la santé de vos enfants, de la naissance à l'adolescence, dispensés par des pédiatres dévoués.</p>
                 <ul className="service-features">
-                  <li>
-                    <i className="fa-solid fa-check"></i> متابعة النمو والتطور
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> التطعيمات والوقاية
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> علاج أمراض الأطفال
-                  </li>
+                  <li data-i18n="s4-f1"><i className="fa-solid fa-check"></i> Suivi de la croissance et du développement</li>
+                  <li data-i18n="s4-f2"><i className="fa-solid fa-check"></i> Vaccination et prévention</li>
+                  <li data-i18n="s4-f3"><i className="fa-solid fa-check"></i> Traitement des maladies infantiles</li>
                 </ul>
               </div>
             </div>
@@ -500,22 +410,12 @@ export default function HomePage() {
                 <div className="service-icon">
                   <i className="fa-solid fa-flask-vial"></i>
                 </div>
-                <h3>المخبر والتحاليل الطبية</h3>
-                <p>
-                  مخبر حديث ومجهز بأحدث الأجهزة، يوفر نتائج دقيقة وسريعة لجميع
-                  أنواع التحاليل.
-                </p>
+                <h3 data-i18n="s5-title">Laboratoire d'Analyses Médicales</h3>
+                <p data-i18n="s5-desc">Laboratoire moderne équipé d'appareils de pointe offrant des résultats rapides et précis pour toutes les analyses.</p>
                 <ul className="service-features">
-                  <li>
-                    <i className="fa-solid fa-check"></i> تحاليل دم وبول شاملة
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> تحاليل البكتيريولوجيا
-                    (Anapath)
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> نتائج سريعة ودقيقة
-                  </li>
+                  <li data-i18n="s5-f1"><i className="fa-solid fa-check"></i> Bilan sanguin et urinaire complet</li>
+                  <li data-i18n="s5-f2"><i className="fa-solid fa-check"></i> Analyses bactériologiques et d'anapath</li>
+                  <li data-i18n="s5-f3"><i className="fa-solid fa-check"></i> Résultats fiables et rapides</li>
                 </ul>
               </div>
             </div>
@@ -530,22 +430,12 @@ export default function HomePage() {
                 <div className="service-icon">
                   <i className="fa-solid fa-x-ray"></i>
                 </div>
-                <h3>الأشعة والتصوير الطبي</h3>
-                <p>
-                  قسم أشعة مجهز بالكامل يوفر جميع أنواع التصوير الطبي اللازمة
-                  للتشخيص الدقيق.
-                </p>
+                <h3 data-i18n="s6-title">Imagerie Médicale & Radiologie</h3>
+                <p data-i18n="s6-desc">Service d'imagerie entièrement équipé proposant tous les examens nécessaires à un diagnostic précis.</p>
                 <ul className="service-features">
-                  <li>
-                    <i className="fa-solid fa-check"></i> أشعة سينية (Radio)
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> الموجات فوق الصوتية
-                    (Echo)
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-check"></i> تصوير متخصص
-                  </li>
+                  <li data-i18n="s6-f1"><i className="fa-solid fa-check"></i> Radiographie numérique (Radio)</li>
+                  <li data-i18n="s6-f2"><i className="fa-solid fa-check"></i> Échographie (Echo 3D/4D)</li>
+                  <li data-i18n="s6-f3"><i className="fa-solid fa-check"></i> Examens spécialisés</li>
                 </ul>
               </div>
             </div>
@@ -559,19 +449,9 @@ export default function HomePage() {
       <section className="whyus section" id="whyus">
         <div className="container whyus-grid">
           <div className="whyus-content animate" data-animation="slide-right">
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> لماذا تختارنا؟
-            </span>
-            <h2 className="section-title">
-              ما يجعلنا الخيار
-              <br />
-              <span className="text-teal">الأول في برج منايل</span>
-            </h2>
-            <p className="whyus-desc">
-              نحن لا نقدم مجرد خدمة طبية — نحن نبني معك علاقة ثقة وشراكة في
-              الصحة. ما يميزنا هو التزامنا الثابت بالجودة والتطوير المستمر، حتى في
-              مواجهة التحديات.
-            </p>
+            <span className="label-tag" data-i18n="why-tag"><i className="fa-solid fa-circle-dot"></i> Pourquoi nous choisir ?</span>
+            <h2 className="section-title" data-i18n="why-title">Ce qui fait de nous le premier choix <br /><span className="text-teal">à Bordj Menaïel</span></h2>
+            <p className="whyus-desc" data-i18n="why-desc">Nous ne proposons pas uniquement un service médical : nous bâtissons avec vous une relation de confiance et de partenariat pour votre santé. Notre engagement envers la qualité et l'amélioration continue fait notre force.</p>
 
             <div className="features-list">
               <div
@@ -583,11 +463,8 @@ export default function HomePage() {
                   <i className="fa-solid fa-clock-rotate-left"></i>
                 </div>
                 <div className="feature-body">
-                  <h4>استعجالات 24/7 بلا انقطاع</h4>
-                  <p>
-                    طاقم طبي متواجد على مدار الساعة للتعامل مع أي حالة طارئة
-                    باحترافية تامة.
-                  </p>
+                  <h4 data-i18n="w1-title">Urgences 24/7 sans interruption</h4>
+                  <p data-i18n="w1-desc">Équipe médicale disponible 24h/24 pour prendre en charge toute urgence avec professionnalisme.</p>
                 </div>
               </div>
               <div
@@ -599,11 +476,8 @@ export default function HomePage() {
                   <i className="fa-solid fa-microscope"></i>
                 </div>
                 <div className="feature-body">
-                  <h4>أحدث الأجهزة التشخيصية</h4>
-                  <p>
-                    نستثمر باستمرار في أجهزة طبية حديثة لضمان دقة التشخيص وجودة
-                    العلاج.
-                  </p>
+                  <h4 data-i18n="w2-title">Équipements et technologies modernes</h4>
+                  <p data-i18n="w2-desc">Nous investissons dans des appareils de diagnostic de pointe pour garantir des résultats précis.</p>
                 </div>
               </div>
               <div
@@ -615,11 +489,8 @@ export default function HomePage() {
                   <i className="fa-solid fa-person-walking-luggage"></i>
                 </div>
                 <div className="feature-body">
-                  <h4>تحسين مستمر في الخدمة</h4>
-                  <p>
-                    نأخذ كل ملاحظة مرضانا بجدية تامة ونعمل على تطوير خدماتنا
-                    باستمرار.
-                  </p>
+                  <h4 data-i18n="w3-title">Médecins spécialisés et expérimentés</h4>
+                  <p data-i18n="w3-desc">Une équipe médicale hautement qualifiée dans diverses disciplines à votre service.</p>
                 </div>
               </div>
               <div
@@ -631,11 +502,8 @@ export default function HomePage() {
                   <i className="fa-solid fa-shield-virus"></i>
                 </div>
                 <div className="feature-body">
-                  <h4>بيئة نظيفة ومعقمة</h4>
-                  <p>
-                    نلتزم بأعلى معايير التعقيم والنظافة لضمان سلامة مرضانا
-                    وفريقنا.
-                  </p>
+                  <h4 data-i18n="w4-title">Environnement propre et confortable</h4>
+                  <p data-i18n="w4-desc">Une clinique conçue selon les plus hauts standards d'hygiène pour assurer votre bien-être.</p>
                 </div>
               </div>
             </div>
@@ -652,11 +520,11 @@ export default function HomePage() {
             <div className="whyus-cta-card">
               <i className="fa-solid fa-headset"></i>
               <div>
-                <strong>هل لديك سؤال؟</strong>
-                <span>فريقنا في خدمتك دائماً</span>
+                <strong data-i18n="whyus-cta-q">Vous avez une question ?</strong>
+                <span data-i18n="whyus-cta-sub">Notre équipe est toujours à votre service</span>
               </div>
-              <a href="#contact" className="btn btn-sm-primary">
-                تواصل معنا
+              <a href="#contact" className="btn btn-sm-primary" data-i18n="nav-contact">
+                Contact
               </a>
             </div>
           </div>
@@ -672,16 +540,9 @@ export default function HomePage() {
             className="section-header text-center animate"
             data-animation="fade-up"
           >
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> فريقنا الطبي
-            </span>
-            <h2 className="section-title">
-              أطباء متخصصون <span className="text-teal">في خدمتك</span>
-            </h2>
-            <p className="section-lead">
-              يضم فريق الرويبح الطبي نخبة من الأطباء المتخصصين ذوي الخبرة
-              والكفاءة العالية.
-            </p>
+            <span className="label-tag" data-i18n="doctors-tag"><i className="fa-solid fa-circle-dot"></i> Équipe Médicale</span>
+            <h2 className="section-title" data-i18n="doctors-title">Des médecins spécialisés <span className="text-teal">à votre service</span></h2>
+            <p className="section-lead" data-i18n="doctors-lead">Notre équipe se compose de médecins et spécialistes expérimentés et dévoués à votre santé.</p>
           </div>
 
           <div className="doctors-grid">
@@ -696,14 +557,12 @@ export default function HomePage() {
                   alt="طبيب متخصص"
                 />
                 <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white">
-                    احجز موعداً
-                  </a>
+                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
               <div className="doctor-info">
-                <h4>د. مختص في الطب الداخلي</h4>
-                <p>طب داخلي — تجربة 10+ سنوات</p>
+                <h4 data-i18n="d1-name">Dr. Rouibah</h4>
+                <p data-i18n="d1-role">Médecin Directeur & Généraliste</p>
                 <div className="doctor-socials">
                   <span>
                     <i className="fa-solid fa-stethoscope"></i>
@@ -723,14 +582,12 @@ export default function HomePage() {
                   alt="طبيبة أخصائية"
                 />
                 <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white">
-                    احجز موعداً
-                  </a>
+                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
               <div className="doctor-info">
-                <h4>د. أخصائية في النساء والتوليد</h4>
-                <p>نساء وتوليد — خبرة ومتابعة متميزة</p>
+                <h4 data-i18n="d3-name">Dr. Gynécologue Spécialiste</h4>
+                <p data-i18n="d3-role">Spécialiste en Gynécologie-Obstétrique</p>
                 <div className="doctor-socials">
                   <span>
                     <i className="fa-solid fa-heart-pulse"></i>
@@ -750,14 +607,12 @@ export default function HomePage() {
                   alt="طبيب أطفال"
                 />
                 <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white">
-                    احجز موعداً
-                  </a>
+                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
               <div className="doctor-info">
-                <h4>د. أخصائي في طب الأطفال</h4>
-                <p>طب الأطفال — رعاية ودافئة</p>
+                <h4 data-i18n="d2-name">Dr. Pédiatre Spécialiste</h4>
+                <p data-i18n="d2-role">Spécialiste en Pédiatrie</p>
                 <div className="doctor-socials">
                   <span>
                     <i className="fa-solid fa-child"></i>
@@ -777,14 +632,12 @@ export default function HomePage() {
                   alt="طبيب أسنان"
                 />
                 <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white">
-                    احجز موعداً
-                  </a>
+                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
               <div className="doctor-info">
-                <h4>د. جراح أسنان متخصص</h4>
-                <p>جراحة وتجميل الأسنان</p>
+                <h4 data-i18n="d4-name">Équipe d'Urgences</h4>
+                <p data-i18n="d4-role">Médecins Urgentistes & Infirmiers</p>
                 <div className="doctor-socials">
                   <span>
                     <i className="fa-solid fa-tooth"></i>
@@ -805,15 +658,9 @@ export default function HomePage() {
             className="section-header text-center animate"
             data-animation="fade-up"
           >
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> معرض الصور
-            </span>
-            <h2 className="section-title">
-              داخل <span className="text-teal">عيادة الرويبح</span>
-            </h2>
-            <p className="section-lead">
-              نوفر بيئة طبية حديثة ومريحة تليق بكل مريض.
-            </p>
+            <span className="label-tag" data-i18n="gallery-tag"><i className="fa-solid fa-circle-dot"></i> Galerie de la Clinique</span>
+            <h2 className="section-title" data-i18n="gallery-title">Découvrez notre clinique <span className="text-teal">en images</span></h2>
+            <p className="section-lead" data-i18n="gallery-lead">Nous offrons un cadre médical moderne et confortable, digne de chaque patient.</p>
           </div>
 
           <div className="gallery-grid">
@@ -826,152 +673,51 @@ export default function HomePage() {
                 src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnY2v8ZLeGFxF3wVFczcIG2l61GOHeUnXlRpkO6ln8lDrsYmhysUKcqge33oRDDrrdKRtUXXdCm6Oyxm7tsyX5B69wKZEZhsOZqGlPSwlbbE02osfsDLv0k4qhKaNdRYthe4sK0=s800"
                 alt="صورة من العيادة 1"
               />
-              <div className="gallery-caption">
-                تحليل الصورة 1: مرفق طبي معتمد 🩺
-              </div>
+              <div className="gallery-caption">Photo 1 : Établissement médical certifié 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="50"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm2QZJ2uo0pVJykrphmJS9rmSzSXgCTHCKAbeQt_cWMozJjFUaM8P-6pGUghC_cSIn-MFHwTJupsing4KTjGMvhoeIswrZU_ioHyCHCB0PcHWikSbAzwti0o8TeDM2x7DsFCq9o=s800"
-                alt="صورة من العيادة 2"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 2: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm2QZJ2uo0pVJykrphmJS9rmSzSXgCTHCKAbeQt_cWMozJjFUaM8P-6pGUghC_cSIn-MFHwTJupsing4KTjGMvhoeIswrZU_ioHyCHCB0PcHWikSbAzwti0o8TeDM2x7DsFCq9o=s800" alt="Clinique Rouibah 2" />
+              <div className="gallery-caption">Photo 2 : Équipements modernes 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="100"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYI0AtSy9FHtA1Wq76X02Dzb7DE4_FxuOq6GfOUqnDc1v4GSul7Bn0PBhhk-1dqziq3Qlxt9CmsLFFvS4uNcP2ODZNgZOl9N0RsZgQxBpRrrrDe1gfl2vnIwwvYeEPIrgCGnkH=s800"
-                alt="صورة من العيادة 3"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 3: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYI0AtSy9FHtA1Wq76X02Dzb7DE4_FxuOq6GfOUqnDc1v4GSul7Bn0PBhhk-1dqziq3Qlxt9CmsLFFvS4uNcP2ODZNgZOl9N0RsZgQxBpRrrrDe1gfl2vnIwwvYeEPIrgCGnkH=s800" alt="Clinique Rouibah 3" />
+              <div className="gallery-caption">Photo 3 : Salles de soins 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="150"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkENYUE4M9aIsFiiP-4oRlnGf2uZXG2VFILoUnnOTldVudd-BkOCgrlsY2pifltr-BnPmNOSJhjq4TCYGC-_LZwomXZo-1LJ3Gvxn-_fAbQxcEi0LtuhA-bJ5RI8ZMLoTchwuzgxR7ELt8=s800"
-                alt="صورة من العيادة 4"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 4: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkENYUE4M9aIsFiiP-4oRlnGf2uZXG2VFILoUnnOTldVudd-BkOCgrlsY2pifltr-BnPmNOSJhjq4TCYGC-_LZwomXZo-1LJ3Gvxn-_fAbQxcEi0LtuhA-bJ5RI8ZMLoTchwuzgxR7ELt8=s800" alt="Clinique Rouibah 4" />
+              <div className="gallery-caption">Photo 4 : Environnement confortable 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="0"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkFgnHXHPIjqaHHA01zQl3Ry5hrqmrU-rbD-FcJ2z0_4d607PF0IVleuMaBx5GvsS0WJ4gPG_NDGgZerSc_wVdbi9rgji7fDzFJTaMBJG1He-7KFw04jhk1WaupJj-KcdqjMFGEUzepZT2=s800"
-                alt="صورة من العيادة 5"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 5: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="0">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkFgnHXHPIjqaHHA01zQl3Ry5hrqmrU-rbD-FcJ2z0_4d607PF0IVleuMaBx5GvsS0WJ4gPG_NDGgZerSc_wVdbi9rgji7fDzFJTaMBJG1He-7KFw04jhk1WaupJj-KcdqjMFGEUzepZT2=s800" alt="Clinique Rouibah 5" />
+              <div className="gallery-caption">Photo 5 : Accueil des patients 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="50"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCeHg3YTAuEB4nIDm2432kvaUSJ9ardDBbI_3trnUf4l_ySJqxeeDyuAgYsTaOiMKezQaqPLGMNAAiOv-rAaatvxsensKCtW00f6yBowUzcPCjs3Hb6Q8mtw2moZRCPpK_BtsAkFI7Q6D6=s800"
-                alt="صورة من العيادة 6"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 6: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCeHg3YTAuEB4nIDm2432kvaUSJ9ardDBbI_3trnUf4l_ySJqxeeDyuAgYsTaOiMKezQaqPLGMNAAiOv-rAaatvxsensKCtW00f6yBowUzcPCjs3Hb6Q8mtw2moZRCPpK_BtsAkFI7Q6D6=s800" alt="Clinique Rouibah 6" />
+              <div className="gallery-caption">Photo 6 : Laboratoire d'analyses 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="100"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkLHsDHM3pVxEgKWJJ40bHvEvhRPmZJHKPG0m2-TkMsDsAidDSCXjeb8euQAMLq-AW1eI_gwbUNa7qAYO1-z5VQVA72s9DLcizEwozXYKrloTkJ0f_C0KaMbfjPwXeutG0Fxwwu5SnojMHQ=s800"
-                alt="صورة من العيادة 7"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 7: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkLHsDHM3pVxEgKWJJ40bHvEvhRPmZJHKPG0m2-TkMsDsAidDSCXjeb8euQAMLq-AW1eI_gwbUNa7qAYO1-z5VQVA72s9DLcizEwozXYKrloTkJ0f_C0KaMbfjPwXeutG0Fxwwu5SnojMHQ=s800" alt="Clinique Rouibah 7" />
+              <div className="gallery-caption">Photo 7 : Service de radiologie 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="150"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl5GyiNZ5hnR3IwdJE4e7B6WoZ4XHwglYPvyXskST789xcrAtIDUIQiiX_dixKAvgxy83TdpxmQgyJdn3TUeMIt6E1tmU5681U52Wdqnc91YBRbTiC_g5xQBhjMFiS829ycREQSAQ=s800"
-                alt="صورة من العيادة 8"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 8: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl5GyiNZ5hnR3IwdJE4e7B6WoZ4XHwglYPvyXskST789xcrAtIDUIQiiX_dixKAvgxy83TdpxmQgyJdn3TUeMIt6E1tmU5681U52Wdqnc91YBRbTiC_g5xQBhjMFiS829ycREQSAQ=s800" alt="Clinique Rouibah 8" />
+              <div className="gallery-caption">Photo 8 : Bloc opératoire 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="0"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkjIBH6yFIPAQp-R3NgBkBVDnYZdcf5kBdsoyTsJfjVd7Mes1Lb7qrWaz4vx014P9ExTumxfKCs9Vn6BWUbzB7YdGn4Y2mLuwmLDl07TI88g3EryctgfwT-pahUTH469uDzyZ7PXQ=s800"
-                alt="صورة من العيادة 9"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 9: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="0">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkjIBH6yFIPAQp-R3NgBkBVDnYZdcf5kBdsoyTsJfjVd7Mes1Lb7qrWaz4vx014P9ExTumxfKCs9Vn6BWUbzB7YdGn4Y2mLuwmLDl07TI88g3EryctgfwT-pahUTH469uDzyZ7PXQ=s800" alt="Clinique Rouibah 9" />
+              <div className="gallery-caption">Photo 9 : Salle d'attente 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="50"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkXtfQN9n235zGpo-4bYL3SzKRFIbXhcAP8Ii7ZaGd4kiWs8atqMp_TDDIn36HoeE1idu00D_k8Vj_yJnNWA3XTgva6Yo2_vWhRBks5iukSW_6adKpDv5paFjbxVblc2nHx5bMLYA=s800"
-                alt="صورة من العيادة 10"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 10: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkXtfQN9n235zGpo-4bYL3SzKRFIbXhcAP8Ii7ZaGd4kiWs8atqMp_TDDIn36HoeE1idu00D_k8Vj_yJnNWA3XTgva6Yo2_vWhRBks5iukSW_6adKpDv5paFjbxVblc2nHx5bMLYA=s800" alt="Clinique Rouibah 10" />
+              <div className="gallery-caption">Photo 10 : Cabinets de consultation 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="100"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxhMxEI73qXF1tzV38JCxDut08mRkioYRgJGYoZh_9DbDWXE34bcHyv53WU-2cOG6P8XOQkgJIA3AraQD2hF63-OgoDgeoj1iiX_dz_5UxUkqathaDssnDvuav5e3uTSElSwNZs6zxVFgP=s800"
-                alt="صورة من العيادة 11"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 11: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxhMxEI73qXF1tzV38JCxDut08mRkioYRgJGYoZh_9DbDWXE34bcHyv53WU-2cOG6P8XOQkgJIA3AraQD2hF63-OgoDgeoj1iiX_dz_5UxUkqathaDssnDvuav5e3uTSElSwNZs6zxVFgP=s800" alt="Clinique Rouibah 11" />
+              <div className="gallery-caption">Photo 11 : Service des urgences 🩺</div>
             </div>
-            <div
-              className="gallery-item animate"
-              data-animation="fade-up"
-              data-delay="150"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0FwP1HDZP6Ss9mGRJt79ayhFJVFP0ztnyTZi-76NOEAcKo9pVOVFgn6lUPh7F9htkbUwlVZxMeVzcDJ3AnZW4DUOO8fMIoc1LronwL9Jbng556rUKzQ7gUZcdFxdIJq4In0w=s800"
-                alt="صورة من العيادة 12"
-              />
-              <div className="gallery-caption">
-                تحليل الصورة 12: مرفق طبي معتمد 🩺
-              </div>
+            <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0FwP1HDZP6Ss9mGRJt79ayhFJVFP0ztnyTZi-76NOEAcKo9pVOVFgn6lUPh7F9htkbUwlVZxMeVzcDJ3AnZW4DUOO8fMIoc1LronwL9Jbng556rUKzQ7gUZcdFxdIJq4In0w=s800" alt="Clinique Rouibah 12" />
+              <div className="gallery-caption">Photo 12 : Infrastructure médicale 🩺</div>
             </div>
           </div>
         </div>
@@ -986,20 +732,10 @@ export default function HomePage() {
             className="section-header text-center animate"
             data-animation="fade-up"
           >
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> آراء مرضانا
-            </span>
-            <h2 className="section-title">
-              ماذا قالوا عنّا <span className="text-teal">على Google?</span>
-            </h2>
-            <p className="section-lead">
-              تقييمات حقيقية من مرضانا على Google Maps — ثقتهم هي وسام شرفنا.
-            </p>
-            <div
-              className="overall-rating animate"
-              data-animation="fade-up"
-              data-delay="100"
-            >
+            <span className="label-tag" data-i18n="testi-tag"><i className="fa-solid fa-circle-dot"></i> Avis Patients</span>
+            <h2 className="section-title" data-i18n="testi-title">Ce que disent nos patients <span className="text-teal">sur la clinique</span></h2>
+            <p className="section-lead" data-i18n="testi-lead">Avis authentiques de nos patients sur Google Maps — leur confiance est notre plus grande récompense.</p>
+            <div className="overall-rating animate" data-animation="fade-up" data-delay="100">
               <div className="rating-score">3.7</div>
               <div className="rating-details">
                 <div className="stars-row">
@@ -1009,20 +745,10 @@ export default function HomePage() {
                   <i className="fa-solid fa-star"></i>
                   <i className="fa-regular fa-star"></i>
                 </div>
-                <p>
-                  بناءً على <strong>31 تقييم</strong> على Google Maps
-                </p>
-                <a
-                  href="https://www.google.com/maps/place/Clinique+Rouibah/@36.7404707,3.7351859,17z"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="google-link"
-                >
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/24px-Google_%22G%22_Logo.svg.png"
-                    alt="Google"
-                  />{" "}
-                  قيّمنا على Google
+                <p data-i18n="testi-rating-count">Basé sur <strong>31 avis</strong> sur Google Maps</p>
+                <a href="https://www.google.com/maps/place/Clinique+Rouibah/@36.7404707,3.7351859,17z" target="_blank" rel="noreferrer" className="google-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/24px-Google_%22G%22_Logo.svg.png" alt="Google" />{" "}
+                  <span data-i18n="testi-rate-btn">Nous évaluer sur Google</span>
                 </a>
               </div>
             </div>
@@ -1063,10 +789,7 @@ export default function HomePage() {
                 patients."
               </blockquote>
               <div className="review-translation">
-                🌟 ترجمة: "أعرب عن امتناني العميق لإحدى الطبيبات الرائعات في قسم
-                الطب الداخلي بعيادة الرويبح. أبدت كفاءة وتفانياً استثنائيين في
-                رعايتي. لم تكتفِ بعلاجي فحسب، بل حرصت على رفاهيتي الجسدية
-                والنفسية بلطف كبير وصبر."
+                🌟 Review from Google Maps — Clinique Rouibah, Bordj Menaïel
               </div>
             </div>
 
@@ -1106,8 +829,7 @@ export default function HomePage() {
                 véritables héros de l'ombre !"
               </blockquote>
               <div className="review-translation">
-                🌟 ترجمة: "بارك الله فيكم. عنايتكم وتفانيكم استثنائيان حقاً.
-                أنتم مصدر فخر وشرف لنا وللمرضى — أبطال حقيقيون!"
+                🌟 Review from Google Maps — Clinique Rouibah, Bordj Menaïel
               </div>
             </div>
 
@@ -1149,14 +871,11 @@ export default function HomePage() {
                 professionnalisme."
               </blockquote>
               <div className="review-translation">
-                🌟 ترجمة: "العيادة ما شاء الله لا تزال تتحسن باستمرار. رغم الظروف
-                الصعبة للمنطقة، تمكنتم من التكيف وتقديم رعاية ممتازة. دعمكم
-                الثابت لنا وللمرضى يشهد على احترافيتكم العالية."
+                🌟 Review from Google Maps — Clinique Rouibah, Bordj Menaïel
               </div>
               <div className="owner-reply">
                 <i className="fa-solid fa-reply"></i>
-                <strong>رد عيادة الرويبح:</strong> "بارك الله فيكم. نتمنى
-                التوفيق والسداد لكم وللجميع."
+                <strong data-i18n="clinic-reply-label">Réponse de la Clinique Rouibah :</strong> <span data-i18n="clinic-reply-3">"Que Dieu vous bénisse. Nous vous souhaitons bonne santé à tous."</span>
               </div>
             </div>
 
@@ -1194,13 +913,11 @@ export default function HomePage() {
                 compétent. Merci pour votre sérieux."
               </blockquote>
               <div className="review-translation">
-                🌟 ترجمة: "عيادة جيدة جداً، الموظفون ودودون والطبيب كفء. شكراً
-                على جدّيتكم."
+                🌟 Review from Google Maps — Clinique Rouibah, Bordj Menaïel
               </div>
               <div className="owner-reply">
                 <i className="fa-solid fa-reply"></i>
-                <strong>رد عيادة الرويبح:</strong> "شكراً جزيلاً لكم مسبقاً،
-                حضراتكم."
+                <strong data-i18n="clinic-reply-label">Réponse de la Clinique Rouibah :</strong> <span data-i18n="clinic-reply-4">"Merci infiniment pour votre confiance."</span>
               </div>
             </div>
 
@@ -1238,13 +955,11 @@ export default function HomePage() {
                 charge est rapide. Le service Anapath est très bien."
               </blockquote>
               <div className="review-translation">
-                🌟 ترجمة: "الطاقم جاد ومنتبه للمرضى، والرعاية سريعة. قسم الـ
-                Anapath (التحاليل النسيجية) ممتاز."
+                🌟 Review from Google Maps — Clinique Rouibah, Bordj Menaïel
               </div>
               <div className="owner-reply">
                 <i className="fa-solid fa-reply"></i>
-                <strong>رد عيادة الرويبح:</strong> "حفظكم الله وأتم عليكم نعمه،
-                وشفى جميع المرضى. شكراً جزيلاً."
+                <strong data-i18n="clinic-reply-label">Réponse de la Clinique Rouibah :</strong> <span data-i18n="clinic-reply-5">"Que Dieu vous garde. Nous souhaitons la guérison à tous les patients. Merci beaucoup."</span>
               </div>
             </div>
 
@@ -1257,19 +972,11 @@ export default function HomePage() {
               <div className="commitment-icon">
                 <i className="fa-solid fa-handshake-angle"></i>
               </div>
-              <h3>التزامنا نحوك</h3>
-              <p>
-                نأخذ كل رأي وكل تعليق بجدية تامة. ردودنا الفورية على كل تقييم
-                يعكس التزامنا الراسخ بتحسين خدماتنا لنلبّي توقعاتكم دائماً.
-              </p>
-              <a
-                href="https://www.google.com/maps/place/Clinique+Rouibah/@36.7404707,3.7351859,17z"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-teal"
-              >
+              <h3 data-i18n="commit-title">Notre engagement envers vous</h3>
+              <p data-i18n="commit-desc">Nous prenons chaque avis et commentaire très au sérieux. Nos réponses immédiates à chaque évaluation témoignent de notre engagement constant à améliorer nos services pour répondre à vos attentes.</p>
+              <a href="https://www.google.com/maps/place/Clinique+Rouibah/@36.7404707,3.7351859,17z" target="_blank" rel="noreferrer" className="btn btn-outline-teal">
                 <i className="fa-brands fa-google"></i>
-                اقرأ كل التقييمات
+                <span data-i18n="commit-btn">Lire tous les avis</span>
               </a>
             </div>
           </div>
@@ -1285,80 +992,37 @@ export default function HomePage() {
             className="section-header text-center animate"
             data-animation="fade-up"
           >
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> كيف يعمل النظام؟
-            </span>
-            <h2 className="section-title">
-              أربع خطوات بسيطة{" "}
-              <span className="text-teal">للحصول على رعايتك</span>
-            </h2>
+            <span className="label-tag" data-i18n="process-tag"><i className="fa-solid fa-circle-dot"></i> Comment ça marche ?</span>
+            <h2 className="section-title" data-i18n="process-title">Quatre étapes simples <span className="text-teal">pour obtenir vos soins</span></h2>
           </div>
 
           <div className="process-steps">
-            <div
-              className="process-step animate"
-              data-animation="fade-up"
-              data-delay="0"
-            >
+            <div className="process-step animate" data-animation="fade-up" data-delay="0">
               <div className="step-number">01</div>
-              <div className="step-icon">
-                <i className="fa-solid fa-calendar-days"></i>
-              </div>
-              <h4>احجز موعدك</h4>
-              <p>
-                تواصل معنا عبر الهاتف أو نموذج الحجز أو واتساب لتحديد موعدك.
-              </p>
+              <div className="step-icon"><i className="fa-solid fa-calendar-days"></i></div>
+              <h4 data-i18n="step1-title">Prenez rendez-vous</h4>
+              <p data-i18n="step1-desc">Contactez-nous par téléphone, formulaire en ligne ou WhatsApp pour fixer votre rendez-vous.</p>
             </div>
-            <div className="process-arrow">
-              <i className="fa-solid fa-arrow-left"></i>
-            </div>
-            <div
-              className="process-step animate"
-              data-animation="fade-up"
-              data-delay="100"
-            >
+            <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
+            <div className="process-step animate" data-animation="fade-up" data-delay="100">
               <div className="step-number">02</div>
-              <div className="step-icon">
-                <i className="fa-solid fa-user-clock"></i>
-              </div>
-              <h4>استقبال الطبيب</h4>
-              <p>
-                في الموعد المحدد، يستقبلك الطبيب المتخصص للفحص والتقييم الأولي.
-              </p>
+              <div className="step-icon"><i className="fa-solid fa-user-clock"></i></div>
+              <h4 data-i18n="step2-title">Accueil par le médecin</h4>
+              <p data-i18n="step2-desc">À l'heure convenue, le spécialiste vous reçoit pour l'examen et l'évaluation initiale.</p>
             </div>
-            <div className="process-arrow">
-              <i className="fa-solid fa-arrow-left"></i>
-            </div>
-            <div
-              className="process-step animate"
-              data-animation="fade-up"
-              data-delay="200"
-            >
+            <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
+            <div className="process-step animate" data-animation="fade-up" data-delay="200">
               <div className="step-number">03</div>
-              <div className="step-icon">
-                <i className="fa-solid fa-magnifying-glass-chart"></i>
-              </div>
-              <h4>التشخيص الدقيق</h4>
-              <p>
-                يتم إجراء التحاليل والفحوصات اللازمة للوصول لتشخيص دقيق وصحيح.
-              </p>
+              <div className="step-icon"><i className="fa-solid fa-magnifying-glass-chart"></i></div>
+              <h4 data-i18n="step3-title">Diagnostic précis</h4>
+              <p data-i18n="step3-desc">Les analyses et examens nécessaires sont réalisés pour établir un diagnostic exact et fiable.</p>
             </div>
-            <div className="process-arrow">
-              <i className="fa-solid fa-arrow-left"></i>
-            </div>
-            <div
-              className="process-step animate"
-              data-animation="fade-up"
-              data-delay="300"
-            >
+            <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
+            <div className="process-step animate" data-animation="fade-up" data-delay="300">
               <div className="step-number">04</div>
-              <div className="step-icon">
-                <i className="fa-solid fa-notes-medical"></i>
-              </div>
-              <h4>خطة العلاج</h4>
-              <p>
-                يضع لك الطبيب خطة علاجية واضحة مع متابعة دورية حتى شفاءك التام.
-              </p>
+              <div className="step-icon"><i className="fa-solid fa-notes-medical"></i></div>
+              <h4 data-i18n="step4-title">Plan de traitement</h4>
+              <p data-i18n="step4-desc">Le médecin établit un plan thérapeutique clair avec un suivi régulier jusqu'à votre rétablissement complet.</p>
             </div>
           </div>
         </div>
@@ -1373,12 +1037,8 @@ export default function HomePage() {
             className="section-header text-center animate"
             data-animation="fade-up"
           >
-            <span className="label-tag">
-              <i className="fa-solid fa-circle-dot"></i> تواصل معنا
-            </span>
-            <h2 className="section-title">
-              نحن في <span className="text-teal">برج منايل</span> — تعال إلينا
-            </h2>
+            <span className="label-tag" data-i18n="contact-tag"><i className="fa-solid fa-circle-dot"></i> Contactez-nous</span>
+            <h2 className="section-title" data-i18n="contact-title">Nous sommes à <span className="text-teal">Bordj Menaïel</span> — Venez nous voir</h2>
           </div>
 
           <div className="contact-grid">
@@ -1388,16 +1048,10 @@ export default function HomePage() {
                   <i className="fa-solid fa-location-dot"></i>
                 </div>
                 <div>
-                  <h4>العنوان</h4>
-                  <p>
-                    برج منايل (Bordj Menaiel)
-                    <br />
-                    ولاية بومرداس، الجزائر
-                  </p>
+                  <h4 data-i18n="c-addr-title">Adresse de la Clinique</h4>
+                  <p data-i18n="c-addr-val">Bordj Menaïel, Wilaya de Boumerdès, Algérie</p>
                   <p className="coords">
-                    <small>
-                      خط العرض: 36.7404707 — خط الطول: 3.7351859
-                    </small>
+                    <small>Lat: 36.7404707 — Long: 3.7351859</small>
                   </p>
                 </div>
               </div>
@@ -1406,26 +1060,20 @@ export default function HomePage() {
                   <i className="fa-solid fa-clock"></i>
                 </div>
                 <div>
-                  <h4>ساعات العمل</h4>
+                  <h4 data-i18n="c-hours-title">Heures de travail</h4>
                   <table className="hours-table">
                     <tbody>
                       <tr>
-                        <td>الإثنين – الجمعة</td>
-                        <td>
-                          <span className="open">مفتوح 24/7</span>
-                        </td>
+                        <td data-i18n="hours-weekdays">Lundi – Vendredi</td>
+                        <td><span className="open" data-i18n="hours-open">Ouvert 24/7</span></td>
                       </tr>
                       <tr>
-                        <td>السبت – الأحد</td>
-                        <td>
-                          <span className="open">مفتوح 24/7</span>
-                        </td>
+                        <td data-i18n="hours-weekend">Samedi – Dimanche</td>
+                        <td><span className="open" data-i18n="hours-open">Ouvert 24/7</span></td>
                       </tr>
                       <tr>
-                        <td>الأعياد</td>
-                        <td>
-                          <span className="open">مفتوح 24/7</span>
-                        </td>
+                        <td data-i18n="hours-holidays">Jours fériés</td>
+                        <td><span className="open" data-i18n="hours-open">Ouvert 24/7</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -1436,25 +1084,11 @@ export default function HomePage() {
                   <i className="fa-solid fa-phone"></i>
                 </div>
                 <div>
-                  <h4>وسائل التواصل</h4>
+                  <h4 data-i18n="c-phone-title">Téléphone & Urgences</h4>
                   <div className="contact-channels">
-                    <a href="tel:0559505001" className="channel-btn phone">
-                      <i className="fa-solid fa-phone"></i> اتصل بنا
-                    </a>
-                    <a
-                      href="https://wa.me/213559505001"
-                      className="channel-btn whatsapp"
-                    >
-                      <i className="fa-brands fa-whatsapp"></i> واتساب
-                    </a>
-                    <a
-                      href="https://www.facebook.com/p/Rouibah-Medical-Group-61559585559411/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="channel-btn facebook"
-                    >
-                      <i className="fa-brands fa-facebook-f"></i> Facebook
-                    </a>
+                    <a href="tel:0559505001" className="channel-btn phone" data-i18n="contact-call-btn"><i className="fa-solid fa-phone"></i> Appeler</a>
+                    <a href="https://wa.me/213559505001" className="channel-btn whatsapp" data-i18n="contact-wa-btn"><i className="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://www.facebook.com/p/Rouibah-Medical-Group-61559585559411/" target="_blank" rel="noreferrer" className="channel-btn facebook"><i className="fa-brands fa-facebook-f"></i> Facebook</a>
                   </div>
                 </div>
               </div>
@@ -1472,14 +1106,8 @@ export default function HomePage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <a
-                href="https://www.google.com/maps/place/Clinique+Rouibah/@36.7404707,3.7351859,17z"
-                target="_blank"
-                rel="noreferrer"
-                className="directions-btn"
-              >
-                <i className="fa-solid fa-map-location-dot"></i>
-                احصل على الاتجاهات
+              <a href="https://www.google.com/maps/place/Clinique+Rouibah/@36.7404707,3.7351859,17z" target="_blank" rel="noreferrer" className="directions-btn" data-i18n="directions-btn">
+                <i className="fa-solid fa-map-location-dot"></i> Obtenir l'itinéraire
               </a>
             </div>
           </div>
@@ -1503,109 +1131,64 @@ export default function HomePage() {
               <div className="appt-icon">
                 <i className="fa-solid fa-calendar-check"></i>
               </div>
-              <h2>احجز موعدك الآن</h2>
-              <p>أكمل النموذج وسنتصل بك خلال 24 ساعة لتأكيد موعدك.</p>
+              <h2 data-i18n="form-title">Formulaire de demande de rendez-vous</h2>
+              <p data-i18n="form-sub">Remplissez les informations suivantes pour réserver votre consultation</p>
             </div>
             <form className="appt-form" id="booking-form">
               <div className="form-row-2">
                 <div className="form-field">
-                  <label htmlFor="f-name">
-                    <i className="fa-solid fa-user"></i> الاسم الكامل
-                  </label>
-                  <input
-                    type="text"
-                    id="f-name"
-                    placeholder="مثال: أحمد محمد"
-                    required
-                  />
+                  <label htmlFor="f-name" data-i18n="lbl-name"><i className="fa-solid fa-user"></i> Nom et Prénom *</label>
+                  <input type="text" id="f-name" data-i18n-ph="ph-name" placeholder="Ex: Benali Mohamed" required />
                 </div>
                 <div className="form-field">
-                  <label htmlFor="f-phone">
-                    <i className="fa-solid fa-phone"></i> رقم الهاتف
-                  </label>
-                  <input
-                    type="tel"
-                    id="f-phone"
-                    placeholder="05X XX XX XX"
-                    required
-                  />
+                  <label htmlFor="f-phone" data-i18n="lbl-phone"><i className="fa-solid fa-phone"></i> Numéro de téléphone *</label>
+                  <input type="tel" id="f-phone" data-i18n-ph="ph-phone" placeholder="Ex: 0550 12 34 56" required />
                 </div>
               </div>
               <div className="form-row-2">
                 <div className="form-field">
-                  <label htmlFor="f-service">
-                    <i className="fa-solid fa-stethoscope"></i> التخصص المطلوب
-                  </label>
+                  <label htmlFor="f-service" data-i18n="lbl-service"><i className="fa-solid fa-stethoscope"></i> Spécialité souhaitée *</label>
                   <select id="f-service" defaultValue="" required>
-                    <option value="" disabled>
-                      اختر التخصص
-                    </option>
-                    <option>الطب العام والطوارئ</option>
-                    <option>طب وجراحة الأسنان</option>
-                    <option>طب النساء والتوليد</option>
-                    <option>طب الأطفال</option>
-                    <option>التحاليل الطبية</option>
-                    <option>الأشعة والتصوير الطبي</option>
+                    <option value="" disabled data-i18n="opt-select">-- Choisissez un service --</option>
+                    <option value="Médecine Générale" data-i18n="opt-s1">Médecine Générale / Urgences</option>
+                    <option value="Dentiste" data-i18n="opt-s2">Dentiste / Chirurgie dentaire</option>
+                    <option value="Gynécologie" data-i18n="opt-s3">Gynécologie & Obstétrique</option>
+                    <option value="Pédiatrie" data-i18n="opt-s4">Pédiatrie</option>
+                    <option value="Laboratoire" data-i18n="opt-s5">Laboratoire d'analyses</option>
+                    <option value="Radiologie" data-i18n="opt-s6">Radiologie / Échographie</option>
                   </select>
                 </div>
                 <div className="form-field">
-                  <label htmlFor="f-date">
-                    <i className="fa-solid fa-calendar"></i> التاريخ المفضل
-                  </label>
+                  <label htmlFor="f-date" data-i18n="lbl-date"><i className="fa-solid fa-calendar"></i> Date souhaitée *</label>
                   <input type="date" id="f-date" required />
                 </div>
               </div>
               <div className="form-field">
-                <label htmlFor="f-message">
-                  <i className="fa-solid fa-comment-medical"></i> وصف مختصر
-                  للحالة (اختياري)
-                </label>
-                <textarea
-                  id="f-message"
-                  rows={4}
-                  placeholder="أذكر لنا أي معلومات تساعدنا على تحضير موعدك..."
-                ></textarea>
+                <label htmlFor="f-message" data-i18n="lbl-notes"><i className="fa-solid fa-comment-medical"></i> Remarques ou symptômes (Optionnel)</label>
+                <textarea id="f-message" rows={4} data-i18n-ph="ph-notes" placeholder="Décrivez brièvement le motif de votre visite..."></textarea>
               </div>
-              <button type="submit" className="btn btn-submit-appt">
-                <i className="fa-solid fa-paper-plane"></i>
-                إرسال طلب الحجز
+              <button type="submit" className="btn btn-submit-appt" data-i18n="btn-submit-apt">
+                <i className="fa-solid fa-paper-plane"></i> Confirmer la demande de rendez-vous
               </button>
-              <p className="form-note">
-                <i className="fa-solid fa-lock"></i> معلوماتك آمنة ومحفوظة — لن
-                تُشارك مع أي طرف ثالث.
-              </p>
+              <p className="form-note" data-i18n="form-privacy"><i className="fa-solid fa-lock"></i> Vos informations sont sécurisées — elles ne seront jamais partagées avec des tiers.</p>
             </form>
           </div>
 
           <div className="appt-info animate" data-animation="slide-left">
-            <h3>لماذا تحجز معنا؟</h3>
+            <h3 data-i18n="appt-why-title">Pourquoi réserver chez nous ?</h3>
             <ul className="appt-benefits">
-              <li>
-                <i className="fa-solid fa-check-circle"></i> تأكيد فوري للموعد
-              </li>
-              <li>
-                <i className="fa-solid fa-check-circle"></i> تذكير قبل الموعد بـ
-                24 ساعة
-              </li>
-              <li>
-                <i className="fa-solid fa-check-circle"></i> طاقم طبي متخصص
-                ينتظرك
-              </li>
-              <li>
-                <i className="fa-solid fa-check-circle"></i> بيئة نظيفة ومريحة
-              </li>
-              <li>
-                <i className="fa-solid fa-check-circle"></i> خدمة ما بعد الزيارة
-              </li>
+              <li data-i18n="appt-b1"><i className="fa-solid fa-check-circle"></i> Confirmation immédiate du rendez-vous</li>
+              <li data-i18n="appt-b2"><i className="fa-solid fa-check-circle"></i> Rappel 24h avant votre rendez-vous</li>
+              <li data-i18n="appt-b3"><i className="fa-solid fa-check-circle"></i> Équipe médicale spécialisée qui vous attend</li>
+              <li data-i18n="appt-b4"><i className="fa-solid fa-check-circle"></i> Environnement propre et confortable</li>
+              <li data-i18n="appt-b5"><i className="fa-solid fa-check-circle"></i> Suivi médical après la visite</li>
             </ul>
             <div className="appt-emergency-box">
               <i className="fa-solid fa-triangle-exclamation"></i>
               <div>
-                <strong>حالة طارئة؟</strong>
-                <p>لا تنتظر — اتصل بنا مباشرة أو تعال للطوارئ على الفور.</p>
-                <a href="tel:0559505001" className="emergency-call-btn">
-                  <i className="fa-solid fa-phone-volume"></i> اتصل الآن
-                </a>
+                <strong data-i18n="emerg-box-title">Urgence médicale ?</strong>
+                <p data-i18n="emerg-box-desc">N'attendez pas — appelez-nous directement ou venez aux urgences immédiatement.</p>
+                <a href="tel:0559505001" className="emergency-call-btn" data-i18n="emerg-btn"><i className="fa-solid fa-phone-volume"></i> Appeler Maintenant</a>
               </div>
             </div>
           </div>
@@ -1628,10 +1211,7 @@ export default function HomePage() {
                   <span className="logo-ar">عيادة الرويبح</span>
                 </div>
               </div>
-              <p>
-                مركز طبي متكامل في برج منايل، نلتزم بتقديم أفضل رعاية طبية لكل
-                مريض، 24 ساعة في اليوم 7 أيام في الأسبوع.
-              </p>
+              <p data-i18n="footer-desc">Groupe Médical Rouibah — Votre centre de santé de référence à Bordj Menaïel. Urgences 24/7, soins de qualité et suivi personnalisé.</p>
               <div className="footer-socials">
                 <a
                   href="https://www.facebook.com/p/Rouibah-Medical-Group-61559585559411/"
@@ -1659,95 +1239,39 @@ export default function HomePage() {
             </div>
 
             <div className="footer-links-col">
-              <h4>روابط سريعة</h4>
+              <h4 data-i18n="footer-quick">Liens Rapides</h4>
               <ul>
-                <li>
-                  <a href="#home">
-                    <i className="fa-solid fa-chevron-left"></i> الرئيسية
-                  </a>
-                </li>
-                <li>
-                  <a href="#about">
-                    <i className="fa-solid fa-chevron-left"></i> من نحن
-                  </a>
-                </li>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> خدماتنا
-                  </a>
-                </li>
-                <li>
-                  <a href="#doctors">
-                    <i className="fa-solid fa-chevron-left"></i> فريقنا الطبي
-                  </a>
-                </li>
-                <li>
-                  <a href="#gallery">
-                    <i className="fa-solid fa-chevron-left"></i> معرض الصور
-                  </a>
-                </li>
-                <li>
-                  <a href="#testimonials">
-                    <i className="fa-solid fa-chevron-left"></i> آراء المرضى
-                  </a>
-                </li>
-                <li>
-                  <a href="#appointment">
-                    <i className="fa-solid fa-chevron-left"></i> احجز موعداً
-                  </a>
-                </li>
+                <li><a href="#home" data-i18n="nav-home"><i className="fa-solid fa-chevron-right"></i> Accueil</a></li>
+                <li><a href="#about" data-i18n="nav-about"><i className="fa-solid fa-chevron-right"></i> À propos</a></li>
+                <li><a href="#services" data-i18n="nav-services"><i className="fa-solid fa-chevron-right"></i> Nos Services</a></li>
+                <li><a href="#doctors" data-i18n="nav-doctors"><i className="fa-solid fa-chevron-right"></i> Notre Équipe</a></li>
+                <li><a href="#gallery" data-i18n="nav-gallery"><i className="fa-solid fa-chevron-right"></i> Galerie</a></li>
+                <li><a href="#testimonials" data-i18n="nav-testimonials"><i className="fa-solid fa-chevron-right"></i> Avis Patients</a></li>
+                <li><a href="#appointment" data-i18n="btn-book"><i className="fa-solid fa-chevron-right"></i> Prendre Rendez-vous</a></li>
               </ul>
             </div>
 
             <div className="footer-links-col">
-              <h4>تخصصاتنا</h4>
+              <h4 data-i18n="footer-services">Nos Services</h4>
               <ul>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> الطب العام
-                    والطوارئ
-                  </a>
-                </li>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> طب وجراحة
-                    الأسنان
-                  </a>
-                </li>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> طب النساء
-                    والتوليد
-                  </a>
-                </li>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> طب الأطفال
-                  </a>
-                </li>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> التحاليل
-                    الطبية
-                  </a>
-                </li>
-                <li>
-                  <a href="#services">
-                    <i className="fa-solid fa-chevron-left"></i> الأشعة والتصوير
-                  </a>
-                </li>
+                <li><a href="#services" data-i18n="s1-title"><i className="fa-solid fa-chevron-right"></i> Médecine Générale & Urgences</a></li>
+                <li><a href="#services" data-i18n="s2-title"><i className="fa-solid fa-chevron-right"></i> Médecine Dentaire & Chirurgie</a></li>
+                <li><a href="#services" data-i18n="s3-title"><i className="fa-solid fa-chevron-right"></i> Gynécologie & Obstétrique</a></li>
+                <li><a href="#services" data-i18n="s4-title"><i className="fa-solid fa-chevron-right"></i> Pédiatrie</a></li>
+                <li><a href="#services" data-i18n="s5-title"><i className="fa-solid fa-chevron-right"></i> Laboratoire d'Analyses</a></li>
+                <li><a href="#services" data-i18n="s6-title"><i className="fa-solid fa-chevron-right"></i> Imagerie Médicale & Radiologie</a></li>
               </ul>
             </div>
 
             <div className="footer-contact-col">
-              <h4>تواصل معنا</h4>
+              <h4 data-i18n="footer-contact">Informations de Contact</h4>
               <div className="footer-contact-item">
                 <i className="fa-solid fa-location-dot"></i>
-                <span>برج منايل، ولاية بومرداس، الجزائر</span>
+                <span data-i18n="c-addr-val">Bordj Menaïel, Wilaya de Boumerdès, Algérie</span>
               </div>
               <div className="footer-contact-item">
                 <i className="fa-solid fa-clock"></i>
-                <span>مفتوح 24/7 — كل أيام الأسبوع</span>
+                <span data-i18n="c-hours-val">7j/7 - 24h/24 (Service d'urgences continu)</span>
               </div>
               <div className="footer-contact-item">
                 <i className="fa-brands fa-facebook-f"></i>
@@ -1772,7 +1296,7 @@ export default function HomePage() {
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-regular fa-star"></i>
                   </div>
-                  <span>3.7/5 — 31 تقييم على Google</span>
+                  <span data-i18n="footer-google-rating">3.7/5 — 31 avis sur Google</span>
                 </div>
               </div>
             </div>
@@ -1781,11 +1305,7 @@ export default function HomePage() {
 
         <div className="footer-bottom">
           <div className="container footer-bottom-inner">
-            <p>
-              &copy; <span id="current-year"></span> Rouibah Medical Group. جميع
-              الحقوق محفوظة.
-            </p>
-            <p>تصميم موقع احترافي لـ عيادة الرويبح، برج منايل، الجزائر.</p>
+            <p data-i18n="footer-rights">Tous droits réservés © Groupe Médical Rouibah.</p>
           </div>
         </div>
       </footer>
