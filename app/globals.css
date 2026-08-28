@@ -173,7 +173,7 @@ input,select,textarea,button { font-family: var(--font-main); }
    HEADER
    ========================================================================== */
 .header {
-    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+    position: absolute; top: 0; left: 0; width: 100%; z-index: 1000;
     background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border); transition: all var(--transition);
     height: var(--header-h); display: flex; align-items: center;
