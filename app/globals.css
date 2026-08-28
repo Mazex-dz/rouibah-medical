@@ -1213,6 +1213,10 @@ div[style*="z-index"][style*="fixed"] > button {
 }
 
 /* Hide standard nav links that are redundant if they are inside the page switcher on mobile */
+.mobile-page-links {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .page-switcher-container {
     display: none;
@@ -1238,7 +1242,4 @@ div[style*="z-index"][style*="fixed"] > button {
     font-weight: 600;
     text-decoration: none;
   }
-}
-.mobile-page-links {
-  display: none;
 }

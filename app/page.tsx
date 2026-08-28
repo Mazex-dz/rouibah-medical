@@ -48,12 +48,19 @@ export default function HomePage() {
           </a>
 
           <nav className="navbar" id="navbar">
+            {/* Mobile page links - MOVED TO TOP */}
+            <div className="mobile-page-links">
+              <Link href="/"><i className="fa-solid fa-house"></i> Accueil</Link>
+              <Link href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</Link>
+              <Link href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
+            </div>
+            
             <ul className="nav-links">
               <li className="page-switcher-container">
                 <div className="page-switcher">
-                  <a href="/" className="page-btn active"><i className="fa-solid fa-house"></i> Accueil</a>
-                  <a href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> Services</a>
-                  <a href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> Spécialistes</a>
+                  <Link href="/" className="page-btn active"><i className="fa-solid fa-house"></i> Accueil</Link>
+                  <Link href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> Services</Link>
+                  <Link href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
                 </div>
               </li>
               <li><a href="/#about" data-i18n="nav-about">À propos</a></li>
@@ -65,11 +72,6 @@ export default function HomePage() {
             <div className="lang-switcher-mobile">
               <button className="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
               <button className="lang-btn" data-lang="ar" aria-label="Arabic">العربية</button>
-            </div>
-            {/* Mobile page links */}
-            <div className="mobile-page-links">
-              <a href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</a>
-              <a href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</a>
             </div>
           </nav>
 

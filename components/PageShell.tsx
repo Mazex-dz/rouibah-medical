@@ -36,6 +36,13 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
           </Link>
 
           <nav className="navbar" id="navbar">
+            {/* Mobile page links - MOVED TO TOP */}
+            <div className="mobile-page-links">
+              <Link href="/"><i className="fa-solid fa-house"></i> Accueil</Link>
+              <Link href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</Link>
+              <Link href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
+            </div>
+            
             <ul className="nav-links inner-page-nav-links">
               <li className="page-switcher-container">
                 <div className="page-switcher">
@@ -50,11 +57,6 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
               <li><Link href="/#testimonials">Avis Patients</Link></li>
               <li><Link href="/#contact">Contact</Link></li>
             </ul>
-            {/* Mobile page links */}
-            <div className="mobile-page-links">
-              <a href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</a>
-              <a href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</a>
-            </div>
           </nav>
 
           <div className="header-cta">
