@@ -143,7 +143,7 @@ export default function SpecialistesPage() {
                     <div className="placeholder-icon" style={{ color: spec.color }}>
                       <i className={spec.icon}></i>
                     </div>
-                    <span className="placeholder-label">Photo du médecin</span>
+                    <span className="placeholder-label">Photo Spécialiste</span>
                   </div>
                   {/* Availability badge */}
                   <div className="spec-avail-badge">
