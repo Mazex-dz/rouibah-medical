@@ -49,17 +49,27 @@ export default function HomePage() {
 
           <nav className="navbar" id="navbar">
             <ul className="nav-links">
-              <li><a href="#home" data-i18n="nav-home">Accueil</a></li>
-              <li><a href="#about" data-i18n="nav-about">À propos</a></li>
-              <li><a href="#services" data-i18n="nav-services">Nos Services</a></li>
-              <li><a href="#doctors" data-i18n="nav-doctors">Notre Équipe</a></li>
-              <li><a href="#gallery" data-i18n="nav-gallery">Galerie</a></li>
-              <li><a href="#testimonials" data-i18n="nav-testimonials">Avis Patients</a></li>
-              <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+              <li className="page-switcher-container">
+                <div className="page-switcher">
+                  <a href="/" className="page-btn active"><i className="fa-solid fa-house"></i> Accueil</a>
+                  <a href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> Services</a>
+                  <a href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> Spécialistes</a>
+                </div>
+              </li>
+              <li><a href="/#about" data-i18n="nav-about">À propos</a></li>
+              <li><a href="/#doctors" data-i18n="nav-doctors">Notre Équipe</a></li>
+              <li><a href="/#gallery" data-i18n="nav-gallery">Galerie</a></li>
+              <li><a href="/#testimonials" data-i18n="nav-testimonials">Avis Patients</a></li>
+              <li><a href="/#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
             <div className="lang-switcher-mobile">
               <button className="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
               <button className="lang-btn" data-lang="ar" aria-label="Arabic">العربية</button>
+            </div>
+            {/* Mobile page links */}
+            <div className="mobile-page-links">
+              <a href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</a>
+              <a href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</a>
             </div>
           </nav>
 
@@ -91,8 +101,8 @@ export default function HomePage() {
       <section className="hero" id="home">
         <div className="hero-bg">
           <img
-            src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm02njxxQUSz_VbHcdcNouoeHSMhf_VfnQJdu7K_At85GF4ZMz1gwX29RcjpPHoUhsDaShXHOC6KzWssqg_yn90Kd6fBJmH0LG67UbvPpwAj5N3kcXx2cq5zfAEdabhmasRhgZ8=s1920"
-            alt="عيادة الرويبح الطبية"
+            src="/downloaded_images/img_1.jpg"
+            alt="Clinique Rouibah — Bordj Menaïel"
             loading="eager"
           />
           <div className="hero-gradient"></div>
@@ -161,14 +171,14 @@ export default function HomePage() {
             <div className="about-visual animate" data-animation="slide-right">
               <div className="about-img-main">
                 <img
-                  src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm02njxxQUSz_VbHcdcNouoeHSMhf_VfnQJdu7K_At85GF4ZMz1gwX29RcjpPHoUhsDaShXHOC6KzWssqg_yn90Kd6fBJmH0LG67UbvPpwAj5N3kcXx2cq5zfAEdabhmasRhgZ8=s900"
-                  alt="طاقم عيادة الرويبح الطبي"
+                  src="/downloaded_images/img_13.jpg"
+                  alt="Clinique Rouibah — équipe médicale"
                 />
               </div>
               <div className="about-img-secondary">
                 <img
-                  src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkpI4c6DIcoYP3aAHVXTa-jSBMo4ihlebHIeDWY2LiM35V0bfTqBge2qnBKxU7qDJY83ObWliYBjzBmY6lBGF_tz36tr4VKcsmV13xRr88Wc9At_U4XoELHMo8DG1v7aZQAg48p_Beu1reJ=s800"
-                  alt="مستلزمات طبية"
+                  src="/downloaded_images/img_15.jpg"
+                  alt="Clinique Rouibah — matériel médical"
                 />
               </div>
               <div className="about-badge-float">
@@ -670,53 +680,53 @@ export default function HomePage() {
               data-delay="0"
             >
               <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnY2v8ZLeGFxF3wVFczcIG2l61GOHeUnXlRpkO6ln8lDrsYmhysUKcqge33oRDDrrdKRtUXXdCm6Oyxm7tsyX5B69wKZEZhsOZqGlPSwlbbE02osfsDLv0k4qhKaNdRYthe4sK0=s800"
-                alt="صورة من العيادة 1"
+                src="/downloaded_images/img_1.jpg"
+                alt="Photo clinique Rouibah 1"
               />
               <div className="gallery-caption">Photo 1 : Établissement médical certifié 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm2QZJ2uo0pVJykrphmJS9rmSzSXgCTHCKAbeQt_cWMozJjFUaM8P-6pGUghC_cSIn-MFHwTJupsing4KTjGMvhoeIswrZU_ioHyCHCB0PcHWikSbAzwti0o8TeDM2x7DsFCq9o=s800" alt="Clinique Rouibah 2" />
+              <img src="/downloaded_images/img_2.jpg" alt="Clinique Rouibah 2" />
               <div className="gallery-caption">Photo 2 : Équipements modernes 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYI0AtSy9FHtA1Wq76X02Dzb7DE4_FxuOq6GfOUqnDc1v4GSul7Bn0PBhhk-1dqziq3Qlxt9CmsLFFvS4uNcP2ODZNgZOl9N0RsZgQxBpRrrrDe1gfl2vnIwwvYeEPIrgCGnkH=s800" alt="Clinique Rouibah 3" />
+              <img src="/downloaded_images/img_3.jpg" alt="Clinique Rouibah 3" />
               <div className="gallery-caption">Photo 3 : Salles de soins 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkENYUE4M9aIsFiiP-4oRlnGf2uZXG2VFILoUnnOTldVudd-BkOCgrlsY2pifltr-BnPmNOSJhjq4TCYGC-_LZwomXZo-1LJ3Gvxn-_fAbQxcEi0LtuhA-bJ5RI8ZMLoTchwuzgxR7ELt8=s800" alt="Clinique Rouibah 4" />
+              <img src="/downloaded_images/img_4.jpg" alt="Clinique Rouibah 4" />
               <div className="gallery-caption">Photo 4 : Environnement confortable 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="0">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkFgnHXHPIjqaHHA01zQl3Ry5hrqmrU-rbD-FcJ2z0_4d607PF0IVleuMaBx5GvsS0WJ4gPG_NDGgZerSc_wVdbi9rgji7fDzFJTaMBJG1He-7KFw04jhk1WaupJj-KcdqjMFGEUzepZT2=s800" alt="Clinique Rouibah 5" />
+              <img src="/downloaded_images/img_5.jpg" alt="Clinique Rouibah 5" />
               <div className="gallery-caption">Photo 5 : Accueil des patients 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCeHg3YTAuEB4nIDm2432kvaUSJ9ardDBbI_3trnUf4l_ySJqxeeDyuAgYsTaOiMKezQaqPLGMNAAiOv-rAaatvxsensKCtW00f6yBowUzcPCjs3Hb6Q8mtw2moZRCPpK_BtsAkFI7Q6D6=s800" alt="Clinique Rouibah 6" />
+              <img src="/downloaded_images/img_6.jpg" alt="Clinique Rouibah 6" />
               <div className="gallery-caption">Photo 6 : Laboratoire d'analyses 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkLHsDHM3pVxEgKWJJ40bHvEvhRPmZJHKPG0m2-TkMsDsAidDSCXjeb8euQAMLq-AW1eI_gwbUNa7qAYO1-z5VQVA72s9DLcizEwozXYKrloTkJ0f_C0KaMbfjPwXeutG0Fxwwu5SnojMHQ=s800" alt="Clinique Rouibah 7" />
+              <img src="/downloaded_images/img_7.jpg" alt="Clinique Rouibah 7" />
               <div className="gallery-caption">Photo 7 : Service de radiologie 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl5GyiNZ5hnR3IwdJE4e7B6WoZ4XHwglYPvyXskST789xcrAtIDUIQiiX_dixKAvgxy83TdpxmQgyJdn3TUeMIt6E1tmU5681U52Wdqnc91YBRbTiC_g5xQBhjMFiS829ycREQSAQ=s800" alt="Clinique Rouibah 8" />
+              <img src="/downloaded_images/img_8.jpg" alt="Clinique Rouibah 8" />
               <div className="gallery-caption">Photo 8 : Bloc opératoire 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="0">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkjIBH6yFIPAQp-R3NgBkBVDnYZdcf5kBdsoyTsJfjVd7Mes1Lb7qrWaz4vx014P9ExTumxfKCs9Vn6BWUbzB7YdGn4Y2mLuwmLDl07TI88g3EryctgfwT-pahUTH469uDzyZ7PXQ=s800" alt="Clinique Rouibah 9" />
+              <img src="/downloaded_images/img_9.jpg" alt="Clinique Rouibah 9" />
               <div className="gallery-caption">Photo 9 : Salle d'attente 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkXtfQN9n235zGpo-4bYL3SzKRFIbXhcAP8Ii7ZaGd4kiWs8atqMp_TDDIn36HoeE1idu00D_k8Vj_yJnNWA3XTgva6Yo2_vWhRBks5iukSW_6adKpDv5paFjbxVblc2nHx5bMLYA=s800" alt="Clinique Rouibah 10" />
+              <img src="/downloaded_images/img_10.jpg" alt="Clinique Rouibah 10" />
               <div className="gallery-caption">Photo 10 : Cabinets de consultation 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxhMxEI73qXF1tzV38JCxDut08mRkioYRgJGYoZh_9DbDWXE34bcHyv53WU-2cOG6P8XOQkgJIA3AraQD2hF63-OgoDgeoj1iiX_dz_5UxUkqathaDssnDvuav5e3uTSElSwNZs6zxVFgP=s800" alt="Clinique Rouibah 11" />
+              <img src="/downloaded_images/img_11.jpg" alt="Clinique Rouibah 11" />
               <div className="gallery-caption">Photo 11 : Service des urgences 🩺</div>
             </div>
             <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0FwP1HDZP6Ss9mGRJt79ayhFJVFP0ztnyTZi-76NOEAcKo9pVOVFgn6lUPh7F9htkbUwlVZxMeVzcDJ3AnZW4DUOO8fMIoc1LronwL9Jbng556rUKzQ7gUZcdFxdIJq4In0w=s800" alt="Clinique Rouibah 12" />
+              <img src="/downloaded_images/img_12.jpg" alt="Clinique Rouibah 12" />
               <div className="gallery-caption">Photo 12 : Infrastructure médicale 🩺</div>
             </div>
           </div>
