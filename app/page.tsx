@@ -52,17 +52,17 @@ export default function HomePage() {
           <nav className="navbar" id="navbar">
             {/* Mobile page links - MOVED TO TOP */}
             <div className="mobile-page-links">
-              <Link href="/"><i className="fa-solid fa-house"></i> Accueil</Link>
-              <Link href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</Link>
-              <Link href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
+              <Link href="/"><i className="fa-solid fa-house"></i> <span data-i18n="nav-home">Accueil</span></Link>
+              <Link href="/services"><i className="fa-solid fa-stethoscope"></i> <span data-i18n="nav-services">Nos Services</span></Link>
+              <Link href="/specialistes"><i className="fa-solid fa-user-doctor"></i> <span data-i18n="nav-specialistes">Les Spécialités</span></Link>
             </div>
-            
+
             <ul className="nav-links">
               <li className="page-switcher-container">
                 <div className="page-switcher">
-                  <Link href="/" className="page-btn active"><i className="fa-solid fa-house"></i> Accueil</Link>
-                  <Link href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> Services</Link>
-                  <Link href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
+                  <Link href="/" className="page-btn active"><i className="fa-solid fa-house"></i> <span data-i18n="nav-home">Accueil</span></Link>
+                  <Link href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> <span data-i18n="nav-services">Nos Services</span></Link>
+                  <Link href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> <span data-i18n="nav-specialistes">Les Spécialités</span></Link>
                 </div>
               </li>
               <li><a href="/#about" data-i18n="nav-about">À propos</a></li>
@@ -82,7 +82,7 @@ export default function HomePage() {
               <i className="fa-solid fa-calendar-plus"></i>
               Prendre Rendez-vous
             </a>
-            <div className="lang-switcher lang-switcher-mobile">
+            <div className="lang-switcher">
               <button className="lang-btn active" data-lang="fr" aria-label="Passer au Français">FR</button>
               <button className="lang-btn" data-lang="ar" aria-label="التحويل إلى العربية">العربية</button>
             </div>
@@ -556,7 +556,7 @@ export default function HomePage() {
           >
             <span className="label-tag" data-i18n="doctors-tag"><i className="fa-solid fa-circle-dot"></i> Équipe Médicale</span>
             <h2 className="section-title" data-i18n="doctors-title">Des médecins spécialisés <span className="text-teal">à votre service</span></h2>
-            <p className="section-lead" data-i18n="doctors-lead">Notre équipe se compose de médecins et spécialistes expérimentés et dévoués à votre santé.</p>
+            <p className="section-lead" data-i18n="doctors-lead">Notre équipe se compose de médecins qualifiés dans diverses spécialités et dévoués à votre santé.</p>
           </div>
 
           <div className="doctors-grid">
@@ -1022,7 +1022,7 @@ export default function HomePage() {
               <div className="step-number">02</div>
               <div className="step-icon"><i className="fa-solid fa-user-clock"></i></div>
               <h4 data-i18n="step2-title">Accueil par le médecin</h4>
-              <p data-i18n="step2-desc">À l'heure convenue, le spécialiste vous reçoit pour l'examen et l'évaluation initiale.</p>
+              <p data-i18n="step2-desc">À l'heure convenue, le médecin de la spécialité choisie vous reçoit pour l'examen et l'évaluation initiale.</p>
             </div>
             <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
             <div className="process-step animate" data-animation="fade-up" data-delay="200">

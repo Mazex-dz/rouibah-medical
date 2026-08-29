@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     // Translations dictionary (French main, Arabic secondary)
@@ -113,7 +113,7 @@
             // Doctors
             'doctors-tag': '<i class="fa-solid fa-circle-dot"></i> Équipe Médicale',
             'doctors-title': 'Des médecins spécialisés <span class="text-teal">à votre service</span>',
-            'doctors-lead': 'Notre équipe se compose de médecins et spécialistes expérimentés et dévoués à votre santé.',
+            'doctors-lead': 'Notre équipe se compose de médecins qualifiés dans diverses spécialités et dévoués à votre santé.',
             'd1-name': 'Dr. Rouibah',
             'd1-role': 'Médecin Directeur & Généraliste',
             'd1-exp': '15+ ans d\'expérience',
@@ -175,7 +175,7 @@
             'step1-title': 'Prenez rendez-vous',
             'step1-desc': 'Contactez-nous par téléphone, formulaire en ligne ou WhatsApp pour fixer votre rendez-vous.',
             'step2-title': 'Accueil par le médecin',
-            'step2-desc': 'À l\'heure convenue, le spécialiste vous reçoit pour l\'examen et l\'évaluation initiale.',
+            'step2-desc': 'À l\'heure convenue, le médecin de la spécialité choisie vous reçoit pour l\'examen et l\'évaluation initiale.',
             'step3-title': 'Diagnostic précis',
             'step3-desc': 'Les analyses et examens nécessaires sont réalisés pour établir un diagnostic exact et fiable.',
             'step4-title': 'Plan de traitement',
@@ -214,7 +214,31 @@
             'footer-quick': 'Liens Rapides',
             'footer-services': 'Nos Services',
             'footer-contact': 'Informations de Contact',
-            'footer-rights': 'Tous droits réservés © Groupe Médical Rouibah.'
+            'footer-rights': 'Tous droits réservés © Groupe Médical Rouibah.',
+
+            // Inner Pages: Services & Specialistes
+            'nav-specialistes': 'Les Spécialités',
+            'srv-page-tag': '<i class="fa-solid fa-circle-dot"></i> Nos Services Médicaux',
+            'srv-page-title': 'Des soins médicaux <span class="text-teal">complets et accessibles</span>',
+            'srv-page-desc': 'Le Groupe Médical Rouibah met à votre disposition des services médicaux de haute qualité à Bordj Menaïel. Chaque service est assuré par des professionnels qualifiés avec des équipements modernes.',
+            'srv-page-call': '<i class="fa-solid fa-phone"></i> Appeler maintenant',
+            'srv-page-book': '<i class="fa-solid fa-calendar-plus"></i> Prendre rendez-vous',
+            'srv-card-call': '<i class="fa-solid fa-phone"></i> Appeler',
+            'srv-card-book': '<i class="fa-solid fa-calendar-plus"></i> Rendez-vous',
+            'srv-page-cta-title': 'Besoin d\'une consultation d\'urgence ?',
+            'srv-page-cta-desc': 'Notre équipe est disponible 24h/24 — Ne tardez pas.',
+
+            'spec-page-tag': '<i class="fa-solid fa-circle-dot"></i> Nos Spécialités Médicales',
+            'spec-page-title': 'Les spécialités médicales <span class="text-teal">à votre service</span>',
+            'spec-page-desc': 'Notre clinique regroupe de nombreuses spécialités médicales sous un même toit. Consultez nos médecins qualifiés et expérimentés, tous disponibles sur rendez-vous à Bordj Menaïel.',
+            'spec-page-btn-book': '<i class="fa-solid fa-calendar-plus"></i> Prendre rendez-vous',
+            'spec-page-btn-call': '<i class="fa-solid fa-phone"></i> 0559 50 50 01',
+            'spec-avail-badge': 'Disponible sur rendez-vous',
+            'spec-actes-title': 'Actes & consultations :',
+            'spec-card-btn-book': '<i class="fa-solid fa-calendar-plus"></i> Prendre rendez-vous',
+            'spec-card-btn-call': '<i class="fa-solid fa-phone"></i> Appeler',
+            'spec-page-cta-title': 'Besoin d\'une consultation spécialisée ?',
+            'spec-page-cta-desc': 'Appelez-nous pour prendre rendez-vous dans la spécialité de votre choix.'
         },
         ar: {
             // Topbar & Nav
@@ -326,7 +350,7 @@
             // Doctors
             'doctors-tag': '<i class="fa-solid fa-circle-dot"></i> طاقمنا الطبي',
             'doctors-title': 'أطباء متخصصون <span class="text-teal">في خدمتك</span>',
-            'doctors-lead': 'يتكون فريقنا من نخبة من الأطباء والاستشاريين الملتزمين بتقديم أفضل مستوى من الرعاية الطبية.',
+            'doctors-lead': 'يتكون فريقنا من نخبة من الأطباء ذوي الكفاءة العالية في مختلف الاختصاصات لخدمة صحتكم.',
             'd1-name': 'د. الرويبح',
             'd1-role': 'طبيب مدير وطبيب عام',
             'd1-exp': 'خبرة تزيد عن 15 سنة',
@@ -388,7 +412,7 @@
             'step1-title': 'احجز موعدك',
             'step1-desc': 'تواصل معنا عبر الهاتف أو نموذج الحجز أو واتساب لتحديد موعدك.',
             'step2-title': 'استقبال الطبيب',
-            'step2-desc': 'في الموعد المحدد، يستقبلك الطبيب المتخصص للفحص والتقييم.',
+            'step2-desc': 'في الموعد المحدد، يستقبلك الطبيب في مختلف الاختصاصات للفحص والتقييم الأولي.',
             'step3-title': 'التشخيص الدقيق',
             'step3-desc': 'يتم إجراء التحاليل والفحوصات اللازمة للوصول لتشخيص دقيق وصحيح.',
             'step4-title': 'خطة العلاج',
@@ -427,7 +451,31 @@
             'footer-quick': 'روابط سريعة',
             'footer-services': 'خدماتنا الطبية',
             'footer-contact': 'معلومات الاتصال',
-            'footer-rights': 'جميع الحقوق محفوظة © عيادة الرويبح.'
+            'footer-rights': 'جميع الحقوق محفوظة © عيادة الرويبح.',
+
+            // Inner Pages: Services & Specialistes
+            'nav-specialistes': 'الاختصاصات',
+            'srv-page-tag': '<i class="fa-solid fa-circle-dot"></i> خدماتنا الطبية',
+            'srv-page-title': 'رعاية طبية <span class="text-teal">شاملة ومتاحة</span>',
+            'srv-page-desc': 'يضع مجمع الرويبح الطبي بين أيديكم خدمات طبية عالية الجودة في برج منايل. يُشرف على كل خدمة طاقم محترف ومؤهل مزود بأحدث المعدات.',
+            'srv-page-call': '<i class="fa-solid fa-phone"></i> اتصل الآن',
+            'srv-page-book': '<i class="fa-solid fa-calendar-plus"></i> احجز موعدك',
+            'srv-card-call': '<i class="fa-solid fa-phone"></i> اتصال',
+            'srv-card-book': '<i class="fa-solid fa-calendar-plus"></i> موعد',
+            'srv-page-cta-title': 'بحاجة لاستشارة مستعجلة؟',
+            'srv-page-cta-desc': 'فريقنا متاح على مدار الساعة — لا تتردد.',
+
+            'spec-page-tag': '<i class="fa-solid fa-circle-dot"></i> الاختصاصات الطبية',
+            'spec-page-title': 'الاختصاصات <span class="text-teal">في خدمتكم</span>',
+            'spec-page-desc': 'تجمع عيادتنا عدة اختصاصات طبية تحت سقف واحد. استشر أطباءنا المؤهلين وذوي الخبرة، والمتاحين بناءً على موعد مسبق في برج منايل.',
+            'spec-page-btn-book': '<i class="fa-solid fa-calendar-plus"></i> احجز موعدك',
+            'spec-page-btn-call': '<i class="fa-solid fa-phone"></i> 0559 50 50 01',
+            'spec-avail-badge': 'متاح بموعد مسبق',
+            'spec-actes-title': 'الخدمات والاستشارات:',
+            'spec-card-btn-book': '<i class="fa-solid fa-calendar-plus"></i> احجز موعدك',
+            'spec-card-btn-call': '<i class="fa-solid fa-phone"></i> اتصال',
+            'spec-page-cta-title': 'بحاجة إلى استشارة في اختصاص طبي؟',
+            'spec-page-cta-desc': 'اتصل بنا لحجز موعد مع الطبيب في الاختصاص الطبي المطلوب.'
         }
     };
 
@@ -437,7 +485,7 @@
 
         document.documentElement.lang = selectedLang;
         document.documentElement.dir = dir;
-        try { localStorage.setItem('preferred_lang', selectedLang); } catch(e) {}
+        try { localStorage.setItem('preferred_lang', selectedLang); } catch (e) { }
 
         const langDict = translations[selectedLang];
 
@@ -476,7 +524,7 @@
     let _observer = null;
 
     function getSavedLang() {
-        try { return localStorage.getItem('preferred_lang') || 'fr'; } catch(e) { return 'fr'; }
+        try { return localStorage.getItem('preferred_lang') || 'fr'; } catch (e) { return 'fr'; }
     }
 
     function applyAndWatch() {
@@ -502,7 +550,7 @@
     }
 
     // Click handler — attached to document in capture phase so it always fires
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const btn = e.target.closest('.lang-btn');
         if (!btn) return;
         const targetLang = btn.getAttribute('data-lang');

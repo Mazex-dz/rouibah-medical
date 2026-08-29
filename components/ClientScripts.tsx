@@ -32,7 +32,7 @@ export default function ClientScripts() {
         'about-rating-text': 'Avis Google','about-btn': 'Découvrez nos services <i class="fa-solid fa-arrow-right"></i>',
         'stat-counter1-label': 'Patients accompagnés','stat-counter2-label': 'Médecins spécialistes','stat-counter3-label': 'Spécialités médicales','stat-counter4-label': 'Avis Google Maps',
         'services-tag': '<i class="fa-solid fa-circle-dot"></i> Nos Services','services-title': 'Des soins spécialisés <span class="text-teal">pour toute la famille</span>',
-        'svc1-title': 'Médecine Générale','svc1-desc': 'Consultations générales, bilans de santé, prévention et orientation vers les spécialistes appropriés.',
+        'svc1-title': 'Médecine Générale','svc1-desc': 'Consultations générales, bilans de santé, prévention et orientation vers les spécialités appropriées.',
         'svc2-title': 'Pédiatrie','svc2-desc': 'Suivi de croissance, vaccinations, maladies infantiles et soins complets pour enfants et nourrissons.',
         'svc3-title': 'Urgences 24/7','svc3-desc': 'Service des urgences disponible 24 heures sur 24, 7 jours sur 7 pour toute situation critique.',
         'svc4-title': 'Analyses & Laboratoire','svc4-desc': 'Analyses de sang, urines et microbiologie avec résultats rapides et fiables.',
@@ -40,10 +40,10 @@ export default function ClientScripts() {
         'svc6-title': 'Consultations Spécialisées','svc6-desc': 'Cardiologie, ophtalmologie, orthopédie, neurologie et autres spécialités sur rendez-vous.',
         'whyus-tag': '<i class="fa-solid fa-circle-dot"></i> Pourquoi Nous Choisir','whyus-title': 'Votre santé entre les meilleures <span class="text-teal">mains</span>',
         'f1-title': 'Équipements Médicaux Modernes','f1-desc': "Nous utilisons les équipements les plus récents pour garantir un diagnostic précis et un traitement efficace.",
-        'f2-title': 'Médecins Spécialisés','f2-desc': "Notre équipe est composée de médecins spécialisés et expérimentés dans toutes les spécialités.",
+        'f2-title': 'Médecins Spécialisés','f2-desc': "Notre équipe est composée de médecins qualifiés dans toutes les spécialités médicales.",
         'f3-title': 'Urgences 24h/24','f3-desc': "Nous sommes disponibles à toute heure pour les urgences médicales.",
         'f4-title': 'Sécurité & Hygiène','f4-desc': "Nous appliquons les normes d'hygiène les plus strictes pour la protection de nos patients.",
-        'doctors-tag': '<i class="fa-solid fa-circle-dot"></i> Notre Équipe Médicale','doctors-title': 'Des médecins <span class="text-teal">expérimentés & dévoués</span>','doctors-lead': "Rencontrez notre équipe de spécialistes qualifiés, engagés à vous offrir des soins de la plus haute qualité.",
+        'doctors-tag': '<i class="fa-solid fa-circle-dot"></i> Notre Équipe Médicale','doctors-title': 'Des médecins <span class="text-teal">expérimentés & dévoués</span>','doctors-lead': "Notre équipe se compose de médecins qualifiés dans diverses spécialités et dévoués à votre santé.",
         'doc1-name': 'Dr. Rouibah','doc1-spec': 'Médecin Généraliste & Directeur Médical','doc1-avail': 'Disponible sur rendez-vous',
         'doc2-name': 'Dr. Amel Benali','doc2-spec': 'Pédiatre spécialisée','doc2-avail': 'Disponible sur rendez-vous',
         'doc3-name': 'Dr. Karim Meziane','doc3-spec': 'Chirurgien Général','doc3-avail': 'Disponible sur rendez-vous',
@@ -55,7 +55,7 @@ export default function ClientScripts() {
         'commit-title': 'Notre engagement envers vous','commit-desc': "Nous prenons chaque avis et commentaire très au sérieux. Nos réponses immédiates témoignent de notre engagement constant à améliorer nos services.",'commit-btn': 'Lire tous les avis',
         'process-tag': '<i class="fa-solid fa-circle-dot"></i> Comment ça marche ?','process-title': 'Quatre étapes simples <span class="text-teal">pour obtenir vos soins</span>',
         'step1-title': 'Prenez rendez-vous','step1-desc': 'Contactez-nous par téléphone, formulaire en ligne ou WhatsApp pour fixer votre rendez-vous.',
-        'step2-title': 'Accueil par le médecin','step2-desc': "À l'heure convenue, le spécialiste vous reçoit pour l'examen et l'évaluation initiale.",
+        'step2-title': 'Accueil par le médecin','step2-desc': "À l'heure convenue, le médecin de la spécialité choisie vous reçoit pour l'examen et l'évaluation initiale.",
         'step3-title': 'Diagnostic précis','step3-desc': "Les analyses et examens nécessaires sont réalisés pour établir un diagnostic exact et fiable.",
         'step4-title': 'Plan de traitement','step4-desc': "Le médecin établit un plan thérapeutique clair avec un suivi régulier jusqu'au rétablissement complet.",
         'contact-tag': '<i class="fa-solid fa-circle-dot"></i> Contactez-nous','contact-title': 'Nous sommes à <span class="text-teal">Bordj Menaïel</span> — Venez nous voir',
@@ -69,6 +69,25 @@ export default function ClientScripts() {
         'whyus-cta-q': 'Vous avez une question ?','whyus-cta-sub': 'Notre équipe est toujours à votre service',
         'footer-google-rating': '3.7/5 — 31 avis sur Google','footer-desc': 'Groupe Médical Rouibah — Votre centre de santé de référence à Bordj Menaïel. Urgences 24/7, soins de qualité et suivi personnalisé.',
         'footer-quick': 'Liens Rapides','footer-services': 'Nos Services','footer-contact': 'Informations de Contact','footer-rights': 'Tous droits réservés © Groupe Médical Rouibah.',
+        
+        /* Inner Pages: Services & Specialistes */
+        'nav-specialistes': 'Les Spécialités',
+        'srv-page-tag': '<i class="fa-solid fa-circle-dot"></i> Nos Services Médicaux', 'srv-page-title': 'Des soins médicaux <span class="text-teal">complets et accessibles</span>', 'srv-page-desc': 'Le Groupe Médical Rouibah met à votre disposition des services médicaux de haute qualité à Bordj Menaïel. Chaque service est assuré par des professionnels qualifiés avec des équipements modernes.', 'srv-page-call': '<i class="fa-solid fa-phone"></i> Appeler maintenant', 'srv-page-book': '<i class="fa-solid fa-calendar-plus"></i> Prendre rendez-vous', 'srv-card-call': '<i class="fa-solid fa-phone"></i> Appeler', 'srv-card-book': '<i class="fa-solid fa-calendar-plus"></i> Rendez-vous', 'srv-page-cta-title': 'Besoin d\'une consultation d\'urgence ?', 'srv-page-cta-desc': 'Notre équipe est disponible 24h/24 — Ne tardez pas.',
+        
+        'spec-page-tag': '<i class="fa-solid fa-circle-dot"></i> Nos Spécialités Médicales', 'spec-page-title': 'Les spécialités médicales <span class="text-teal">à votre service</span>', 'spec-page-desc': 'Notre clinique regroupe de nombreuses spécialités médicales sous un même toit. Consultez nos médecins qualifiés et expérimentés, tous disponibles sur rendez-vous à Bordj Menaïel.', 'spec-page-btn-book': '<i class="fa-solid fa-calendar-plus"></i> Prendre rendez-vous', 'spec-page-btn-call': '<i class="fa-solid fa-phone"></i> 0559 50 50 01', 'spec-avail-badge': 'Disponible sur rendez-vous', 'spec-actes-title': 'Actes & consultations :', 'spec-card-btn-book': '<i class="fa-solid fa-calendar-plus"></i> Prendre rendez-vous', 'spec-card-btn-call': '<i class="fa-solid fa-phone"></i> Appeler', 'spec-page-cta-title': 'Besoin d\'une consultation spécialisée ?', 'spec-page-cta-desc': 'Appelez-nous pour prendre rendez-vous dans la spécialité de votre choix.',
+
+        'srv-urgences-title': 'Urgences 24/7', 'srv-urgences-sub': 'Service des urgences médicales', 'srv-urgences-desc': "Notre service des urgences est ouvert 24 heures sur 24, 7 jours sur 7, 365 jours par an. Une équipe médicale qualifiée est toujours présente pour prendre en charge toute situation d'urgence médicale rapidement et efficacement.", 'srv-urgences-feat-0': 'Disponible 24h/24 — 7j/7', 'srv-urgences-feat-1': 'Équipe médicale permanente', 'srv-urgences-feat-2': 'Matériel de réanimation complet', 'srv-urgences-feat-3': 'Prise en charge immédiate', 'srv-urgences-feat-4': 'Coordination avec les hôpitaux',
+        'srv-anapate-title': 'Anapate', 'srv-anapate-sub': 'Anatomie pathologique', 'srv-anapate-desc': "Le service d'anatomie et de pathologie (Anapate) réalise des analyses histologiques et cytologiques pour établir des diagnostics précis. Nos pathologistes examinent les prélèvements tissulaires avec les équipements les plus modernes.", 'srv-anapate-feat-0': 'Analyses histologiques', 'srv-anapate-feat-1': 'Études cytologiques', 'srv-anapate-feat-2': 'Biopsies et prélèvements', 'srv-anapate-feat-3': 'Résultats fiables et rapides', 'srv-anapate-feat-4': 'Rapports détaillés',
+        'srv-laboratoire-title': 'Laboratoire', 'srv-laboratoire-sub': 'Analyses biologiques et médicales', 'srv-laboratoire-desc': "Notre laboratoire d'analyses médicales réalise un large éventail d'examens biologiques : analyses de sang, d'urine, bactériologie, sérologie et bien plus. Les résultats sont transmis rapidement pour une prise en charge optimale.", 'srv-laboratoire-feat-0': 'Analyses de sang complètes', 'srv-laboratoire-feat-1': "Analyses d'urine", 'srv-laboratoire-feat-2': 'Bactériologie & sérologie', 'srv-laboratoire-feat-3': 'Résultats rapides', 'srv-laboratoire-feat-4': 'Équipements automatisés',
+        'srv-imagerie-title': 'Imagerie Médicale', 'srv-imagerie-sub': 'Radiologie & échographie', 'srv-imagerie-desc': "Le service d'imagerie médicale propose des radiographies numériques et des échographies pour un diagnostic précis et rapide. Nos techniciens et médecins radiologues interprètent les images avec la plus grande rigueur.", 'srv-imagerie-feat-0': 'Radiographie numérique', 'srv-imagerie-feat-1': 'Échographie', 'srv-imagerie-feat-2': 'Interprétation par radiologues', 'srv-imagerie-feat-3': 'Résultats immédiats', 'srv-imagerie-feat-4': 'Archivage numérique',
+
+        'spec-dentiste-title': 'Dentisterie', 'spec-dentiste-role': 'Chirurgien-Dentiste', 'spec-dentiste-desc': 'Notre cabinet dentaire prend en charge toutes les pathologies bucco-dentaires : soins conservateurs, extractions, prothèses, détartrage et blanchiment. Un suivi régulier pour une santé bucco-dentaire optimale.', 'spec-dentiste-acte-0': 'Soins conservateurs', 'spec-dentiste-acte-1': 'Extraction dentaire', 'spec-dentiste-acte-2': 'Prothèses dentaires', 'spec-dentiste-acte-3': 'Détartrage', 'spec-dentiste-acte-4': 'Traitement des caries',
+        'spec-gynecologie-title': 'Gynécologie', 'spec-gynecologie-role': 'Gynécologue-Obstétricien', 'spec-gynecologie-desc': 'Notre service de gynécologie assure le suivi gynécologique et obstétrical de la femme à tous les stades de sa vie. Consultations, grossesse, dépistage et prévention des pathologies féminines.', 'spec-gynecologie-acte-0': 'Suivi de grossesse', 'spec-gynecologie-acte-1': 'Consultations gynécologiques', 'spec-gynecologie-acte-2': 'Échographies obstétricales', 'spec-gynecologie-acte-3': 'Dépistage', 'spec-gynecologie-acte-4': 'Contraception',
+        'spec-orthopedie-title': 'Orthopédie', 'spec-orthopedie-role': 'Chirurgien Orthopédiste', 'spec-orthopedie-desc': "Le service orthopédique traite les affections de l'appareil locomoteur : traumatismes, fractures, douleurs articulaires, pathologies osseuses et tendineuses. Diagnostic précis et plan de traitement adapté.", 'spec-orthopedie-acte-0': 'Fractures & traumatismes', 'spec-orthopedie-acte-1': 'Douleurs articulaires', 'spec-orthopedie-acte-2': 'Pathologies osseuses', 'spec-orthopedie-acte-3': 'Rééducation', 'spec-orthopedie-acte-4': 'Entorses & tendinites',
+        'spec-cci-title': 'CCI', 'spec-cci-role': 'Centre de Chimiothérapie Intraveineux', 'spec-cci-desc': "Notre centre CCI (Chambre à Cathéter Implantable) assure la pose, le suivi et l'entretien des chambres implantables pour les patients sous traitement intraveineux prolongé, dans un environnement sécurisé et stérile.", 'spec-cci-acte-0': 'Pose de CCI', 'spec-cci-acte-1': 'Suivi et entretien', 'spec-cci-acte-2': 'Perfusions intraveineuses', 'spec-cci-acte-3': 'Protocoles oncologiques', 'spec-cci-acte-4': 'Soins infirmiers spécialisés',
+        'spec-gastrologie-title': 'Gastroentérologie', 'spec-gastrologie-role': 'Gastroentérologue', 'spec-gastrologie-desc': "Notre gastroentérologue prend en charge les maladies du système digestif : estomac, intestin, foie, pancréas et vésicule biliaire. Consultations, endoscopies et suivi des pathologies digestives chroniques.", 'spec-gastrologie-acte-0': 'Pathologies digestives', 'spec-gastrologie-acte-1': 'Hépatologie', 'spec-gastrologie-acte-2': 'Coloscopie & endoscopie', 'spec-gastrologie-acte-3': 'Reflux & ulcères', 'spec-gastrologie-acte-4': 'Maladies inflammatoires',
+        'spec-pediatrie-title': 'Pédiatrie', 'spec-pediatrie-role': 'Pédiatre Spécialisé', 'spec-pediatrie-desc': "Notre pédiatre assure le suivi de la croissance et du développement de l'enfant de la naissance à l'adolescence. Consultations, vaccinations, maladies infantiles, et bilans de santé réguliers.", 'spec-pediatrie-acte-0': 'Suivi de croissance', 'spec-pediatrie-acte-1': 'Vaccinations', 'spec-pediatrie-acte-2': 'Maladies infantiles', 'spec-pediatrie-acte-3': 'Bilans de santé', 'spec-pediatrie-acte-4': 'Alimentation & nutrition',
+        'spec-cardiologie-title': 'Cardiologie', 'spec-cardiologie-role': 'Cardiologue', 'spec-cardiologie-desc': "Le service de cardiologie assure le dépistage, le diagnostic et le suivi des maladies cardiovasculaires. Électrocardiogramme, échocardiographie, Holter et consultations spécialisées pour la santé de votre cœur.", 'spec-cardiologie-acte-0': 'Électrocardiogramme (ECG)', 'spec-cardiologie-acte-1': 'Échocardiographie', 'spec-cardiologie-acte-2': 'Holter cardiaque', 'spec-cardiologie-acte-3': 'Hypertension artérielle', 'spec-cardiologie-acte-4': 'Insuffisance cardiaque',
       },
       ar: {
         'topbar-address': '<i class="fa-solid fa-location-dot"></i> برج منايل، ولاية بومرداس، الجزائر',
@@ -94,7 +113,7 @@ export default function ClientScripts() {
         'about-rating-text': 'تقييم جوجل','about-btn': 'اكتشف خدماتنا <i class="fa-solid fa-arrow-right"></i>',
         'stat-counter1-label': 'مريض تمت رعايتهم','stat-counter2-label': 'طبيب متخصص','stat-counter3-label': 'تخصصات طبية','stat-counter4-label': 'تقييم على Google Maps',
         'services-tag': '<i class="fa-solid fa-circle-dot"></i> خدماتنا الطبية','services-title': 'رعاية متخصصة <span class="text-teal">لكل أفراد العائلة</span>',
-        'svc1-title': 'طب عام','svc1-desc': 'استشارات طبية عامة، فحوصات دورية، وقاية وتحويل للتخصصات المناسبة.',
+        'svc1-title': 'طب عام','svc1-desc': 'استشارات طبية عامة، فحوصات دورية، وقاية وتوجيه نحو الاختصاصات الطبية المناسبة.',
         'svc2-title': 'طب الأطفال','svc2-desc': 'متابعة نمو الأطفال، التطعيمات، وعلاج الأمراض الطفولية والرضع.',
         'svc3-title': 'طوارئ 24/7','svc3-desc': 'خدمة الطوارئ متاحة على مدار الساعة طوال أيام الأسبوع لأي حالة حرجة.',
         'svc4-title': 'التحاليل والمختبر','svc4-desc': 'تحاليل الدم والبول والجراثيم بنتائج سريعة وموثوقة.',
@@ -102,10 +121,10 @@ export default function ClientScripts() {
         'svc6-title': 'استشارات متخصصة','svc6-desc': 'قلب، عيون، عظام، أعصاب وتخصصات أخرى بموعد مسبق.',
         'whyus-tag': '<i class="fa-solid fa-circle-dot"></i> لماذا تختارنا','whyus-title': 'صحتك بين أفضل <span class="text-teal">الأيدي</span>',
         'f1-title': 'معدات طبية حديثة','f1-desc': 'نستخدم أحدث الأجهزة لضمان تشخيص دقيق وعلاج فعّال.',
-        'f2-title': 'أطباء متخصصون','f2-desc': 'فريقنا من أطباء متخصصين وذوي خبرة في مختلف التخصصات.',
+        'f2-title': 'أطباء في مختلف الاختصاصات','f2-desc': 'فريقنا يضم أطباء ذوي خبرة وكفاءة عالية في مختلف الاختصاصات الطبية.',
         'f3-title': 'طوارئ 24/24','f3-desc': 'نحن متاحون في أي وقت للحالات الطارئة.',
         'f4-title': 'أمان وصرامة صحية','f4-desc': 'نطبق أعلى معايير النظافة لحماية مرضانا.',
-        'doctors-tag': '<i class="fa-solid fa-circle-dot"></i> فريقنا الطبي','doctors-title': 'أطباء <span class="text-teal">متمرسون ومتفانون</span>','doctors-lead': 'تعرّف على فريقنا من المتخصصين المؤهلين الملتزمين بتقديم أعلى مستويات الرعاية الصحية.',
+        'doctors-tag': '<i class="fa-solid fa-circle-dot"></i> فريقنا الطبي','doctors-title': 'أطباء <span class="text-teal">متمرسون ومتفانون</span>','doctors-lead': 'يتكون فريقنا من نخبة من الأطباء ذوي الكفاءة العالية في مختلف الاختصاصات لخدمة صحتكم.',
         'doc1-name': 'د. الرويبح','doc1-spec': 'طبيب عام ومدير طبي','doc1-avail': 'متاح بموعد مسبق',
         'doc2-name': 'د. أمل بن علي','doc2-spec': 'طبيبة أطفال متخصصة','doc2-avail': 'متاحة بموعد مسبق',
         'doc3-name': 'د. كريم مزيان','doc3-spec': 'جراح عام','doc3-avail': 'متاح بموعد مسبق',
@@ -117,7 +136,7 @@ export default function ClientScripts() {
         'commit-title': 'التزامنا نحوك','commit-desc': 'نأخذ كل رأي وكل تعليق بجدية تامة. ردودنا الفورية يعكس التزامنا الراسخ بتحسين خدماتنا.','commit-btn': 'اقرأ كل التقييمات',
         'process-tag': '<i class="fa-solid fa-circle-dot"></i> كيف يعمل النظام؟','process-title': 'أربع خطوات بسيطة <span class="text-teal">للحصول على رعايتك</span>',
         'step1-title': 'احجز موعدك','step1-desc': 'تواصل معنا عبر الهاتف أو نموذج الحجز أو واتساب لتحديد موعدك.',
-        'step2-title': 'استقبال الطبيب','step2-desc': 'في الموعد المحدد، يستقبلك الطبيب المتخصص للفحص والتقييم.',
+        'step2-title': 'استقبال الطبيب','step2-desc': 'في الموعد المحدد، يستقبلك الطبيب في مختلف الاختصاصات للفحص والتقييم الأولي.',
         'step3-title': 'التشخيص الدقيق','step3-desc': 'يتم إجراء التحاليل والفحوصات اللازمة للوصول لتشخيص دقيق وصحيح.',
         'step4-title': 'خطة العلاج','step4-desc': 'يضع لك الطبيب خطة علاجية واضحة مع متابعة دورية حتى شفائك التام.',
         'contact-tag': '<i class="fa-solid fa-circle-dot"></i> تواصل معنا','contact-title': 'نحن في <span class="text-teal">برج منايل</span> — تعال إلينا',
@@ -131,6 +150,25 @@ export default function ClientScripts() {
         'whyus-cta-q': 'هل لديك سؤال؟','whyus-cta-sub': 'فريقنا في خدمتك دائماً',
         'footer-google-rating': '3.7/5 — 31 تقييم على Google','footer-desc': 'عيادة الرويبح — مركزك الطبي الموثوق في برج منايل. استعجالات 24/7، رعاية طبية عالية الجودة ومتابعة مخصصة.',
         'footer-quick': 'روابط سريعة','footer-services': 'خدماتنا الطبية','footer-contact': 'معلومات الاتصال','footer-rights': 'جميع الحقوق محفوظة © عيادة الرويبح.',
+        
+        /* Inner Pages: Services & Specialistes */
+        'nav-specialistes': 'الاختصاصات',
+        'srv-page-tag': '<i class="fa-solid fa-circle-dot"></i> خدماتنا الطبية', 'srv-page-title': 'رعاية طبية <span class="text-teal">شاملة ومتاحة</span>', 'srv-page-desc': 'يضع مجمع الرويبح الطبي بين أيديكم خدمات طبية عالية الجودة في برج منايل. يُشرف على كل خدمة طاقم محترف ومؤهل مزود بأحدث المعدات.', 'srv-page-call': '<i class="fa-solid fa-phone"></i> اتصل الآن', 'srv-page-book': '<i class="fa-solid fa-calendar-plus"></i> احجز موعدك', 'srv-card-call': '<i class="fa-solid fa-phone"></i> اتصال', 'srv-card-book': '<i class="fa-solid fa-calendar-plus"></i> موعد', 'srv-page-cta-title': 'بحاجة لاستشارة مستعجلة؟', 'srv-page-cta-desc': 'فريقنا متاح على مدار الساعة — لا تتردد.',
+        
+        'spec-page-tag': '<i class="fa-solid fa-circle-dot"></i> الاختصاصات الطبية', 'spec-page-title': 'الاختصاصات <span class="text-teal">في خدمتكم</span>', 'spec-page-desc': 'تجمع عيادتنا عدة اختصاصات طبية تحت سقف واحد. استشر أطباءنا المؤهلين وذوي الخبرة، والمتاحين بناءً على موعد مسبق في برج منايل.', 'spec-page-btn-book': '<i class="fa-solid fa-calendar-plus"></i> احجز موعدك', 'spec-page-btn-call': '<i class="fa-solid fa-phone"></i> 0559 50 50 01', 'spec-avail-badge': 'متاح بموعد مسبق', 'spec-actes-title': 'الخدمات والاستشارات:', 'spec-card-btn-book': '<i class="fa-solid fa-calendar-plus"></i> احجز موعدك', 'spec-card-btn-call': '<i class="fa-solid fa-phone"></i> اتصال', 'spec-page-cta-title': 'بحاجة إلى استشارة في اختصاص طبي؟', 'spec-page-cta-desc': 'اتصل بنا لحجز موعد مع الطبيب في الاختصاص الطبي المطلوب.',
+
+        'srv-urgences-title': 'طوارئ 24/7', 'srv-urgences-sub': 'خدمة الطوارئ الطبية', 'srv-urgences-desc': 'قسم الطوارئ لدينا مفتوح على مدار 24 ساعة في اليوم، 7 أيام في الأسبوع، 365 يوماً في السنة. فريق طبي مؤهل حاضر دائماً للتعامل مع أي حالة طبية طارئة بسرعة وكفاءة.', 'srv-urgences-feat-0': 'متاح 24/24 — 7/7', 'srv-urgences-feat-1': 'فريق طبي دائم', 'srv-urgences-feat-2': 'معدات إنعاش كاملة', 'srv-urgences-feat-3': 'رعاية فورية', 'srv-urgences-feat-4': 'تنسيق مع المستشفيات',
+        'srv-anapate-title': 'علم الأمراض (Anapate)', 'srv-anapate-sub': 'التشريح المرضي', 'srv-anapate-desc': 'يقوم قسم علم الأمراض والتشريح المرضي بإجراء تحاليل نسيجية وخلوية لتحديد تشخيصات دقيقة. يفحص أطباؤنا عينات الأنسجة باستخدام أحدث المعدات.', 'srv-anapate-feat-0': 'تحاليل نسيجية', 'srv-anapate-feat-1': 'دراسات خلوية', 'srv-anapate-feat-2': 'خزعات وعينات', 'srv-anapate-feat-3': 'نتائج موثوقة وسريعة', 'srv-anapate-feat-4': 'تقارير مفصلة',
+        'srv-laboratoire-title': 'المختبر', 'srv-laboratoire-sub': 'التحاليل البيولوجية والطبية', 'srv-laboratoire-desc': 'يُجري مختبر التحاليل الطبية لدينا مجموعة واسعة من الفحوصات البيولوجية: تحاليل الدم، البول، علم الجراثيم، الأمصال وأكثر من ذلك بكثير. يتم إرسال النتائج بسرعة للحصول على رعاية مثالية.', 'srv-laboratoire-feat-0': 'تحاليل دم كاملة', 'srv-laboratoire-feat-1': 'تحاليل البول', 'srv-laboratoire-feat-2': 'علم الجراثيم والأمصال', 'srv-laboratoire-feat-3': 'نتائج سريعة', 'srv-laboratoire-feat-4': 'معدات آلية',
+        'srv-imagerie-title': 'التصوير الطبي', 'srv-imagerie-sub': 'الأشعة والموجات فوق الصوتية', 'srv-imagerie-desc': 'يقدم قسم التصوير الطبي صور أشعة رقمية وفحوصات بالموجات فوق الصوتية لتشخيص دقيق وسريع. يقوم الفنيون وأطباء الأشعة لدينا بتفسير الصور بمنتهى الدقة.', 'srv-imagerie-feat-0': 'أشعة رقمية', 'srv-imagerie-feat-1': 'موجات فوق صوتية', 'srv-imagerie-feat-2': 'تفسير من قبل أطباء الأشعة', 'srv-imagerie-feat-3': 'نتائج فورية', 'srv-imagerie-feat-4': 'أرشفة رقمية',
+
+        'spec-dentiste-title': 'طب الأسنان', 'spec-dentiste-role': 'جراح أسنان', 'spec-dentiste-desc': 'تتولى عيادة الأسنان لدينا جميع أمراض الفم والأسنان: العلاجات التحفظية، الخلع، الأطراف الصناعية، إزالة الترسبات وتبييض الأسنان. متابعة منتظمة لصحة فم مثالية.', 'spec-dentiste-acte-0': 'علاجات تحفظية', 'spec-dentiste-acte-1': 'خلع الأسنان', 'spec-dentiste-acte-2': 'تعويضات سنية', 'spec-dentiste-acte-3': 'إزالة الترسبات', 'spec-dentiste-acte-4': 'علاج التسوس',
+        'spec-gynecologie-title': 'أمراض النساء', 'spec-gynecologie-role': 'طبيب أمراض النساء والتوليد', 'spec-gynecologie-desc': 'يضمن قسم أمراض النساء لدينا المتابعة النسائية والتوليدية للمرأة في جميع مراحل حياتها. الاستشارات، الحمل، الفحص، والوقاية من أمراض النساء.', 'spec-gynecologie-acte-0': 'متابعة الحمل', 'spec-gynecologie-acte-1': 'استشارات أمراض النساء', 'spec-gynecologie-acte-2': 'الموجات فوق الصوتية التوليدية', 'spec-gynecologie-acte-3': 'الفحص والكشف', 'spec-gynecologie-acte-4': 'تنظيم الأسرة',
+        'spec-orthopedie-title': 'جراحة العظام', 'spec-orthopedie-role': 'جراح عظام', 'spec-orthopedie-desc': 'يعالج قسم العظام أمراض الجهاز الحركي: الصدمات، الكسور، آلام المفاصل، وأمراض العظام والأوتار. تشخيص دقيق وخطة علاج مناسبة.', 'spec-orthopedie-acte-0': 'الكسور والإصابات', 'spec-orthopedie-acte-1': 'آلام المفاصل', 'spec-orthopedie-acte-2': 'أمراض العظام', 'spec-orthopedie-acte-3': 'إعادة التأهيل', 'spec-orthopedie-acte-4': 'الالتواءات والتهاب الأوتار',
+        'spec-cci-title': 'مركز العلاج الكيميائي', 'spec-cci-role': 'مركز العلاج الكيميائي الوريدي (CCI)', 'spec-cci-desc': 'يضمن مركز CCI لدينا تركيب، متابعة، وصيانة الغرف المزروعة للمرضى الذين يخضعون لعلاج وريدي طويل الأمد، في بيئة آمنة ومعقمة.', 'spec-cci-acte-0': 'تركيب CCI', 'spec-cci-acte-1': 'متابعة وصيانة', 'spec-cci-acte-2': 'تسريب وريدي', 'spec-cci-acte-3': 'بروتوكولات علاج الأورام', 'spec-cci-acte-4': 'رعاية تمريضية متخصصة',
+        'spec-gastrologie-title': 'أمراض الجهاز الهضمي', 'spec-gastrologie-role': 'أخصائي أمراض الجهاز الهضمي', 'spec-gastrologie-desc': 'يتكفل أخصائي الجهاز الهضمي لدينا بأمراض الجهاز الهضمي: المعدة، الأمعاء، الكبد، البنكرياس والمرارة. استشارات، تنظير ومتابعة لأمراض الجهاز الهضمي المزمنة.', 'spec-gastrologie-acte-0': 'أمراض الجهاز الهضمي', 'spec-gastrologie-acte-1': 'أمراض الكبد', 'spec-gastrologie-acte-2': 'تنظير القولون والمعدة', 'spec-gastrologie-acte-3': 'الارتجاع والقرحة', 'spec-gastrologie-acte-4': 'الأمراض الالتهابية',
+        'spec-pediatrie-title': 'طب الأطفال', 'spec-pediatrie-role': 'أخصائي طب الأطفال', 'spec-pediatrie-desc': 'يضمن طبيب الأطفال لدينا متابعة نمو وتطور الطفل من الولادة وحتى المراهقة. الاستشارات، التطعيمات، أمراض الطفولة، والفحوصات الصحية الدورية.', 'spec-pediatrie-acte-0': 'متابعة النمو', 'spec-pediatrie-acte-1': 'التطعيمات', 'spec-pediatrie-acte-2': 'أمراض الطفولة', 'spec-pediatrie-acte-3': 'فحوصات صحية', 'spec-pediatrie-acte-4': 'التغذية والنظام الغذائي',
+        'spec-cardiologie-title': 'أمراض القلب', 'spec-cardiologie-role': 'طبيب قلب', 'spec-cardiologie-desc': 'يضمن قسم أمراض القلب الفحص، التشخيص والمتابعة لأمراض القلب والأوعية الدموية. تخطيط القلب، صدى القلب، جهاز هولتر واستشارات متخصصة لصحة قلبك.', 'spec-cardiologie-acte-0': 'تخطيط القلب (ECG)', 'spec-cardiologie-acte-1': 'تخطيط صدى القلب', 'spec-cardiologie-acte-2': 'هولتر القلب', 'spec-cardiologie-acte-3': 'ارتفاع ضغط الدم', 'spec-cardiologie-acte-4': 'قصور القلب',
       }
     };
 
@@ -227,25 +265,25 @@ export default function ClientScripts() {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    // 4. Mobile menu
-    const menuBtn = document.getElementById("menu-toggle");
-    const navbar = document.getElementById("navbar");
-
-    if (menuBtn && navbar) {
-      const toggleMenu = () => {
-        menuBtn.classList.toggle("open");
-        navbar.classList.toggle("open");
-      };
-      menuBtn.addEventListener("click", toggleMenu);
-
-      const closeMenu = () => {
-        menuBtn.classList.remove("open");
-        navbar.classList.remove("open");
-      };
-      navbar.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeMenu);
-      });
-    }
+    // 4. Mobile menu (Event Delegation for SPA)
+    const onMobileMenuClick = (e: MouseEvent) => {
+      const target = e.target as Element;
+      const btn = target.closest('#menu-toggle');
+      const nav = document.getElementById('navbar');
+      
+      if (btn && nav) {
+        btn.classList.toggle('open');
+        nav.classList.toggle('open');
+        return;
+      }
+      
+      if (nav && target.closest('#navbar a')) {
+        const toggleBtn = document.getElementById('menu-toggle');
+        if (toggleBtn) toggleBtn.classList.remove('open');
+        nav.classList.remove('open');
+      }
+    };
+    document.addEventListener('click', onMobileMenuClick);
 
     // 5. Intersection Observer — Animate elements
     const animateEls = document.querySelectorAll(".animate");
@@ -446,6 +484,7 @@ export default function ClientScripts() {
       window.removeEventListener("resize", setHeaderOffset);
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener('click', onLangClick, true);
+      document.removeEventListener('click', onMobileMenuClick);
       cleanupFns.forEach((fn) => fn());
     };
   }, []);

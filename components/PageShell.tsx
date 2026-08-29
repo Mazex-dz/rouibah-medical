@@ -38,32 +38,36 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
           <nav className="navbar" id="navbar">
             {/* Mobile page links - MOVED TO TOP */}
             <div className="mobile-page-links">
-              <Link href="/"><i className="fa-solid fa-house"></i> Accueil</Link>
-              <Link href="/services"><i className="fa-solid fa-stethoscope"></i> Nos Services</Link>
-              <Link href="/specialistes"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
+              <Link href="/"><i className="fa-solid fa-house"></i> <span data-i18n="nav-home">Accueil</span></Link>
+              <Link href="/services"><i className="fa-solid fa-stethoscope"></i> <span data-i18n="nav-services">Nos Services</span></Link>
+              <Link href="/specialistes"><i className="fa-solid fa-user-doctor"></i> <span data-i18n="nav-specialistes">Les Spécialités</span></Link>
             </div>
             
             <ul className="nav-links inner-page-nav-links">
               <li className="page-switcher-container">
                 <div className="page-switcher">
-                  <Link href="/" className="page-btn"><i className="fa-solid fa-house"></i> Accueil</Link>
-                  <Link href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> Services</Link>
-                  <Link href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> Spécialistes</Link>
+                  <Link href="/" className="page-btn"><i className="fa-solid fa-house"></i> <span data-i18n="nav-home">Accueil</span></Link>
+                  <Link href="/services" className="page-btn"><i className="fa-solid fa-stethoscope"></i> <span data-i18n="nav-services">Services</span></Link>
+                  <Link href="/specialistes" className="page-btn"><i className="fa-solid fa-user-doctor"></i> <span data-i18n="nav-specialistes">Les Spécialités</span></Link>
                 </div>
               </li>
-              <li><Link href="/#about">À propos</Link></li>
-              <li><Link href="/#doctors">Notre Équipe</Link></li>
-              <li><Link href="/#gallery">Galerie</Link></li>
-              <li><Link href="/#testimonials">Avis Patients</Link></li>
-              <li><Link href="/#contact">Contact</Link></li>
+              <li><Link href="/#about" data-i18n="nav-about">À propos</Link></li>
+              <li><Link href="/#doctors" data-i18n="nav-doctors">Notre Équipe</Link></li>
+              <li><Link href="/#gallery" data-i18n="nav-gallery">Galerie</Link></li>
+              <li><Link href="/#testimonials" data-i18n="nav-testimonials">Avis Patients</Link></li>
+              <li><Link href="/#contact" data-i18n="nav-contact">Contact</Link></li>
             </ul>
+            <div className="lang-switcher-mobile">
+              <button className="lang-btn active" data-lang="fr" aria-label="Passer au Français">FR</button>
+              <button className="lang-btn" data-lang="ar" aria-label="التحويل إلى العربية">العربية</button>
+            </div>
           </nav>
 
           <div className="header-cta">
             <Link href="/#appointment" className="btn btn-primary" data-i18n="btn-book">
               <i className="fa-solid fa-calendar-plus"></i> Rendez-vous
             </Link>
-            <div className="lang-switcher lang-switcher-mobile">
+            <div className="lang-switcher">
               <button className="lang-btn active" data-lang="fr" aria-label="Passer au Français">FR</button>
               <button className="lang-btn" data-lang="ar" aria-label="التحويل إلى العربية">العربية</button>
             </div>
@@ -106,7 +110,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
               <ul>
                 <li><Link href="/"><i className="fa-solid fa-chevron-right"></i> Accueil</Link></li>
                 <li><Link href="/services"><i className="fa-solid fa-chevron-right"></i> Services</Link></li>
-                <li><Link href="/specialistes"><i className="fa-solid fa-chevron-right"></i> Spécialistes</Link></li>
+                <li><Link href="/specialistes"><i className="fa-solid fa-chevron-right"></i> <span data-i18n="nav-specialistes">Les Spécialités</span></Link></li>
                 <li><Link href="/#about"><i className="fa-solid fa-chevron-right"></i> À propos</Link></li>
                 <li><Link href="/#contact"><i className="fa-solid fa-chevron-right"></i> Contact</Link></li>
               </ul>

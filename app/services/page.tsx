@@ -88,20 +88,20 @@ export default function ServicesPage() {
       {/* ── HERO BANNER ── */}
       <section className="inner-hero">
         <div className="container inner-hero-content">
-          <div className="label-tag">
+          <div className="label-tag" data-i18n="srv-page-tag">
             <i className="fa-solid fa-circle-dot"></i> Nos Services Médicaux
           </div>
-          <h1>Des soins médicaux <span className="text-teal">complets et accessibles</span></h1>
-          <p>
+          <h1 data-i18n="srv-page-title">Des soins médicaux <span className="text-teal">complets et accessibles</span></h1>
+          <p data-i18n="srv-page-desc">
             Le Groupe Médical Rouibah met à votre disposition des services médicaux de
             haute qualité à Bordj Menaïel. Chaque service est assuré par des
             professionnels qualifiés avec des équipements modernes.
           </p>
           <div className="inner-hero-actions">
-            <a href="tel:0559505001" className="btn btn-primary">
+            <a href="tel:0559505001" className="btn btn-primary" data-i18n="srv-page-call">
               <i className="fa-solid fa-phone"></i> Appeler maintenant
             </a>
-            <a href="/#appointment" className="btn btn-outline-teal">
+            <a href="/#appointment" className="btn btn-outline-teal" data-i18n="srv-page-book">
               <i className="fa-solid fa-calendar-plus"></i> Prendre rendez-vous
             </a>
           </div>
@@ -129,27 +129,27 @@ export default function ServicesPage() {
                       <i className={svc.icon}></i>
                     </div>
                     <div>
-                      <h2 className="svc-full-title">{svc.title}</h2>
-                      <p className="svc-full-subtitle">{svc.subtitle}</p>
+                      <h2 className="svc-full-title" data-i18n={`srv-${svc.id}-title`}>{svc.title}</h2>
+                      <p className="svc-full-subtitle" data-i18n={`srv-${svc.id}-sub`}>{svc.subtitle}</p>
                     </div>
                   </div>
 
-                  <p className="svc-full-desc">{svc.description}</p>
+                  <p className="svc-full-desc" data-i18n={`srv-${svc.id}-desc`}>{svc.description}</p>
 
                   <ul className="svc-features">
                     {svc.features.map((f, i) => (
                       <li key={i}>
                         <i className="fa-solid fa-check-circle" style={{ color: svc.color }}></i>
-                        {f}
+                        <span data-i18n={`srv-${svc.id}-feat-${i}`}>{f}</span>
                       </li>
                     ))}
                   </ul>
 
                   <div className="svc-full-actions">
-                    <a href={`tel:${svc.phone.replace(/\s/g, "")}`} className="btn btn-primary">
+                    <a href={`tel:${svc.phone.replace(/\s/g, "")}`} className="btn btn-primary" data-i18n="srv-card-call">
                       <i className="fa-solid fa-phone"></i> Appeler
                     </a>
-                    <a href="/#appointment" className="btn btn-outline-teal">
+                    <a href="/#appointment" className="btn btn-outline-teal" data-i18n="srv-card-book">
                       <i className="fa-solid fa-calendar-plus"></i> Rendez-vous
                     </a>
                   </div>
@@ -164,8 +164,8 @@ export default function ServicesPage() {
       <section className="inner-cta-strip">
         <div className="container inner-cta-inner">
           <div>
-            <h3>Besoin d&apos;une consultation d&apos;urgence ?</h3>
-            <p>Notre équipe est disponible 24h/24 — Ne tardez pas.</p>
+            <h3 data-i18n="srv-page-cta-title">Besoin d&apos;une consultation d&apos;urgence ?</h3>
+            <p data-i18n="srv-page-cta-desc">Notre équipe est disponible 24h/24 — Ne tardez pas.</p>
           </div>
           <div className="inner-cta-btns">
             <a href="tel:0559505001" className="btn btn-primary">

@@ -472,6 +472,44 @@ button {
     background: var(--bg-soft);
 }
 
+.page-switcher-container {
+    display: block;
+}
+
+.page-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-soft);
+    border-radius: var(--radius-full);
+    padding: 4px;
+    margin-right: 12px;
+}
+
+.page-switcher .page-btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    border-radius: var(--radius-full);
+    transition: all 0.3s;
+}
+
+.page-switcher .page-btn i {
+    margin-right: 6px;
+    color: var(--teal-500);
+}
+
+.page-switcher .page-btn.active,
+.page-switcher .page-btn:hover {
+    background: #fff;
+    color: var(--blue-800);
+    box-shadow: var(--shadow-sm);
+}
+
+.mobile-page-links {
+    display: none;
+}
+
 .header-cta {
     display: flex;
     align-items: center;
@@ -2258,7 +2296,8 @@ button {
         display: flex;
     }
 
-    .header-cta .btn-primary {
+    .header-cta .btn-primary,
+    .header-cta .lang-switcher {
         display: none;
     }
 
@@ -2292,6 +2331,8 @@ button {
         transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border-bottom: 2px solid var(--teal-500);
         z-index: 999;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .navbar.open {
@@ -2299,20 +2340,55 @@ button {
         overflow-y: auto;
     }
 
+    .page-switcher-container {
+        display: none !important;
+    }
+
+    .mobile-page-links {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid var(--border);
+        background: var(--bg-soft);
+    }
+    
+    .mobile-page-links a {
+        padding: 14px 24px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--blue-800);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .mobile-page-links a i {
+        color: var(--teal-500);
+        font-size: 1.1rem;
+        width: 24px;
+        text-align: center;
+    }
+
     .nav-links {
         flex-direction: column;
         gap: 0;
-        padding: 12px 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
     }
 
     .nav-links a {
         padding: 14px 24px;
         border-radius: 0;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid rgba(0,0,0,0.05);
         font-size: 1rem;
         width: 100%;
         display: block;
-        text-align: start;
+        text-align: left;
+        color: var(--blue-800);
     }
 
     .lang-switcher-mobile {

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Nos Spécialistes | Groupe Médical Rouibah — Bordj Menaïel",
+  title: "Les Spécialités | Groupe Médical Rouibah — Bordj Menaïel",
   description:
-    "Consultez nos médecins spécialistes à Bordj Menaïel : Dentiste, Gynécologue, Orthopédiste, CCI, Gastrologue, Pédiatre, Cardiologue — sur rendez-vous.",
+    "Découvrez les spécialités médicales à Bordj Menaïel : Dentisterie, Gynécologie, Orthopédie, CCI, Gastroentérologie, Pédiatrie, Cardiologie — sur rendez-vous.",
 };
 
 const specialists = [
@@ -93,20 +93,20 @@ export default function SpecialistesPage() {
       {/* ── HERO BANNER ── */}
       <section className="inner-hero inner-hero--specialists">
         <div className="container inner-hero-content">
-          <div className="label-tag">
-            <i className="fa-solid fa-circle-dot"></i> Nos Médecins Spécialistes
+          <div className="label-tag" data-i18n="spec-page-tag">
+            <i className="fa-solid fa-circle-dot"></i> Nos Spécialités Médicales
           </div>
-          <h1>Des spécialistes <span className="text-teal">à votre service</span></h1>
-          <p>
-            Notre clinique regroupe plusieurs spécialités médicales sous un même toit.
-            Consultez nos médecins spécialistes qualifiés et expérimentés,
+          <h1 data-i18n="spec-page-title">Les spécialités médicales <span className="text-teal">à votre service</span></h1>
+          <p data-i18n="spec-page-desc">
+            Notre clinique regroupe de nombreuses spécialités médicales sous un même toit.
+            Consultez nos médecins qualifiés et expérimentés,
             tous disponibles sur rendez-vous à Bordj Menaïel.
           </p>
           <div className="inner-hero-actions">
-            <a href="/#appointment" className="btn btn-primary">
+            <a href="/#appointment" className="btn btn-primary" data-i18n="spec-page-btn-book">
               <i className="fa-solid fa-calendar-plus"></i> Prendre rendez-vous
             </a>
-            <a href="tel:0559505001" className="btn btn-outline-teal">
+            <a href="tel:0559505001" className="btn btn-outline-teal" data-i18n="spec-page-btn-call">
               <i className="fa-solid fa-phone"></i> 0559 50 50 01
             </a>
           </div>
@@ -120,7 +120,7 @@ export default function SpecialistesPage() {
             {specialists.map((s) => (
               <a key={s.id} href={`#${s.id}`} className="spec-pill" style={{ "--pill-color": s.color } as React.CSSProperties}>
                 <i className={s.icon}></i>
-                <span>{s.title}</span>
+                <span data-i18n={`spec-${s.id}-title`}>{s.title}</span>
               </a>
             ))}
           </div>
@@ -143,11 +143,11 @@ export default function SpecialistesPage() {
                     <div className="placeholder-icon" style={{ color: spec.color }}>
                       <i className={spec.icon}></i>
                     </div>
-                    <span className="placeholder-label">Photo Spécialiste</span>
+                    <span className="placeholder-label">Consultation Spécialisée</span>
                   </div>
                   {/* Availability badge */}
                   <div className="spec-avail-badge">
-                    <i className="fa-solid fa-circle-check"></i> Disponible sur rendez-vous
+                    <i className="fa-solid fa-circle-check"></i> <span data-i18n="spec-avail-badge">Disponible sur rendez-vous</span>
                   </div>
                 </div>
 
@@ -158,30 +158,30 @@ export default function SpecialistesPage() {
                       <i className={spec.icon}></i>
                     </div>
                     <div>
-                      <h2 className="spec-name">{spec.title}</h2>
-                      <p className="spec-role">{spec.specialist}</p>
+                      <h2 className="spec-name" data-i18n={`spec-${spec.id}-title`}>{spec.title}</h2>
+                      <p className="spec-role" data-i18n={`spec-${spec.id}-role`}>{spec.specialist}</p>
                     </div>
                   </div>
 
-                  <p className="spec-desc">{spec.description}</p>
+                  <p className="spec-desc" data-i18n={`spec-${spec.id}-desc`}>{spec.description}</p>
 
                   <div className="spec-actes">
-                    <h4 className="spec-actes-title">Actes & consultations :</h4>
+                    <h4 className="spec-actes-title" data-i18n="spec-actes-title">Actes & consultations :</h4>
                     <ul>
                       {spec.actes.map((a, i) => (
                         <li key={i}>
                           <i className="fa-solid fa-check" style={{ color: spec.color }}></i>
-                          {a}
+                          <span data-i18n={`spec-${spec.id}-acte-${i}`}>{a}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="spec-actions">
-                    <a href="/#appointment" className="btn btn-primary">
+                    <a href="/#appointment" className="btn btn-primary" data-i18n="spec-card-btn-book">
                       <i className="fa-solid fa-calendar-plus"></i> Prendre rendez-vous
                     </a>
-                    <a href="tel:0559505001" className="btn btn-outline-teal">
+                    <a href="tel:0559505001" className="btn btn-outline-teal" data-i18n="spec-card-btn-call">
                       <i className="fa-solid fa-phone"></i> Appeler
                     </a>
                   </div>
@@ -196,8 +196,8 @@ export default function SpecialistesPage() {
       <section className="inner-cta-strip">
         <div className="container inner-cta-inner">
           <div>
-            <h3>Prêt à consulter un spécialiste ?</h3>
-            <p>Appelez-nous pour prendre rendez-vous avec le médecin de votre choix.</p>
+            <h3 data-i18n="spec-page-cta-title">Besoin d'une consultation spécialisée ?</h3>
+            <p data-i18n="spec-page-cta-desc">Appelez-nous pour prendre rendez-vous dans la spécialité de votre choix.</p>
           </div>
           <div className="inner-cta-btns">
             <a href="tel:0559505001" className="btn btn-primary">
