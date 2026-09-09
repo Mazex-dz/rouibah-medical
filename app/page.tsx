@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Medical3DCanvas from "@/components/dora/Medical3DCanvas";
+import BorderBeam from "@/components/dora/BorderBeam";
+import InteractiveTriage from "@/components/dora/InteractiveTriage";
 
 export default function HomePage() {
   return (
@@ -102,58 +105,64 @@ export default function HomePage() {
       {/* ============================================================
           HERO SECTION
          ============================================================ */}
-      <section className="hero" id="home">
+      <section className="hero relative overflow-hidden" id="home">
         <div className="hero-bg">
           <img
-            src="/downloaded_images/img_1.jpg"
+            src="/clinic-images/gallery/pro-01.jpeg"
             alt="Clinique Rouibah — Bordj Menaïel"
             loading="eager"
           />
           <div className="hero-gradient"></div>
         </div>
         <div className="hero-particles" id="hero-particles"></div>
-        <div className="container hero-content">
-          <div className="hero-badge fade-in" data-delay="100" data-i18n="hero-badge"><i className="fa-solid fa-shield-heart"></i> Centre Médical Agréé — Bordj Menaïel, Algérie</div>
-          <h1 className="hero-title fade-in" data-delay="200" data-i18n="hero-title">Votre santé est une priorité entre des mains<br /><span className="gradient-text">spécialisées et de confiance</span></h1>
-          <p className="hero-subtitle fade-in" data-delay="300" data-i18n="hero-subtitle">Au Groupe Médical Rouibah, nous allions une haute compétence médicale à une vraie prise en charge humaine pour être votre partenaire santé de confiance à tout moment.</p>
-          <div className="hero-buttons fade-in" data-delay="400">
-            <a href="#appointment" className="btn btn-hero-primary" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
-            <a href="#about" className="btn btn-hero-ghost" data-i18n="hero-btn-about"><i className="fa-solid fa-play-circle"></i> Découvrez-nous</a>
+
+        {/* ── Split layout: text left / 3D canvas right ── */}
+        <div className="hero-split">
+          {/* Left: Text content */}
+          <div className="hero-split-text">
+            <div className="hero-badge fade-in" data-delay="100" data-i18n="hero-badge"><i className="fa-solid fa-shield-heart"></i> Centre Médical Agréé — Bordj Menaïel, Algérie</div>
+            <h1 className="hero-title fade-in" data-delay="200" data-i18n="hero-title">Votre santé est une priorité entre des mains<br /><span className="gradient-text">spécialisées et de confiance</span></h1>
+            <p className="hero-subtitle fade-in" data-delay="300" data-i18n="hero-subtitle">Au Groupe Médical Rouibah, nous allions une haute compétence médicale à une vraie prise en charge humaine pour être votre partenaire santé de confiance à tout moment.</p>
+            <div className="hero-buttons fade-in" data-delay="400">
+              <a href="#appointment" className="btn btn-hero-primary" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
+              <a href="#about" className="btn btn-hero-ghost" data-i18n="hero-btn-about"><i className="fa-solid fa-play-circle"></i> Découvrez-nous</a>
+            </div>
+            <div className="hero-stats fade-in" data-delay="500">
+              <div className="hero-stat">
+                <div className="stat-number" data-target="31">0</div>
+                <div className="stat-label" data-i18n="stat-google-label">Avis sur Google</div>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="hero-stat">
+                <div className="stat-number" data-target="6">0</div>
+                <div className="stat-label" data-i18n="stat-spec-label">Spécialités médicales</div>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="hero-stat">
+                <div className="stat-number" data-suffix="ساعة">24</div>
+                <div className="stat-label" data-i18n="stat-emerg-label">Urgences 24/7</div>
+              </div>
+            </div>
           </div>
 
-          <div className="hero-stats fade-in" data-delay="500">
-            <div className="hero-stat">
-              <div className="stat-number" data-target="31">
-                0
-              </div>
-              <div className="stat-label" data-i18n="stat-google-label">Avis sur Google</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="hero-stat">
-              <div className="stat-number" data-target="6">
-                0
-              </div>
-              <div className="stat-label" data-i18n="stat-spec-label">Spécialités médicales</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="hero-stat">
-              <div className="stat-number" data-suffix="ساعة">
-                24
-              </div>
-              <div className="stat-label" data-i18n="stat-emerg-label">Urgences 24/7</div>
-            </div>
+          {/* Right: 3D Medical Canvas */}
+          <div className="hero-split-visual">
+            <Medical3DCanvas />
           </div>
         </div>
+
         <div className="hero-scroll-indicator">
           <span data-i18n="hero-scroll">Découvrir plus</span>
           <i className="fa-solid fa-chevron-down"></i>
         </div>
       </section>
 
+
       {/* ============================================================
           EMERGENCY BANNER
          ============================================================ */}
-      <section className="emergency-bar">
+      <section className="emergency-bar relative overflow-hidden">
+        <BorderBeam size={220} duration={8} borderWidth={2} colorFrom="#ef4444" colorTo="#f59e0b" />
         <div className="container emergency-inner">
           <div className="emergency-icon pulse-ring">
             <i className="fa-solid fa-truck-medical"></i>
@@ -175,13 +184,13 @@ export default function HomePage() {
             <div className="about-visual animate" data-animation="slide-right">
               <div className="about-img-main">
                 <img
-                  src="/downloaded_images/img_13.jpg"
+                  src="/clinic-images/gallery/pro-02.jpeg"
                   alt="Clinique Rouibah — équipe médicale"
                 />
               </div>
               <div className="about-img-secondary">
                 <img
-                  src="/downloaded_images/img_15.jpg"
+                  src="/clinic-images/gallery/reception.jpeg"
                   alt="Clinique Rouibah — matériel médical"
                 />
               </div>
@@ -334,16 +343,11 @@ export default function HomePage() {
           </div>
 
           <div className="services-grid">
-            <div
-              className="service-card animate"
-              data-animation="fade-up"
-              data-delay="0"
-            >
+            {/* 01 — Urgences */}
+            <div className="service-card animate" data-animation="fade-up" data-delay="0" data-spec="urgences">
               <div className="service-card-inner">
                 <div className="service-number">01</div>
-                <div className="service-icon">
-                  <i className="fa-solid fa-truck-medical"></i>
-                </div>
+                <div className="service-icon"><i className="fa-solid fa-truck-medical"></i></div>
                 <h3 data-i18n="s1-title">Médecine Générale & Urgences</h3>
                 <p data-i18n="s1-desc">Un service d'urgence entièrement équipé, ouvert 24h/24 et 7j/7 pour accueillir tous les cas urgents.</p>
                 <ul className="service-features">
@@ -354,16 +358,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div
-              className="service-card animate"
-              data-animation="fade-up"
-              data-delay="100"
-            >
+            {/* 02 — Dentaire */}
+            <div className="service-card animate" data-animation="fade-up" data-delay="100" data-spec="dentaire">
               <div className="service-card-inner">
                 <div className="service-number">02</div>
-                <div className="service-icon">
-                  <i className="fa-solid fa-tooth"></i>
-                </div>
+                <div className="service-icon"><i className="fa-solid fa-tooth"></i></div>
                 <h3 data-i18n="s2-title">Médecine Dentaire & Chirurgie</h3>
                 <p data-i18n="s2-desc">Services d'orthodontie, de soin et d'esthétique dentaire avec des technologies récentes et des spécialistes expérimentés.</p>
                 <ul className="service-features">
@@ -374,16 +373,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div
-              className="service-card animate"
-              data-animation="fade-up"
-              data-delay="200"
-            >
+            {/* 03 — Gynécologie */}
+            <div className="service-card animate" data-animation="fade-up" data-delay="200" data-spec="gyneco">
               <div className="service-card-inner">
                 <div className="service-number">03</div>
-                <div className="service-icon">
-                  <i className="fa-solid fa-baby"></i>
-                </div>
+                <div className="service-icon"><i className="fa-solid fa-baby"></i></div>
                 <h3 data-i18n="s3-title">Gynécologie & Obstétrique</h3>
                 <p data-i18n="s3-desc">Suivi complet de la grossesse, accouchement sécurisé et soins post-partum dans un environnement confortable.</p>
                 <ul className="service-features">
@@ -394,16 +388,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div
-              className="service-card animate"
-              data-animation="fade-up"
-              data-delay="300"
-            >
+            {/* 04 — Pédiatrie */}
+            <div className="service-card animate" data-animation="fade-up" data-delay="300" data-spec="pediatrie">
               <div className="service-card-inner">
                 <div className="service-number">04</div>
-                <div className="service-icon">
-                  <i className="fa-solid fa-child-reaching"></i>
-                </div>
+                <div className="service-icon"><i className="fa-solid fa-child-reaching"></i></div>
                 <h3 data-i18n="s4-title">Pédiatrie</h3>
                 <p data-i18n="s4-desc">Soins complets pour la santé de vos enfants, de la naissance à l'adolescence, dispensés par des pédiatres dévoués.</p>
                 <ul className="service-features">
@@ -414,16 +403,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div
-              className="service-card animate"
-              data-animation="fade-up"
-              data-delay="400"
-            >
+            {/* 05 — Laboratoire */}
+            <div className="service-card animate" data-animation="fade-up" data-delay="400" data-spec="labo">
               <div className="service-card-inner">
                 <div className="service-number">05</div>
-                <div className="service-icon">
-                  <i className="fa-solid fa-flask-vial"></i>
-                </div>
+                <div className="service-icon"><i className="fa-solid fa-flask-vial"></i></div>
                 <h3 data-i18n="s5-title">Laboratoire d'Analyses Médicales</h3>
                 <p data-i18n="s5-desc">Laboratoire moderne équipé d'appareils de pointe offrant des résultats rapides et précis pour toutes les analyses.</p>
                 <ul className="service-features">
@@ -434,16 +418,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div
-              className="service-card animate"
-              data-animation="fade-up"
-              data-delay="500"
-            >
+            {/* 06 — Radiologie */}
+            <div className="service-card animate" data-animation="fade-up" data-delay="500" data-spec="radio">
               <div className="service-card-inner">
                 <div className="service-number">06</div>
-                <div className="service-icon">
-                  <i className="fa-solid fa-x-ray"></i>
-                </div>
+                <div className="service-icon"><i className="fa-solid fa-x-ray"></i></div>
                 <h3 data-i18n="s6-title">Imagerie Médicale & Radiologie</h3>
                 <p data-i18n="s6-desc">Service d'imagerie entièrement équipé proposant tous les examens nécessaires à un diagnostic précis.</p>
                 <ul className="service-features">
@@ -456,6 +435,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ============================================================
+          DORA INTERACTIVE MEDICAL TRIAGE & ORIENTATION
+         ============================================================ */}
+      <InteractiveTriage />
 
       {/* ============================================================
           WHY US SECTION
@@ -527,7 +511,7 @@ export default function HomePage() {
             <div className="img-stack">
               <img
                 className="img-back"
-                src="/downloaded_images/img_14.jpg"
+                src="/clinic-images/gallery/clinique-1.jpeg"
                 alt="طاقم طبي"
               />
             </div>
@@ -550,116 +534,111 @@ export default function HomePage() {
          ============================================================ */}
       <section className="doctors section bg-soft" id="doctors">
         <div className="container">
-          <div
-            className="section-header text-center animate"
-            data-animation="fade-up"
-          >
+          {/* Section header */}
+          <div className="section-header text-center animate" data-animation="fade-up">
             <span className="label-tag" data-i18n="doctors-tag"><i className="fa-solid fa-circle-dot"></i> Équipe Médicale</span>
             <h2 className="section-title" data-i18n="doctors-title">Des médecins spécialisés <span className="text-teal">à votre service</span></h2>
             <p className="section-lead" data-i18n="doctors-lead">Notre équipe se compose de médecins qualifiés dans diverses spécialités et dévoués à votre santé.</p>
           </div>
 
-          <div className="doctors-grid">
-            <div
-              className="doctor-card animate"
-              data-animation="fade-up"
-              data-delay="0"
-            >
-              <div className="doctor-img">
-                <img
-                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccc'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
-                  alt="طبيب متخصص"
-                />
-                <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
+          {/* ── Featured + Supporting layout ── */}
+          <div className="doctors-featured-grid">
+
+            {/* ── Featured: Dr. Rouibah ── */}
+            <div className="doctor-card-v2 doctor-card-featured animate" data-spec="directeur" data-animation="fade-up" data-delay="0">
+              <div className="doctor-photo-area">
+                <div className="doctor-placeholder">
+                  <div className="doctor-placeholder-icon"><i className="fa-solid fa-user-doctor"></i></div>
+                  <span className="doctor-placeholder-label" data-i18n="d1-name">Dr. Rouibah</span>
                 </div>
               </div>
-              <div className="doctor-info">
+              <div className="doctor-card-body">
+                <span className="doctor-specialty-badge"><i className="fa-solid fa-star"></i> <span data-i18n="d1-role-badge">Médecin Directeur</span></span>
                 <h4 data-i18n="d1-name">Dr. Rouibah</h4>
-                <p data-i18n="d1-role">Médecin Directeur & Généraliste</p>
-                <div className="doctor-socials">
-                  <span>
-                    <i className="fa-solid fa-stethoscope"></i>
-                  </span>
-                </div>
+                <p className="doctor-role-text" data-i18n="d1-role">Médecin Directeur & Généraliste — Groupe Médical Rouibah, Bordj Menaïel</p>
+                <a href="#appointment" className="doctor-book-btn" data-i18n="hero-btn-book">
+                  <i className="fa-solid fa-calendar-plus"></i> Réserver un rendez-vous
+                </a>
               </div>
             </div>
 
-            <div
-              className="doctor-card animate"
-              data-animation="fade-up"
-              data-delay="150"
-            >
-              <div className="doctor-img">
-                <img
-                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccc'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
-                  alt="طبيبة أخصائية"
-                />
-                <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-              <div className="doctor-info">
-                <h4 data-i18n="d3-name">Dr. Gynécologue Spécialiste</h4>
-                <p data-i18n="d3-role">Spécialiste en Gynécologie-Obstétrique</p>
-                <div className="doctor-socials">
-                  <span>
-                    <i className="fa-solid fa-heart-pulse"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
+            {/* ── Supporting column ── */}
+            <div className="doctors-supporting-col">
 
-            <div
-              className="doctor-card animate"
-              data-animation="fade-up"
-              data-delay="300"
-            >
-              <div className="doctor-img">
-                <img
-                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccc'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
-                  alt="طبيب أطفال"
-                />
-                <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
+              {/* Gynécologue */}
+              <div className="doctor-card-v2 doctor-card-supporting animate" data-spec="gyneco" data-animation="fade-up" data-delay="100">
+                <div className="doctor-photo-area">
+                  <div className="doctor-placeholder">
+                    <div className="doctor-placeholder-icon"><i className="fa-solid fa-heart-pulse"></i></div>
+                    <span className="doctor-placeholder-label">Gynéco</span>
+                  </div>
+                </div>
+                <div className="doctor-card-body">
+                  <span className="doctor-specialty-badge"><i className="fa-solid fa-circle"></i> Gynécologie</span>
+                  <h4 data-i18n="d3-name">Dr. Gynécologue Spécialiste</h4>
+                  <p className="doctor-role-text" data-i18n="d3-role">Spécialiste en Gynécologie-Obstétrique</p>
+                  <a href="#appointment" className="doctor-book-btn" data-i18n="hero-btn-book"><i className="fa-solid fa-calendar-plus"></i> Rendez-vous</a>
                 </div>
               </div>
-              <div className="doctor-info">
-                <h4 data-i18n="d2-name">Dr. Pédiatre Spécialiste</h4>
-                <p data-i18n="d2-role">Spécialiste en Pédiatrie</p>
-                <div className="doctor-socials">
-                  <span>
-                    <i className="fa-solid fa-child"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
 
-            <div
-              className="doctor-card animate"
-              data-animation="fade-up"
-              data-delay="450"
-            >
-              <div className="doctor-img">
-                <img
-                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccc'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>"
-                  alt="طبيب أسنان"
-                />
-                <div className="doctor-overlay">
-                  <a href="#appointment" className="btn btn-sm-white" data-i18n="hero-btn-book">Réserver un rendez-vous <i className="fa-solid fa-arrow-right"></i></a>
+              {/* Pédiatre */}
+              <div className="doctor-card-v2 doctor-card-supporting animate" data-spec="pediatrie" data-animation="fade-up" data-delay="200">
+                <div className="doctor-photo-area">
+                  <div className="doctor-placeholder">
+                    <div className="doctor-placeholder-icon"><i className="fa-solid fa-child"></i></div>
+                    <span className="doctor-placeholder-label">Pédiatrie</span>
+                  </div>
+                </div>
+                <div className="doctor-card-body">
+                  <span className="doctor-specialty-badge"><i className="fa-solid fa-circle"></i> Pédiatrie</span>
+                  <h4 data-i18n="d2-name">Dr. Pédiatre Spécialiste</h4>
+                  <p className="doctor-role-text" data-i18n="d2-role">Spécialiste en Pédiatrie</p>
+                  <a href="#appointment" className="doctor-book-btn" data-i18n="hero-btn-book"><i className="fa-solid fa-calendar-plus"></i> Rendez-vous</a>
                 </div>
               </div>
-              <div className="doctor-info">
-                <h4 data-i18n="d4-name">Équipe d'Urgences</h4>
-                <p data-i18n="d4-role">Médecins Urgentistes & Infirmiers</p>
-                <div className="doctor-socials">
-                  <span>
-                    <i className="fa-solid fa-tooth"></i>
-                  </span>
+
+              {/* Équipe Urgences */}
+              <div className="doctor-card-v2 doctor-card-supporting animate" data-spec="urgences" data-animation="fade-up" data-delay="300">
+                <div className="doctor-photo-area">
+                  <div className="doctor-placeholder">
+                    <div className="doctor-placeholder-icon"><i className="fa-solid fa-truck-medical"></i></div>
+                    <span className="doctor-placeholder-label">Urgences</span>
+                  </div>
+                </div>
+                <div className="doctor-card-body">
+                  <span className="doctor-specialty-badge"><i className="fa-solid fa-circle"></i> Urgences 24/7</span>
+                  <h4 data-i18n="d4-name">Équipe d'Urgences</h4>
+                  <p className="doctor-role-text" data-i18n="d4-role">Médecins Urgentistes & Infirmiers</p>
+                  <a href="tel:0559505001" className="doctor-book-btn" style={{ background: '#ef4444' }}><i className="fa-solid fa-phone"></i> Appeler Maintenant</a>
                 </div>
               </div>
+
             </div>
           </div>
+
+          {/* Team trust indicators */}
+          <div className="team-trust-bar animate" data-animation="fade-up">
+            <div className="team-trust-item">
+              <i className="fa-solid fa-user-doctor"></i>
+              <span data-i18n="stat-counter2-label">12+ Médecins spécialistes</span>
+            </div>
+            <div className="team-trust-divider"></div>
+            <div className="team-trust-item">
+              <i className="fa-solid fa-clock"></i>
+              <span data-i18n="stat-emerg-label">Urgences 24/7</span>
+            </div>
+            <div className="team-trust-divider"></div>
+            <div className="team-trust-item">
+              <i className="fa-solid fa-microscope"></i>
+              <span data-i18n="stat-counter3-label">6 Spécialités médicales</span>
+            </div>
+            <div className="team-trust-divider"></div>
+            <div className="team-trust-item">
+              <i className="fa-solid fa-shield-heart"></i>
+              <span data-i18n="about-badge-title">Centre Médical Intégré</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -668,70 +647,33 @@ export default function HomePage() {
          ============================================================ */}
       <section className="gallery section" id="gallery">
         <div className="container">
-          <div
-            className="section-header text-center animate"
-            data-animation="fade-up"
-          >
-            <span className="label-tag" data-i18n="gallery-tag"><i className="fa-solid fa-circle-dot"></i> Galerie de la Clinique</span>
-            <h2 className="section-title" data-i18n="gallery-title">Découvrez notre clinique <span className="text-teal">en images</span></h2>
-            <p className="section-lead" data-i18n="gallery-lead">Nous offrons un cadre médical moderne et confortable, digne de chaque patient.</p>
+          <div className="section-header text-center animate" data-animation="fade-up">
+            <span className="label-tag" data-i18n="gallery-tag"><i className="fa-solid fa-camera-retro"></i> En Images</span>
+            <h2 className="section-title" data-i18n="gallery-title">Visite <span className="text-teal">Virtuelle</span></h2>
+            <p className="section-lead" dir="rtl">اكتشفوا القطب الطبي ومرافق الاستقبال الخاصة بنا من خلال هذه الجولة المصورة.</p>
           </div>
-
-          <div className="gallery-grid">
-            <div
-              className="gallery-item gallery-item-wide animate"
-              data-animation="fade-up"
-              data-delay="0"
-            >
-              <img
-                src="/downloaded_images/img_1.jpg"
-                alt="Photo clinique Rouibah 1"
-              />
-              <div className="gallery-caption">Photo 1 : Établissement médical certifié 🩺</div>
+          
+          <div className="horizontal-gallery-wrapper animate" data-animation="fade-up">
+            <div className="horizontal-gallery" style={{ paddingBottom: '20px' }}>
+              {Array.from({ length: 32 }, (_, i) => (
+                <img
+                  key={`hub-${i}`}
+                  src={`/clinic-images/batch3/medical-hub-${String(i + 1).padStart(2, '0')}.jpeg`}
+                  alt={`Le Pôle Médical - Photo ${i + 1}`}
+                  loading="lazy"
+                />
+              ))}
+              {Array.from({ length: 11 }, (_, i) => (
+                <img
+                  key={`reception-${i}`}
+                  src={`/clinic-images/batch3/reception-${String(i + 1).padStart(2, '0')}.jpeg`}
+                  alt={`Réception - Photo ${i + 1}`}
+                  loading="lazy"
+                />
+              ))}
             </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
-              <img src="/downloaded_images/img_2.jpg" alt="Clinique Rouibah 2" />
-              <div className="gallery-caption">Photo 2 : Équipements modernes 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
-              <img src="/downloaded_images/img_3.jpg" alt="Clinique Rouibah 3" />
-              <div className="gallery-caption">Photo 3 : Salles de soins 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
-              <img src="/downloaded_images/img_4.jpg" alt="Clinique Rouibah 4" />
-              <div className="gallery-caption">Photo 4 : Environnement confortable 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="0">
-              <img src="/downloaded_images/img_5.jpg" alt="Clinique Rouibah 5" />
-              <div className="gallery-caption">Photo 5 : Accueil des patients 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
-              <img src="/downloaded_images/img_6.jpg" alt="Clinique Rouibah 6" />
-              <div className="gallery-caption">Photo 6 : Laboratoire d'analyses 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
-              <img src="/downloaded_images/img_7.jpg" alt="Clinique Rouibah 7" />
-              <div className="gallery-caption">Photo 7 : Service de radiologie 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
-              <img src="/downloaded_images/img_8.jpg" alt="Clinique Rouibah 8" />
-              <div className="gallery-caption">Photo 8 : Bloc opératoire 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="0">
-              <img src="/downloaded_images/img_9.jpg" alt="Clinique Rouibah 9" />
-              <div className="gallery-caption">Photo 9 : Salle d'attente 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="50">
-              <img src="/downloaded_images/img_10.jpg" alt="Clinique Rouibah 10" />
-              <div className="gallery-caption">Photo 10 : Cabinets de consultation 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="100">
-              <img src="/downloaded_images/img_11.jpg" alt="Clinique Rouibah 11" />
-              <div className="gallery-caption">Photo 11 : Service des urgences 🩺</div>
-            </div>
-            <div className="gallery-item animate" data-animation="fade-up" data-delay="150">
-              <img src="/downloaded_images/img_12.jpg" alt="Clinique Rouibah 12" />
-              <div className="gallery-caption">Photo 12 : Infrastructure médicale 🩺</div>
+            <div className="horizontal-gallery-hint">
+              <i className="fa-solid fa-arrows-left-right"></i> Glisser pour voir plus
             </div>
           </div>
         </div>
@@ -1010,34 +952,95 @@ export default function HomePage() {
             <h2 className="section-title" data-i18n="process-title">Quatre étapes simples <span className="text-teal">pour obtenir vos soins</span></h2>
           </div>
 
-          <div className="process-steps">
-            <div className="process-step animate" data-animation="fade-up" data-delay="0">
-              <div className="step-number">01</div>
-              <div className="step-icon"><i className="fa-solid fa-calendar-days"></i></div>
+          {/* ── Process Timeline v2 — with connecting line ── */}
+          <div className="process-timeline-wrapper">
+            <div className="process-step-v2 animate" data-animation="fade-up" data-delay="0">
+              <div className="step-circle">01</div>
+              <div className="step-icon-v2"><i className="fa-solid fa-calendar-days"></i></div>
               <h4 data-i18n="step1-title">Prenez rendez-vous</h4>
               <p data-i18n="step1-desc">Contactez-nous par téléphone, formulaire en ligne ou WhatsApp pour fixer votre rendez-vous.</p>
             </div>
-            <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
-            <div className="process-step animate" data-animation="fade-up" data-delay="100">
-              <div className="step-number">02</div>
-              <div className="step-icon"><i className="fa-solid fa-user-clock"></i></div>
+            <div className="process-step-v2 animate" data-animation="fade-up" data-delay="100">
+              <div className="step-circle">02</div>
+              <div className="step-icon-v2"><i className="fa-solid fa-user-clock"></i></div>
               <h4 data-i18n="step2-title">Accueil par le médecin</h4>
               <p data-i18n="step2-desc">À l'heure convenue, le médecin de la spécialité choisie vous reçoit pour l'examen et l'évaluation initiale.</p>
             </div>
-            <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
-            <div className="process-step animate" data-animation="fade-up" data-delay="200">
-              <div className="step-number">03</div>
-              <div className="step-icon"><i className="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div className="process-step-v2 animate" data-animation="fade-up" data-delay="200">
+              <div className="step-circle">03</div>
+              <div className="step-icon-v2"><i className="fa-solid fa-magnifying-glass-chart"></i></div>
               <h4 data-i18n="step3-title">Diagnostic précis</h4>
               <p data-i18n="step3-desc">Les analyses et examens nécessaires sont réalisés pour établir un diagnostic exact et fiable.</p>
             </div>
-            <div className="process-arrow"><i className="fa-solid fa-arrow-right"></i></div>
-            <div className="process-step animate" data-animation="fade-up" data-delay="300">
-              <div className="step-number">04</div>
-              <div className="step-icon"><i className="fa-solid fa-notes-medical"></i></div>
+            <div className="process-step-v2 animate" data-animation="fade-up" data-delay="300">
+              <div className="step-circle">04</div>
+              <div className="step-icon-v2"><i className="fa-solid fa-notes-medical"></i></div>
               <h4 data-i18n="step4-title">Plan de traitement</h4>
               <p data-i18n="step4-desc">Le médecin établit un plan thérapeutique clair avec un suivi régulier jusqu'à votre rétablissement complet.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          ACTUALITÉS & ÉVÉNEMENTS
+         ============================================================ */}
+      <section className="news section" id="news">
+        <div className="container">
+          <div className="section-header text-center animate" data-animation="fade-up">
+            <span className="label-tag" data-i18n="news-tag"><i className="fa-solid fa-bullhorn"></i> Actualités & Événements</span>
+            <h2 className="section-title" data-i18n="news-title">Découvrez nos dernières <span className="text-teal">nouvelles</span></h2>
+          </div>
+          <div className="news-grid">
+            {/* Pink October */}
+            <div className="news-card animate" data-animation="fade-up">
+              <div className="news-img">
+                <img src="/clinic-images/batch3/pink-october-01.jpeg" alt="Octobre Rose" loading="lazy" />
+              </div>
+              <div className="news-content" dir="rtl">
+                <span className="news-date">أكتوبر</span>
+                <h3>أكتوبر الوردي</h3>
+                <p>شهر التوعية بسرطان الثدي. الفحص المبكر ينقذ الأرواح، لا تترددي في زيارتنا.</p>
+              </div>
+            </div>
+            {/* Circumcision */}
+            <div className="news-card animate" data-animation="fade-up" data-delay="100">
+              <div className="news-img">
+                <img src="/clinic-images/batch3/circumcision-01.jpeg" alt="Circoncision" loading="lazy" />
+              </div>
+              <div className="news-content" dir="rtl">
+                <span className="news-date">المولد النبوي الشريف</span>
+                <h3>عرض خاص على عمليات الختان</h3>
+                <p>بمناسبة المولد النبوي الشريف، يسرّ عيادة رويبح أن تقدم لكم عرضًا خاصًا على عمليات الختان.</p>
+              </div>
+            </div>
+            {/* Did you know / Health tips */}
+            <div className="news-card animate" data-animation="fade-up" data-delay="200">
+              <div className="news-img">
+                <img src="/clinic-images/batch3/did-you-know-01.jpeg" alt="Le saviez-vous" loading="lazy" />
+              </div>
+              <div className="news-content" dir="rtl">
+                <span className="news-date">نصائح صحية</span>
+                <h3>هل تعلم؟</h3>
+                <p>في إطار التوعية بأهمية الوقاية خلال فصل الصيف، نذكركم بشرب كميات كافية من الماء للحفاظ على صحتكم.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          PARTENAIRES
+         ============================================================ */}
+      <section className="partners section">
+        <div className="container">
+          <div className="section-header text-center animate" data-animation="fade-up">
+            <span className="label-tag" data-i18n="partners-tag"><i className="fa-solid fa-handshake"></i> Nos Partenaires</span>
+            <h2 className="section-title" data-i18n="partners-title">Ils nous font <span className="text-teal">confiance</span></h2>
+            <p className="section-lead" dir="rtl">مؤسساتٌ وضعت ثقتها فينا، نفخر بثقة العديد من المؤسسات والشركات التي اختارت عيادة رويبح كشريك للرعاية الصحية.</p>
+          </div>
+          <div className="partners-logos animate" data-animation="fade-up">
+            <img src="/clinic-images/batch3/partners-01.jpeg" alt="Nos Partenaires" loading="lazy" />
           </div>
         </div>
       </section>
@@ -1140,7 +1143,8 @@ export default function HomePage() {
           <div className="appt-overlay"></div>
         </div>
         <div className="container appt-container">
-          <div className="appt-form-card animate" data-animation="fade-up">
+          <div className="appt-form-card animate relative overflow-hidden" data-animation="fade-up">
+            <BorderBeam size={320} duration={12} borderWidth={2} colorFrom="#14b8a6" colorTo="#38bdf8" />
             <div className="appt-form-header">
               <div className="appt-icon">
                 <i className="fa-solid fa-calendar-check"></i>
@@ -1332,6 +1336,17 @@ export default function HomePage() {
       >
         <i className="fa-solid fa-arrow-up"></i>
       </button>
+
+      {/* Mobile Floating Appointment CTA */}
+      <a
+        href="#appointment"
+        className="mobile-appt-fab"
+        aria-label="Prendre rendez-vous"
+        data-i18n="btn-book"
+      >
+        <i className="fa-solid fa-calendar-plus"></i>
+        Rendez-vous
+      </a>
     </>
   );
 }

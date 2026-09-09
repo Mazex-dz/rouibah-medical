@@ -1,6 +1,10 @@
 import "./globals.css";
 import Script from "next/script";
 import ClientScripts from "@/components/ClientScripts";
+import ScrollProgressBar from "@/components/motion/ScrollProgressBar";
+import PremiumEffects from "@/components/motion/PremiumEffects";
+import MedicalFloatingDock from "@/components/dora/MedicalFloatingDock";
+import DoraScrollEffects from "@/components/dora/DoraScrollEffects";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,9 +46,16 @@ export default function RootLayout({
         <Script src="/lang-switcher.js" strategy="afterInteractive" />
       </head>
       <body>
+        {/* Framer-motion scroll progress bar — spring-smoothed */}
+        <ScrollProgressBar />
         <div id="react-loader-root"></div>
         {children}
         <ClientScripts />
+        {/* Motion.dev & Dora premium spatial effects */}
+        <PremiumEffects />
+        <DoraScrollEffects />
+        {/* Dora spatial floating medical quick action dock */}
+        <MedicalFloatingDock />
       </body>
     </html>
   );

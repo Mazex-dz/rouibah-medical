@@ -1,0 +1,66 @@
+Rapport d'assemblage
+
+-----------------------------------------------------------------------------
+Document :
+Nom : photo de couverture rouibah octobre rose.eps
+Mode : Couleurs RVB
+Profil colorimétrique : sRGB IEC61966-2.1
+Unité : pixels
+Dimensions : 911,5989 px x 509,4772 px
+Afficher les images en mode Tracés : INACTIF
+Mettre en évidence les polices substituées : INACTIF
+Mettre en évidence les glyphes substitués : INACTIF
+Conserver le caractère modifiable du texte
+Simuler le papier couleur : INACTIF
+
+-----------------------------------------------------------------------------
+Objets en tons directs :
+
+-----------------------------------------------------------------------------
+Polices manquantes :SANS
+
+-----------------------------------------------------------------------------
+Polices protégées non assemblées :SANS
+
+-----------------------------------------------------------------------------
+Polices :
+Frutiger LT Arabic 55 Roman (OTF)
+Frutiger LT Arabic 65 Bold (TrueType)
+Frutiger LT Arabic 75 Black (TrueType)
+
+-----------------------------------------------------------------------------
+Polices incorporées :
+SANS
+
+-----------------------------------------------------------------------------
+Liens manquants :
+SANS
+
+-----------------------------------------------------------------------------
+Images liées :
+
+D:\work\01 Rouibah medical\Logo\octobre rose\nohat_bg_removed_e9579157.png
+Type : RVB transparent
+Bits par pixel : 32
+Couches : 4
+Taille : 18310K, 2500 x 1875 pixels
+Dimensions : 558,852 x 427,985 points 
+Résolution : 322,089 x 315,431 pixels par pouce
+
+
+D:\work\01 Rouibah medical\Logo\octobre rose\nohat_bg_removed_e9579157.png
+Type : RVB transparent
+Bits par pixel : 32
+Couches : 4
+Taille : 18310K, 2500 x 1875 pixels
+Dimensions : 558,852 x 427,985 points 
+Résolution : 322,089 x 315,431 pixels par pouce
+
+
+D:\work\01 Rouibah medical\Logo\octobre rose\logo.png
+Type : RVB transparent
+Bits par pixel : 32
+Couches : 4
+Taille : 8789K, 1500 x 1500 pixels
+Dimensions : 259,2 x 259,2 points 
+Résolution : 416,667 x 416,667 pixels par pouce

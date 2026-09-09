@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
+import Link from "next/link";
+import { galleryData } from "../data/galleries";
 
 export const metadata: Metadata = {
   title: "Nos Services | Groupe Médical Rouibah — Bordj Menaïel",
@@ -15,34 +17,49 @@ const services = [
     bg: "#fef2f2",
     title: "Urgences 24/7",
     subtitle: "Service des urgences médicales",
-    description:
-      "Notre service des urgences est ouvert 24 heures sur 24, 7 jours sur 7, 365 jours par an. Une équipe médicale qualifiée est toujours présente pour prendre en charge toute situation d'urgence médicale rapidement et efficacement.",
+    description: "Notre service des urgences est ouvert 24h/24 et 7j/7. Une équipe médicale qualifiée est toujours présente pour prendre en charge toute situation d'urgence.",
+    arabicDesc: "لأن الحالات الطارئة لا تنتظر، تضع عيادة رويبح بين أيديكم مصلحة استعجالات مجهزة بكل ما يلزم للتكفل السريع والفعال: استقبال 24 ساعة، طاقم طبي جاهز للتدخل في أي لحظة، وتجهيزات حديثة ومتكاملة (جهاز ECG، مركزات الأوكسجين).",
     features: [
       "Disponible 24h/24 — 7j/7",
       "Équipe médicale permanente",
       "Matériel de réanimation complet",
       "Prise en charge immédiate",
-      "Coordination avec les hôpitaux",
     ],
-    phone: "0559 50 50 01",
+    phone: "0559 50 50 05",
+  },
+  {
+    id: "dentaire",
+    icon: "fa-solid fa-tooth",
+    color: "#3b82f6",
+    bg: "#eff6ff",
+    title: "Soins Dentaires",
+    subtitle: "Médecine et chirurgie dentaire",
+    description: "Des soins de haute qualité, de la prévention à la restauration complexe, avec les dernières technologies.",
+    arabicDesc: "نوفّر لكم خدمات علاج الأسنان تحت إشراف طبيب أسنان مختص، باستخدام تجهيزات حديثة، من أجل صحة فم وأسنان أفضل. علاج التسوّس، آلام الأسنان، تبييض الأسنان، ومتابعة دورية للوقاية من المضاعفات.",
+    features: [
+      "Soins et obturations",
+      "Blanchiment dentaire",
+      "Prothèses fixes et amovibles",
+      "Équipement de pointe",
+    ],
+    phone: "0559 50 50 05",
   },
   {
     id: "anapate",
     icon: "fa-solid fa-microscope",
     color: "#8b5cf6",
     bg: "#f5f3ff",
-    title: "Anapate",
-    subtitle: "Anatomie pathologique",
-    description:
-      "Le service d'anatomie et de pathologie (Anapate) réalise des analyses histologiques et cytologiques pour établir des diagnostics précis. Nos pathologistes examinent les prélèvements tissulaires avec les équipements les plus modernes.",
+    title: "Anapate (Anatomopathologie)",
+    subtitle: "Analyse des tissus et cellules",
+    description: "Le service d'anatomie et de pathologie réalise des analyses histologiques et cytologiques pour établir des diagnostics précis.",
+    arabicDesc: "نوفر لكم خدمة التشريح المرضي بإشراف طبيب مختص بخبرة تفوق 25 سنة. يساعد على تشخيص العديد من الأمراض من خلال فحص الأنسجة والخلايا بدقة.",
     features: [
       "Analyses histologiques",
       "Études cytologiques",
       "Biopsies et prélèvements",
       "Résultats fiables et rapides",
-      "Rapports détaillés",
     ],
-    phone: "0559 50 50 01",
+    phone: "0559 50 50 02",
   },
   {
     id: "laboratoire",
@@ -51,11 +68,10 @@ const services = [
     bg: "#ecfeff",
     title: "Laboratoire",
     subtitle: "Analyses biologiques et médicales",
-    description:
-      "Notre laboratoire d'analyses médicales réalise un large éventail d'examens biologiques : analyses de sang, d'urine, bactériologie, sérologie et bien plus. Les résultats sont transmis rapidement pour une prise en charge optimale.",
+    description: "Laboratoire d'analyses médicales pour un large éventail d'examens biologiques avec résultats rapides.",
+    arabicDesc: "مخبر التحاليل الطبية مزود بأحدث الأجهزة لضمان دقة وسرعة النتائج. نقوم بجميع أنواع التحاليل بفضل فريقنا المخبري المتخصص.",
     features: [
       "Analyses de sang complètes",
-      "Analyses d'urine",
       "Bactériologie & sérologie",
       "Résultats rapides",
       "Équipements automatisés",
@@ -68,18 +84,51 @@ const services = [
     color: "#0f766e",
     bg: "#f0fdfa",
     title: "Imagerie Médicale",
-    subtitle: "Radiologie & échographie",
-    description:
-      "Le service d'imagerie médicale propose des radiographies numériques et des échographies pour un diagnostic précis et rapide. Nos techniciens et médecins radiologues interprètent les images avec la plus grande rigueur.",
+    subtitle: "Radiologie, Échographie & Scanner",
+    description: "Le service d'imagerie médicale propose des radiographies numériques, des échographies, et des examens Scanner.",
+    arabicDesc: "نضع بين أيديكم جهاز سكانير حديث وعالي الجودة، إضافة إلى خدمة التصوير بالأمواج فوق الصوتية (الإيكوغرافيا) باستعمال تجهيزات حديثة لضمان فحوصات دقيقة وسريعة.",
     features: [
+      "Scanner de haute précision",
+      "Échographie (Echo 3D/4D)",
       "Radiographie numérique",
-      "Échographie",
       "Interprétation par radiologues",
-      "Résultats immédiats",
-      "Archivage numérique",
+    ],
+    phone: "0559 50 50 03",
+  },
+  {
+    id: "ambulance",
+    icon: "fa-solid fa-truck-medical",
+    color: "#f59e0b",
+    bg: "#fffbeb",
+    title: "Ambulance & Transport",
+    subtitle: "Transport médicalisé",
+    description: "Transport sanitaire rapide et sécurisé, assuré par des professionnels.",
+    arabicDesc: "لأن سلامتكم لا تحتمل الانتظار، نوفر لكم خدمة إسعاف سريعة وآمنة لنقل المرضى في أفضل الظروف، مع تغطية شاملة لولاية بومرداس بأسعار تنافسية (مجاناً لتلاميذ المدارس).",
+    features: [
+      "Disponible 24h/24 — 7j/7",
+      "Intervention rapide",
+      "Véhicules équipés",
+      "Couverture de toute la wilaya",
+    ],
+    phone: "0559 90 01 00",
+  },
+  {
+    id: "domicile",
+    icon: "fa-solid fa-house-medical",
+    color: "#10b981",
+    bg: "#ecfdf5",
+    title: "Soins à Domicile",
+    subtitle: "Rعاية منزلية",
+    description: "Prise en charge médicale et soins infirmiers dans le confort de votre foyer.",
+    arabicDesc: "بما أن بعض الحالات تحتاج إلى الراحة بعيدا عن عناء التنقل، توفر لكم عيادة رويبح خدمة العلاج والرعاية المنزلية لتستفيدوا من متابعة طبية في منزلكم بكل راحة وأمان.",
+    features: [
+      "Soins infirmiers à domicile",
+      "Changement de pansements",
+      "Injections et traitements",
+      "Évaluation médicale",
     ],
     phone: "0559 50 50 01",
-  },
+  }
 ];
 
 export default function ServicesPage() {
@@ -114,12 +163,18 @@ export default function ServicesPage() {
           <div className="services-full-grid">
             {services.map((svc) => (
               <article className="svc-full-card" key={svc.id} id={svc.id}>
-                {/* Image placeholder */}
-                <div className="svc-image-placeholder" aria-label={`Photo — ${svc.title}`}>
-                  <div className="placeholder-icon" style={{ color: svc.color }}>
+                {/* Featured Image */}
+                <div className="svc-image-wrap" style={{ position: 'relative' }}>
+                  <img
+                    src={galleryData[svc.id]?.images[0] || "/clinic-images/gallery/pro-01.jpeg"}
+                    alt={svc.title}
+                    className="svc-real-img"
+                    style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '15px' }}
+                    loading="lazy"
+                  />
+                  <div className="svc-img-badge" style={{ background: svc.color, position: 'absolute', top: '15px', left: '15px', zIndex: 10 }}>
                     <i className={svc.icon}></i>
                   </div>
-                  <span className="placeholder-label">Image à venir</span>
                 </div>
 
                 {/* Card body */}
@@ -135,6 +190,12 @@ export default function ServicesPage() {
                   </div>
 
                   <p className="svc-full-desc" data-i18n={`srv-${svc.id}-desc`}>{svc.description}</p>
+                  
+                  {svc.arabicDesc && (
+                    <div className="svc-arabic-desc">
+                      <p dir="rtl">{svc.arabicDesc}</p>
+                    </div>
+                  )}
 
                   <ul className="svc-features">
                     {svc.features.map((f, i) => (
@@ -145,13 +206,18 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  <div className="svc-full-actions">
+                  <div className="svc-full-actions" style={{ flexWrap: 'wrap', gap: '10px' }}>
                     <a href={`tel:${svc.phone.replace(/\s/g, "")}`} className="btn btn-primary" data-i18n="srv-card-call">
                       <i className="fa-solid fa-phone"></i> Appeler
                     </a>
                     <a href="/#appointment" className="btn btn-outline-teal" data-i18n="srv-card-book">
                       <i className="fa-solid fa-calendar-plus"></i> Rendez-vous
                     </a>
+                    {galleryData[svc.id] && galleryData[svc.id].images.length > 1 && (
+                      <Link href={`/galerie/${svc.id}`} className="btn btn-outline" style={{ flexBasis: '100%' }}>
+                        <i className="fa-solid fa-camera"></i> Voir l'album photo ({galleryData[svc.id].images.length}) / شاهد الصور
+                      </Link>
+                    )}
                   </div>
                 </div>
               </article>

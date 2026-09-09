@@ -285,8 +285,8 @@ export default function ClientScripts() {
     };
     document.addEventListener('click', onMobileMenuClick);
 
-    // 5. Intersection Observer — Animate elements
-    const animateEls = document.querySelectorAll(".animate");
+    // 5. Intersection Observer — Animate & Fade-in elements
+    const animateEls = document.querySelectorAll(".animate, .fade-in");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -299,6 +299,14 @@ export default function ClientScripts() {
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     animateEls.forEach((el) => observer.observe(el));
+
+    // Immediately trigger hero fade-in elements with their staggered delays
+    requestAnimationFrame(() => {
+      document.querySelectorAll<HTMLElement>(".hero .fade-in").forEach((el) => {
+        const delay = parseInt(el.getAttribute("data-delay") || "0", 10);
+        setTimeout(() => el.classList.add("visible"), delay);
+      });
+    });
 
     // 6. Stat Counter animation
     const animateCounter = (el: HTMLElement) => {

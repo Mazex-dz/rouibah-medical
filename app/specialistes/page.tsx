@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
+import Link from "next/link";
+import { galleryData } from "../data/galleries";
 
 export const metadata: Metadata = {
   title: "Les Spécialités | Groupe Médical Rouibah — Bordj Menaïel",
@@ -9,48 +11,15 @@ export const metadata: Metadata = {
 
 const specialists = [
   {
-    id: "dentiste",
-    icon: "fa-solid fa-tooth",
-    color: "#0891b2",
-    bg: "#ecfeff",
-    title: "Dentisterie",
-    specialist: "Chirurgien-Dentiste",
-    description:
-      "Notre cabinet dentaire prend en charge toutes les pathologies bucco-dentaires : soins conservateurs, extractions, prothèses, détartrage et blanchiment. Un suivi régulier pour une santé bucco-dentaire optimale.",
-    actes: ["Soins conservateurs", "Extraction dentaire", "Prothèses dentaires", "Détartrage", "Traitement des caries"],
-  },
-  {
     id: "gynecologie",
     icon: "fa-solid fa-venus",
     color: "#db2777",
     bg: "#fdf2f8",
     title: "Gynécologie",
     specialist: "Gynécologue-Obstétricien",
-    description:
-      "Notre service de gynécologie assure le suivi gynécologique et obstétrical de la femme à tous les stades de sa vie. Consultations, grossesse, dépistage et prévention des pathologies féminines.",
-    actes: ["Suivi de grossesse", "Consultations gynécologiques", "Échographies obstétricales", "Dépistage", "Contraception"],
-  },
-  {
-    id: "orthopedie",
-    icon: "fa-solid fa-bone",
-    color: "#d97706",
-    bg: "#fffbeb",
-    title: "Orthopédie",
-    specialist: "Chirurgien Orthopédiste",
-    description:
-      "Le service orthopédique traite les affections de l'appareil locomoteur : traumatismes, fractures, douleurs articulaires, pathologies osseuses et tendineuses. Diagnostic précis et plan de traitement adapté.",
-    actes: ["Fractures & traumatismes", "Douleurs articulaires", "Pathologies osseuses", "Rééducation", "Entorses & tendinites"],
-  },
-  {
-    id: "cci",
-    icon: "fa-solid fa-syringe",
-    color: "#7c3aed",
-    bg: "#f5f3ff",
-    title: "CCI",
-    specialist: "Centre de Chimiothérapie Intraveineux",
-    description:
-      "Notre centre CCI (Chambre à Cathéter Implantable) assure la pose, le suivi et l'entretien des chambres implantables pour les patients sous traitement intraveineux prolongé, dans un environnement sécurisé et stérile.",
-    actes: ["Pose de CCI", "Suivi et entretien", "Perfusions intraveineuses", "Protocoles oncologiques", "Soins infirmiers spécialisés"],
+    description: "Notre service de gynécologie assure le suivi gynécologique et obstétrical de la femme à tous les stades de sa vie. Consultations, grossesse, dépistage.",
+    arabicDesc: "بشرى سارة، انضمام طبيبة مختصة في أمراض النساء والتوليد ذات خبرة كبيرة. متواجدة كل يوم ثلاثاء لضمان متابعة طبية دقيقة ورعاية متميزة.",
+    actes: ["Suivi de grossesse", "Consultations gynécologiques", "Échographies obstétricales", "Dépistage"],
   },
   {
     id: "gastrologie",
@@ -59,9 +28,40 @@ const specialists = [
     bg: "#f0fdf4",
     title: "Gastroentérologie",
     specialist: "Gastroentérologue",
-    description:
-      "Notre gastroentérologue prend en charge les maladies du système digestif : estomac, intestin, foie, pancréas et vésicule biliaire. Consultations, endoscopies et suivi des pathologies digestives chroniques.",
-    actes: ["Pathologies digestives", "Hépatologie", "Coloscopie & endoscopie", "Reflux & ulcères", "Maladies inflammatoires"],
+    description: "Notre gastroentérologue prend en charge les maladies du système digestif : estomac, intestin, foie, pancréas et vésicule biliaire.",
+    arabicDesc: "هل تعانون من آلام أو حرق في المعدة؟ طبيب الجهاز الهضمي يستقبلكم كل يوم الثلاثاء والخميس بعيادة رويبح، للتشخيص الدقيق والتكفل المناسب.",
+    actes: ["Pathologies digestives", "Hépatologie", "Coloscopie & endoscopie", "Reflux & ulcères"],
+  },
+  {
+    id: "interne",
+    icon: "fa-solid fa-stethoscope",
+    color: "#4f46e5",
+    bg: "#eef2ff",
+    title: "Médecine Interne",
+    specialist: "Spécialiste en médecine interne",
+    description: "Prise en charge globale des patients adultes atteints de maladies chroniques ou complexes, impliquant souvent plusieurs organes.",
+    arabicDesc: "فريق الطب الداخلي جاهز لاستقبالكم للتشخيص المتكامل للأمراض المزمنة والمعقدة وتوفير الرعاية الشاملة.",
+    actes: ["Maladies chroniques", "Diabète & Hypertension", "Maladies auto-immunes", "Bilan de santé"],
+  },
+  {
+    id: "orthopedie",
+    icon: "fa-solid fa-bone",
+    color: "#d97706",
+    bg: "#fffbeb",
+    title: "Orthopédie",
+    specialist: "Chirurgien Orthopédiste",
+    description: "Le service orthopédique traite les affections de l'appareil locomoteur : traumatismes, fractures, douleurs articulaires.",
+    actes: ["Fractures & traumatismes", "Douleurs articulaires", "Pathologies osseuses", "Rééducation"],
+  },
+  {
+    id: "cci",
+    icon: "fa-solid fa-syringe",
+    color: "#7c3aed",
+    bg: "#f5f3ff",
+    title: "CCI",
+    specialist: "Centre de Chimiothérapie Intraveineux",
+    description: "Notre centre CCI assure la pose, le suivi et l'entretien des chambres implantables pour les patients sous traitement intraveineux prolongé.",
+    actes: ["Pose de CCI", "Suivi et entretien", "Perfusions intraveineuses", "Protocoles oncologiques"],
   },
   {
     id: "pediatrie",
@@ -70,9 +70,8 @@ const specialists = [
     bg: "#f0fdf4",
     title: "Pédiatrie",
     specialist: "Pédiatre Spécialisé",
-    description:
-      "Notre pédiatre assure le suivi de la croissance et du développement de l'enfant de la naissance à l'adolescence. Consultations, vaccinations, maladies infantiles, et bilans de santé réguliers.",
-    actes: ["Suivi de croissance", "Vaccinations", "Maladies infantiles", "Bilans de santé", "Alimentation & nutrition"],
+    description: "Notre pédiatre assure le suivi de la croissance et du développement de l'enfant de la naissance à l'adolescence.",
+    actes: ["Suivi de croissance", "Vaccinations", "Maladies infantiles", "Bilans de santé"],
   },
   {
     id: "cardiologie",
@@ -81,11 +80,11 @@ const specialists = [
     bg: "#fef2f2",
     title: "Cardiologie",
     specialist: "Cardiologue",
-    description:
-      "Le service de cardiologie assure le dépistage, le diagnostic et le suivi des maladies cardiovasculaires. Électrocardiogramme, échocardiographie, Holter et consultations spécialisées pour la santé de votre cœur.",
-    actes: ["Électrocardiogramme (ECG)", "Échocardiographie", "Holter cardiaque", "Hypertension artérielle", "Insuffisance cardiaque"],
+    description: "Le service de cardiologie assure le dépistage, le diagnostic et le suivi des maladies cardiovasculaires.",
+    actes: ["Électrocardiogramme (ECG)", "Échocardiographie", "Holter cardiaque", "Hypertension artérielle"],
   },
 ];
+
 
 export default function SpecialistesPage() {
   return (
@@ -137,13 +136,19 @@ export default function SpecialistesPage() {
                 key={spec.id}
                 id={spec.id}
               >
-                {/* Image placeholder */}
+                {/* Featured Image */}
                 <div className="spec-image-block">
-                  <div className="spec-image-placeholder" aria-label={`Photo — Dr. ${spec.title}`}>
-                    <div className="placeholder-icon" style={{ color: spec.color }}>
+                  <div className="spec-image-wrap" style={{ position: 'relative' }}>
+                    <img
+                      src={galleryData[spec.id]?.images[0] || "/clinic-images/gallery/pro-01.jpeg"}
+                      alt={spec.title}
+                      className="spec-real-img"
+                      style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '15px' }}
+                      loading="lazy"
+                    />
+                    <div className="spec-img-overlay" style={{ background: spec.color, zIndex: 10 }}>
                       <i className={spec.icon}></i>
                     </div>
-                    <span className="placeholder-label">Consultation Spécialisée</span>
                   </div>
                   {/* Availability badge */}
                   <div className="spec-avail-badge">
@@ -164,6 +169,12 @@ export default function SpecialistesPage() {
                   </div>
 
                   <p className="spec-desc" data-i18n={`spec-${spec.id}-desc`}>{spec.description}</p>
+                  
+                  {spec.arabicDesc && (
+                    <div className="svc-arabic-desc">
+                      <p dir="rtl">{spec.arabicDesc}</p>
+                    </div>
+                  )}
 
                   <div className="spec-actes">
                     <h4 className="spec-actes-title" data-i18n="spec-actes-title">Actes & consultations :</h4>
@@ -177,13 +188,18 @@ export default function SpecialistesPage() {
                     </ul>
                   </div>
 
-                  <div className="spec-actions">
+                  <div className="spec-actions" style={{ flexWrap: 'wrap', gap: '10px' }}>
                     <a href="/#appointment" className="btn btn-primary" data-i18n="spec-card-btn-book">
                       <i className="fa-solid fa-calendar-plus"></i> Prendre rendez-vous
                     </a>
                     <a href="tel:0559505001" className="btn btn-outline-teal" data-i18n="spec-card-btn-call">
                       <i className="fa-solid fa-phone"></i> Appeler
                     </a>
+                    {galleryData[spec.id] && galleryData[spec.id].images.length > 1 && (
+                      <Link href={`/galerie/${spec.id}`} className="btn btn-outline" style={{ flexBasis: '100%', marginTop: '10px' }}>
+                        <i className="fa-solid fa-camera"></i> Voir l'album photo ({galleryData[spec.id].images.length}) / شاهد الصور
+                      </Link>
+                    )}
                   </div>
                 </div>
               </article>

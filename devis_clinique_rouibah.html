@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض سعر — عيادة رويبح الطبية | DEV-2026-ROUIBAH-02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0369a1;
+            --primary-light: #e0f2fe;
+            --accent: #0d9488;
+            --text: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f1f5f9;
+            color: var(--text);
+            padding: 32px 16px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .print-bar {
+            max-width: 900px;
+            margin: 0 auto 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .print-bar span { font-size: 13px; color: #64748b; font-weight: 600; }
+        .btn-print {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 9px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(3,105,161,0.25);
+        }
+        .btn-print:hover { background: #0284c7; }
+
+        .devis-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .stripe {
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        /* HEADER */
+        .header {
+            padding: 34px 40px 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1.5px solid var(--border);
+            gap: 20px;
+        }
+        .brand h1 {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .brand-sub { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 12px; }
+        .brand-contact { font-size: 12.5px; color: #334155; line-height: 1.9; }
+        .brand-contact span { display: block; }
+        .brand-contact i { color: var(--primary); width: 16px; margin-left: 5px; font-size: 11px; }
+
+        .devis-ref { text-align: left; flex-shrink: 0; }
+        .devis-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 800;
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 12.5px;
+            margin-bottom: 9px;
+            border: 1px solid #bae6fd;
+        }
+        .devis-ref p { font-size: 12.5px; color: var(--text-muted); margin-bottom: 3px; }
+        .validity {
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            background: #fef9c3;
+            color: #854d0e;
+            padding: 3px 9px;
+            border-radius: 6px;
+            font-weight: 700;
+            border: 1px solid #fde68a;
+        }
+
+        /* PARTIES */
+        .parties {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            padding: 22px 40px;
+            border-bottom: 1.5px solid var(--border);
+        }
+        .party-box {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 15px 18px;
+        }
+        .party-box h4 {
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            font-weight: 800;
+            margin-bottom: 10px;
+            padding-bottom: 7px;
+            border-bottom: 1px dashed var(--border);
+        }
+        .party-box p { font-size: 13px; margin-bottom: 4px; color: #334155; }
+        .party-box strong { color: var(--text); }
+
+        /* TOTAL BANNER */
+        .total-banner {
+            margin: 22px 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            padding: 18px 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .total-banner h3 { font-size: 14px; font-weight: 700; opacity: 0.9; }
+        .total-banner .note { font-size: 11px; opacity: 0.75; margin-top: 2px; }
+        .total-banner .amount { font-size: 28px; font-weight: 900; text-align: left; }
+
+        /* TABLE */
+        .table-wrap { padding: 0 40px; margin-bottom: 26px; }
+
+        table { width: 100%; border-collapse: collapse; }
+
+        thead th {
+            background: var(--bg);
+            color: var(--text-muted);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 13px;
+            border-top: 1px solid var(--border);
+            border-bottom: 2px solid var(--border);
+            text-align: right;
+        }
+        thead th.num-col { width: 5%; }
+        thead th.desc-col { width: 65%; }
+        thead th.qty-col { width: 10%; text-align: center; }
+        thead th.price-col { width: 10%; text-align: left; }
+        thead th.total-col { width: 10%; text-align: left; }
+
+        tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+        tbody tr:hover { background: #fafbfc; }
+        tbody td { padding: 15px 13px; font-size: 13px; vertical-align: top; }
+
+        .num { font-weight: 900; color: var(--primary); }
+        .item-title { font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px; }
+        .item-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+        .price-cell { text-align: left; font-weight: 800; font-size: 13.5px; color: var(--text); white-space: nowrap; }
+        .qty-cell { text-align: center; color: var(--text-muted); }
+
+        /* BOTTOM SECTION */
+        .bottom { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; padding: 0 40px 30px; }
+
+        .conditions {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 11px;
+            padding: 16px 18px;
+        }
+        .conditions h4 {
+            font-size: 12px; font-weight: 800; color: var(--text);
+            margin-bottom: 12px; display: flex; align-items: center; gap: 7px;
+        }
+        .conditions h4 i { color: var(--accent); }
+        .cond { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 9px; font-size: 12.5px; }
+        .cond-k { font-weight: 700; color: var(--primary); min-width: 105px; flex-shrink: 0; }
+        .cond-v { color: var(--text-muted); }
+
+        .totals {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 11px;
+            padding: 16px 18px;
+        }
+        .trow {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12.5px;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border);
+            color: var(--text-muted);
+        }
+        .trow strong { color: var(--text); }
+        .trow.final {
+            border-bottom: none;
+            border-top: 2px solid var(--border);
+            margin-top: 7px;
+            padding-top: 11px;
+            font-size: 16px;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .pay-sched { margin-top: 13px; padding-top: 11px; border-top: 1px dashed var(--border); }
+        .pay-sched h5 {
+            font-size: 11px; font-weight: 800; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;
+        }
+        .pay-row {
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 12px; padding: 5px 0; color: var(--text-muted);
+        }
+        .pay-row span:last-child { font-weight: 800; color: var(--text); }
+
+        /* SIGNATURES */
+        .sigs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            padding: 0 40px 32px;
+        }
+        .sig {
+            border: 1px dashed #cbd5e1;
+            border-radius: 9px;
+            padding: 13px 16px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #fafafa;
+        }
+        .sig span { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+        .sig .date { font-size: 11px; color: #94a3b8; }
+
+        /* FOOTER */
+        .doc-footer {
+            background: var(--bg);
+            border-top: 1.5px solid var(--border);
+            padding: 12px 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .print-bar { display: none; }
+            .devis-wrap { box-shadow: none; border: none; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="print-bar">
+    <span><i class="fa-solid fa-file-invoice-dollar" style="color:#0369a1;margin-left:6px;"></i>
+        عرض سعر رسمي — عيادة رويبح الطبية</span>
+    <button class="btn-print" onclick="window.print()">
+        <i class="fa-solid fa-print"></i> طباعة / حفظ PDF
+    </button>
+</div>
+
+<div class="devis-wrap">
+    <div class="stripe"></div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="brand">
+            <h1><i class="fa-solid fa-code"></i> DEVIS PROFORMA</h1>
+            <div class="brand-sub">مطور ويب — تطوير منصات طبية ومواقع احترافية مخصصة</div>
+            <div class="brand-contact">
+                <span><i class="fa-solid fa-envelope"></i> [بريدك الإلكتروني]</span>
+                <span><i class="fa-solid fa-phone"></i> [رقم هاتفك]</span>
+                <span><i class="fa-solid fa-location-dot"></i> الجزائر العاصمة، الجزائر</span>
+            </div>
+        </div>
+        <div class="devis-ref">
+            <div class="devis-badge">N° DEV-2026-ROUIBAH-02</div>
+            <p><strong>تاريخ الإصدار :</strong> 02 سبتمبر 2026</p>
+            <p><strong>العملة :</strong> دينار جزائري (DZD)</p>
+            <div class="validity"><i class="fa-solid fa-clock"></i> صالح لغاية : 02 أكتوبر 2026</div>
+        </div>
+    </div>
+
+    <!-- PARTIES -->
+    <div class="parties">
+        <div class="party-box">
+            <h4><i class="fa-solid fa-user-tie" style="margin-left:5px;"></i> مقدم الخدمة</h4>
+            <p><strong>الاسم :</strong> [اسمك الكامل]</p>
+            <p><strong>البريد الإلكتروني :</strong> [بريدك الإلكتروني]</p>
+            <p><strong>الهاتف :</strong> [رقم هاتفك]</p>
+            <p><strong>الموقع :</strong> الجزائر العاصمة، الجزائر</p>
+        </div>
+        <div class="party-box">
+            <h4><i class="fa-solid fa-hospital" style="margin-left:5px;"></i> العميل</h4>
+            <p><strong>المؤسسة :</strong> عيادة رويبح الطبية والتشخيصية</p>
+            <p><strong>العنوان :</strong> برج منايل، ولاية بومرداس</p>
+            <p><strong>الهاتف :</strong> 0559 50 50 01 / 0559 50 50 05</p>
+            <p><strong>التخصص :</strong> مركز طبي متكامل — 24h/24 · 7j/7</p>
+        </div>
+    </div>
+
+    <!-- TOTAL BANNER -->
+    <div class="total-banner">
+        <div>
+            <h3>المبلغ الإجمالي الصافي للمشروع</h3>
+            <div class="note">شامل جميع البنود — بدون TVA</div>
+        </div>
+        <div class="amount">135,000 دج</div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th class="num-col">#</th>
+                    <th class="desc-col">المنتج / الخدمة المقدَّمة</th>
+                    <th class="qty-col">الكمية</th>
+                    <th class="price-col">السعر (دج)</th>
+                    <th class="total-col">الإجمالي (دج)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="num">01</td>
+                    <td>
+                        <div class="item-title">الصفحة الرئيسية الكاملة — Page d'Accueil</div>
+                        <div class="item-desc">
+                            موقع طبي كامل يضم: Header ثابت مع Navigation + سلكتور اللغة · قسم Hero بصورة خلفية وإحصائيات متحركة (31 تقييم، 6 تخصصات، 24h) · شريط الطوارئ · قسم "من نحن" بالقيم الأربعة · عدادات متحركة · 6 خدمات طبية في شبكة مرئية · قسم "لماذا نحن" · بطاقات الأطباء الأربعة · معرض الصور · 5 تقييمات Google حقيقية مع الترجمة · 4 خطوات الحجز · نموذج الحجز الكامل · خريطة Google Maps مدمجة · Footer كامل.
+                        </div>
+                    </td>
+                    <td class="qty-cell">1 صفحة</td>
+                    <td class="price-cell">40,000</td>
+                    <td class="price-cell">40,000</td>
+                </tr>
+
+                <tr>
+                    <td class="num">02</td>
+                    <td>
+                        <div class="item-title">صفحة الخدمات الطبية — Page Services</div>
+                        <div class="item-desc">
+                            صفحة مستقلة تعرض 4 خدمات طبية مفصّلة مع وصف كامل وقائمة الميزات وأزرار الاتصال المباشر: <strong>Urgences 24/7 · Anatomopathologie (Anapate) · Laboratoire d'analyses · Imagerie Médicale (Scanner & Échographie)</strong>. Banner داخلي + شبكة البطاقات + CTA strip.
+                        </div>
+                    </td>
+                    <td class="qty-cell">1 صفحة</td>
+                    <td class="price-cell">25,000</td>
+                    <td class="price-cell">25,000</td>
+                </tr>
+
+                <tr>
+                    <td class="num">03</td>
+                    <td>
+                        <div class="item-title">صفحة التخصصات الطبية — Page Spécialités</div>
+                        <div class="item-desc">
+                            صفحة مستقلة تعرض 7 تخصصات بتخطيط احترافي متناوب (يمين/يسار): <strong>Dentisterie · Gynécologie · Orthopédie · CCI · Gastroentérologie · Pédiatrie · Cardiologie</strong>. لكل تخصص: وصف طبي، قائمة 5 أعمال، زر حجز + زر اتصال. بار تنقل سريع بين التخصصات + CTA strip.
+                        </div>
+                    </td>
+                    <td class="qty-cell">1 صفحة</td>
+                    <td class="price-cell">25,000</td>
+                    <td class="price-cell">25,000</td>
+                </tr>
+
+                <tr>
+                    <td class="num">04</td>
+                    <td>
+                        <div class="item-title">نظام التعدد اللغوي المتكامل — Moteur Bilingue AR / FR</div>
+                        <div class="item-desc">
+                            محرك ترجمة مخصص بأكثر من 200 مفتاح نصي يغطي الصفحات الثلاث كاملةً. تبديل فوري بين العربية والفرنسية بدون أي إعادة تحميل. عكس اتجاه الواجهة تلقائياً (RTL ↔ LTR). حفظ تفضيل اللغة في المتصفح.
+                        </div>
+                    </td>
+                    <td class="qty-cell">3 صفحات</td>
+                    <td class="price-cell">20,000</td>
+                    <td class="price-cell">20,000</td>
+                </tr>
+
+                <tr>
+                    <td class="num">05</td>
+                    <td>
+                        <div class="item-title">النشر والاستضافة والدعم الفني — Déploiement & Support</div>
+                        <div class="item-desc">
+                            رفع ونشر الموقع على استضافة سحابية سريعة. شهادة أمان SSL/HTTPS. تهيئة الموقع لمحركات البحث المحلية (بومرداس / برج منايل). نقل كامل لملكية الكود المصدري. دعم فني مجاني لمدة <strong>3 أشهر</strong> بعد التسليم.
+                        </div>
+                    </td>
+                    <td class="qty-cell">1 سنة</td>
+                    <td class="price-cell">10,000</td>
+                    <td class="price-cell">10,000</td>
+                </tr>
+
+                <tr>
+                    <td class="num">06</td>
+                    <td>
+                        <div class="item-title">معالجة وتصنيف الوسائط الرسمية للعيادة — Traitement des Médias</div>
+                        <div class="item-desc">
+                            استلام وفرز وتصنيف <strong>~152 ملف وسائط</strong> مُرسَلة عبر واتساب على دفعتين (31 أوت و01 سبتمبر 2026)، تشمل: <strong>141 صورة + 2 فيديو + 9 ملفات (RAR, JPG, MP4, PDF)</strong>. ربط كل وسيط بالقسم الطبي المناسب (إسعاف، تصوير طبي، أسنان، تشريح مرضي، إسعاف، إلخ). ضغط وتحسين الصور للويب. جاهزة للدمج في الصفحات الثلاث.
+                        </div>
+                    </td>
+                    <td class="qty-cell">2 دفعة</td>
+                    <td class="price-cell">15,000</td>
+                    <td class="price-cell">15,000</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+        <div class="conditions">
+            <h4><i class="fa-solid fa-handshake"></i> شروط العمل والضمانات</h4>
+            <div class="cond">
+                <span class="cond-k">مدة الإنجاز :</span>
+                <span class="cond-v">من 10 إلى 15 يوم عمل مع مراجعات مرحلية.</span>
+            </div>
+            <div class="cond">
+                <span class="cond-k">مراجعات مجانية :</span>
+                <span class="cond-v">مراجعتان مجانيتان لكل صفحة بعد التسليم.</span>
+            </div>
+            <div class="cond">
+                <span class="cond-k">ملكية الكود :</span>
+                <span class="cond-v">نقل كامل للكود المصدري عند التسليم النهائي.</span>
+            </div>
+            <div class="cond">
+                <span class="cond-k">دعم فني :</span>
+                <span class="cond-v">3 أشهر مجانية بعد النشر الرسمي للموقع.</span>
+            </div>
+            <div class="cond">
+                <span class="cond-k">صلاحية العرض :</span>
+                <span class="cond-v">30 يوماً من تاريخ الإصدار.</span>
+            </div>
+        </div>
+
+        <div class="totals">
+            <div class="trow"><span>الصفحة الرئيسية (01)</span><strong>40,000 دج</strong></div>
+            <div class="trow"><span>صفحة الخدمات (02)</span><strong>25,000 دج</strong></div>
+            <div class="trow"><span>صفحة التخصصات (03)</span><strong>25,000 دج</strong></div>
+            <div class="trow"><span>نظام AR/FR (04)</span><strong>20,000 دج</strong></div>
+            <div class="trow"><span>SEO + SSL + النشر + دعم 3 أشهر (05)</span><strong>10,000 دج</strong></div>
+            <div class="trow"><span>معالجة الوسائط — 2 دفعة (06)</span><strong>15,000 دج</strong></div>
+            <div class="trow final"><span>الإجمالي الصافي :</span><span>135,000 دج</span></div>
+
+            <div class="pay-sched">
+                <h5><i class="fa-solid fa-calendar-check" style="color:#0369a1;margin-left:5px;"></i> جدول الدفع المقترح</h5>
+                <div class="pay-row"><span>عند التوقيع والبدء (40%)</span><span>54,000 دج</span></div>
+                <div class="pay-row"><span>عند التسليم الجزئي (30%)</span><span>40,500 دج</span></div>
+                <div class="pay-row"><span>عند النشر النهائي (30%)</span><span>40,500 دج</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNATURES -->
+    <div class="sigs">
+        <div class="sig">
+            <span>توقيع مقدم الخدمة — Bon pour accord :</span>
+            <span class="date">التاريخ : _____ / _____ / 2026</span>
+        </div>
+        <div class="sig">
+            <span>ختم وتوقيع إدارة عيادة رويبح :</span>
+            <span class="date">التاريخ : _____ / _____ / 2026</span>
+        </div>
+    </div>
+
+    <div class="doc-footer">
+        <span>DEV-2026-ROUIBAH-02 · وثيقة سرية — للاستخدام الداخلي فقط</span>
+        <span>شكراً لثقتكم · Merci pour votre confiance 🤝</span>
+    </div>
+</div>
+
+</body>
+</html>
